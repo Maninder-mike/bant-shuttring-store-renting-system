@@ -1,6 +1,4 @@
-=====
-Bant Shuttring Store Renting System
-=====
+# Bant Shuttring Store Renting System
 
 
 Add a short description here!
