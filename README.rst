@@ -15,5 +15,5 @@ A longer description of your project goes here...
 Note
 ====
 
-This project has been set up using PyScaffold 3.2.3. For details and usage
-information on PyScaffold see https://pyscaffold.org/.
+### Suggestions and Feedback
+[Click here](https://docs.google.com/forms/d/1qBx38sxLMUEFDkeFotfe2fn7HxuMY8T0K4WIBeIoqUM/prefill) if you have any feedback or suggestions.
