@@ -14,4 +14,4 @@ Note
 ====
 
 ### Suggestions and Feedback
-[Click here](https://docs.google.com/forms/d/1qBx38sxLMUEFDkeFotfe2fn7HxuMY8T0K4WIBeIoqUM/prefill) if you have any feedback or suggestions.
+[Click here](https://forms.gle/uuHH2MFPX8Jg5R8Z6) if you have any feedback or suggestions.
