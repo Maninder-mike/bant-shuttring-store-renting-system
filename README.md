@@ -2,8 +2,14 @@
 
 # Bant Shuttring Store Renting System
 
+![GitHub followers](https://img.shields.io/github/followers/maninder-mike?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/maninder-mike/bant-shuttring-store-renting-system?style=social)
 
-Add a short description here!
+![Twitter Follow](https://img.shields.io/twitter/follow/maninder_mike?style=social)
+
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pytest)
+![GitHub repo size](https://img.shields.io/github/repo-size/maninder-mike/bant-shuttring-store-renting-system)
+![GitHub](https://img.shields.io/github/license/maninder-mike/bant-shuttring-store-renting-system)
 
 
 Description
