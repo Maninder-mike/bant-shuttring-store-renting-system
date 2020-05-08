@@ -1,0 +1,193 @@
+Metadata-Version: 2.1
+Name: pip-lock
+Version: 2.1.0
+Summary: Check for differences between requirements.txt files and your environment.
+Home-page: https://github.com/adamchainz/pip-lock
+Author: Aaron Kirkbride, Adam Johnson, et al.
+Author-email: me@adamj.eu
+License: ISCL
+Project-URL: Changelog, https://github.com/adamchainz/pip-lock/blob/master/HISTORY.rst
+Keywords: pip,requirements
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5
+Description-Content-Type: text/x-rst
+Requires-Dist: pip (>=10.0.0)
+
+========
+pip-lock
+========
+
+.. image:: https://img.shields.io/pypi/v/pip-lock.svg
+        :target: https://pypi.python.org/pypi/pip-lock
+
+.. image:: https://img.shields.io/travis/adamchainz/pip-lock/master.svg
+        :target: https://travis-ci.org/adamchainz/pip-lock
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/python/black
+
+Check for differences between requirements.txt files and your environment.
+
+At YPlan, we automatically call ``check_requirements()`` during development and testing to provide developers instant
+feedback if their environment is out of sync with the current requirements.txt. This ensures that developers do
+not experience unexpected behaviour or errors related to out of sync requirements.
+
+
+Installation
+============
+
+Install with **pip**:
+
+.. code-block:: python
+
+    pip install pip-lock
+
+Python 3.5 to 3.8 supported.
+
+Example usage
+=============
+
+.. code-block:: python
+
+    from pip_lock import check_requirements
+
+    # Check requirements and if there are any mismatches, print a message and die with exit code 1
+    check_requirements('requirements.txt')
+
+
+.. code-block:: python
+
+    from pip_lock import get_mismatches
+
+    # Get mismatches as a dictionary of package names to tuples (expected_version, actual_version)
+    # e.g. {'django': ('1.10.2', None), 'requests': ('2.11.1', '2.9.2')}
+    mismatches = get_mismatches('requirements.txt')
+
+
+At YPlan, we call ``check_requirements()`` within our Django ``manage.py`` which checks the requirements every time
+Django starts or tests are run. We recommend checking the environment to ensure it is not run in a production
+environment, to avoid slowing down application startup.
+
+API
+===
+
+``check_requirements(requirements_file_path, post_text='')``
+------------------------------------------------------------
+
+Exit with exit code 1 and output to stderr if there are mismatches between the environment and requirements file.
+
+``requirements_file_path`` is the path to the ``requirements.txt`` file - we recommend using an absolute file path.
+
+``post_text`` is optional text which is displayed after the stderr message. This can be used to display instructions
+on how to update the requirements.
+
+Example:
+
+.. code-block:: python
+
+    check_requirements(
+        'requirements.txt',
+        post_text='\nRun the following on your host machine: \n\n    vagrant provision\n'
+    )
+
+.. code-block:: bash
+
+    There are requirement mismatches with requirements.txt:
+        * Package Django has version 1.9.10 but you have version 1.9.0 installed.
+        * Package requests has version 2.11.1 but you have version 2.11.0 installed.
+        * Package requests-oauthlib is in requirements.txt but not in virtualenv
+
+    Run the following on your host machine:
+
+        vagrant provision
+
+``get_mismatches(requirements_file_path, post_text='')``
+--------------------------------------------------------
+
+Return a dictionary of package names to tuples of ``(expected_version, actual_version)`` for mismatched packages.
+
+``requirements_file_path`` is the path to the ``requirements.txt`` file - we recommend using an absolute file path.
+
+Example:
+
+.. code-block:: python
+
+    >>> get_mismatches('requirements.txt')
+    {'django': ('1.10.2', '1.9.0'), 'requests': ('2.11.1', '2.9.2'), 'request-oauthlib': ('0.7.0', None)}
+
+.. :changelog:
+
+History
+=======
+
+.. New release notes go here
+
+2.1.0 (2019-12-19)
+------------------
+
+* Update Python support to 3.5-3.8, as 3.4 has reached its end of life.
+* Converted setuptools metadata to configuration file. This meant removing the
+  ``__version__`` attribute from the package. If you want to inspect the
+  installed version, use
+  ``importlib.metadata.version("pip-lock")``
+  (`docs <https://docs.python.org/3.8/library/importlib.metadata.html#distribution-versions>`__ /
+  `backport <https://pypi.org/project/importlib-metadata/>`__).
+* Fix parsing of package names featuring extras e.g. ``package[extra1]``.
+* Require Pip 10+.
+
+2.0.0 (2019-02-28)
+------------------
+
+* Drop Python 2 support, only Python 3.4+ is supported now.
+
+1.2.0 (2018-07-25)
+------------------
+
+* Ignore installed external (``-e``) packages.
+
+1.1.1 (2018-04-15)
+------------------
+
+* Fix for pip 10 move of import to ``pip._internal``
+
+1.1.0 (2016-08-18)
+------------------
+
+* Remove logic that made relative file paths relative to the path of the
+  calling code's file. It's now the standard behaviour of relative to the
+  current working directory. Passing an absolute path is recommended.
+* Make comparison of package names case-insensitive to work with
+  ``requirements.txt`` files that use a different case to the canoncial package
+  name. This can happen with ``pip-compile`` that always outputs lowercase
+  names.
+* Fix 'mismatches' typo
+* Only indent mismatch list by 4 spaces in error message
+
+1.0.2 (2016-10-28)
+------------------
+
+* Fix relative paths for all environments
+
+1.0.1 (2016-10-28)
+------------------
+
+* Support relative requirements.txt paths
+
+1.0.0 (2016-10-27)
+------------------
+
+* First release on PyPI.
+
+
