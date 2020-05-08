@@ -4,7 +4,6 @@
 
 ![GitHub followers](https://img.shields.io/github/followers/maninder-mike?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/maninder-mike/bant-shuttring-store-renting-system?style=social)
-
 ![Twitter Follow](https://img.shields.io/twitter/follow/maninder_mike?style=social)
 
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pytest)
