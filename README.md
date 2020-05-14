@@ -8,6 +8,7 @@
 
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pytest)
 ![GitHub](https://img.shields.io/github/license/maninder-mike/bant-shuttring-store-renting-system)
+![Python application](https://github.com/Maninder-mike/bant-shuttring-store-renting-system/workflows/Python%20application/badge.svg?branch=master)
 
 
 Description
