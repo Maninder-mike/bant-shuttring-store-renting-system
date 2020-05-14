@@ -7,9 +7,11 @@ verify_ssl = true
 codecov = "*"
 autopep8 = "*"
 pytest = "*"
+sphinx-rtd-theme = "*"
 
 [packages]
 pyqt5 = "*"
+sphinx = "*"
 
 [requires]
 python_version = "3.8"
