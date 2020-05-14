@@ -4,6 +4,9 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+codecov = "*"
+autopep8 = "*"
+pytest = "*"
 
 [packages]
 pyqt5 = "*"
