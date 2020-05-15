@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "81133f3e7d81c26ef65695cabda217525e2bd6c221d9b417a11642d9c27cf14c"
+            "sha256": "762dddb414d7dea82e09297db76949859ec2f92c0c4ef3a51051f0961659610f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -346,6 +346,13 @@
             "markers": "sys_platform == 'win32'",
             "version": "==0.4.3"
         },
+        "commonmark": {
+            "hashes": [
+                "sha256:452f9dc859be7f06631ddcb328b6919c67984aca654e5fefb3914d54691aed60",
+                "sha256:da2f38c92590f83de410ba1a3cbceafbc74fee9def35f9251ba9a971d6d66fd9"
+            ],
+            "version": "==0.9.1"
+        },
         "coverage": {
             "hashes": [
                 "sha256:00f1d23f4336efc3b311ed0d807feb45098fc86dee1ca13b3d6768cdab187c8a",
@@ -525,6 +532,13 @@
             ],
             "version": "==2020.1"
         },
+        "recommonmark": {
+            "hashes": [
+                "sha256:29cd4faeb6c5268c633634f2d69aef9431e0f4d347f90659fd0aab20e541efeb",
+                "sha256:2ec4207a574289355d5b6ae4ae4abb29043346ca12cdd5f07d374dc5987d2852"
+            ],
+            "version": "==0.6.0"
+        },
         "requests": {
             "hashes": [
                 "sha256:43999036bfa82904b6af1d99e4882b560e5e2c68e5c4b0aa03b655f3d7d73fee",
@@ -532,6 +546,42 @@
             ],
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
             "version": "==2.23.0"
+        },
+        "rinoh-typeface-dejavuserif": {
+            "hashes": [
+                "sha256:6198fbcb412688239d9a9e79440f716a555ef5d160536c0846a0bda8e62a0cf3",
+                "sha256:ff0b236bdd69ef36c14887ac5078bbf1f14ae1ca403fc81b5426ba0bdfb13bea"
+            ],
+            "version": "==0.1.1"
+        },
+        "rinoh-typeface-texgyrecursor": {
+            "hashes": [
+                "sha256:076f7dbbd0201b0d44f4c77e4f7070474e1365152dc8509b5cded04c1648308a",
+                "sha256:98080e6af2271e67cff1d69033cb6c3a6baa58de41a66dce1a1102b4dd41de72"
+            ],
+            "version": "==0.1.1"
+        },
+        "rinoh-typeface-texgyreheros": {
+            "hashes": [
+                "sha256:0c921a040a84b0af031e4a36d196d46b65fb18929d88df5ed26533b57100e6c9",
+                "sha256:fd7082e917bccc292894447f11d15a3efce9f1386056118b57b66cc2f5a36bbd"
+            ],
+            "version": "==0.1.1"
+        },
+        "rinoh-typeface-texgyrepagella": {
+            "hashes": [
+                "sha256:0144e3b828a31b405ab9be1dec67f48be360d9f86d109578924fd1d7e0e1ded6",
+                "sha256:53f4dba338c6b1df758888f23ce1ed728e5be45746f161488ad3b944e5e79fd2"
+            ],
+            "version": "==0.1.1"
+        },
+        "rinohtype": {
+            "hashes": [
+                "sha256:037b5b3b5eebbaa32f0936e705191a5994d15de01ffe94600cc60e38262830a0",
+                "sha256:e0e76b8e8135d7757e22181df2791b2cd379183420fa8ffb59e1aa1ad5fda010"
+            ],
+            "index": "pypi",
+            "version": "==0.4.0"
         },
         "six": {
             "hashes": [

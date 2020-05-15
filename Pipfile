@@ -8,6 +8,7 @@ codecov = "*"
 autopep8 = "*"
 pytest = "*"
 sphinx-rtd-theme = "*"
+rinohtype = "*"
 
 [packages]
 pyqt5 = "*"
