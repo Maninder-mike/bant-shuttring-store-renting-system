@@ -4,15 +4,10 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-codecov = "*"
-autopep8 = "*"
 pytest = "*"
-sphinx-rtd-theme = "*"
-rinohtype = "*"
 
 [packages]
 pyqt5 = "*"
-sphinx = "*"
 
 [requires]
 python_version = "3.8"
