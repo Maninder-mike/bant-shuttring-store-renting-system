@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoTestManager">
+    <enabled-run-configurations>
+      <run-configuration type="tests" name="pytest for test_main.test_add" />
+    </enabled-run-configurations>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cfbb3344-0f69-4f1c-8c74-baeb258d65f9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,9 +20,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/requirements-dev.txt" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python tests.pytest for test_main.test_add">
     <configuration name="setup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bssrs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -39,8 +45,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for test_main.test_add" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="bssrs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_main.test_add&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_main.test_mul" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="bssrs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_main.test_mul&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test_main.test_add" />
+        <item itemvalue="Python tests.pytest for test_main.test_mul" />
         <item itemvalue="Python.setup" />
       </list>
     </recent_temporary>
@@ -59,21 +99,37 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1345" height="182" key="GridCell.Tab.0.bottom" timestamp="1589742505007">
+    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589749112431">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1589742505007" />
-    <state width="1345" height="182" key="GridCell.Tab.0.center" timestamp="1589742505006">
+    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1589749112431" />
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1589748510699">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1589742505006" />
-    <state width="1345" height="182" key="GridCell.Tab.0.left" timestamp="1589742505006">
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1589748510699" />
+    <state width="1345" height="309" key="GridCell.Tab.0.bottom" timestamp="1589749303962">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1589742505006" />
-    <state width="1345" height="182" key="GridCell.Tab.0.right" timestamp="1589742505007">
+    <state width="1345" height="309" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1589749303962" />
+    <state width="1345" height="309" key="GridCell.Tab.0.center" timestamp="1589749303962">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="182" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1589742505007" />
+    <state width="1345" height="309" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1589749303962" />
+    <state width="1345" height="309" key="GridCell.Tab.0.left" timestamp="1589749303961">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="309" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1589749303961" />
+    <state width="1345" height="309" key="GridCell.Tab.0.right" timestamp="1589749303962">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="309" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1589749303962" />
+    <state x="184" y="14" key="SettingsEditor" timestamp="1589748918305">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="184" y="14" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1589748918305" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1589748637826">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1589748637826" />
   </component>
 </project>

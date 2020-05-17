@@ -11,7 +11,7 @@ setup(
     description='A POS Python project',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/pypa/sampleproject',
+    url='https://github.com/maninder-mike',
     author='@maninder_mike',
     author_email='maninder.singh@outlook.in',
     classifiers=[  # Optional
@@ -90,7 +90,6 @@ setup(
             'sample=sample:main',
         ],
     },
-
 
     project_urls={
         # 'Bug Reports': 'https://github.com/pypa/sampleproject/issues',
