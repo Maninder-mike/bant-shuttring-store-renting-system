@@ -1,4 +1,4 @@
-from src.main import add, mul
+from src.check import add, mul
 
 
 def test_add():

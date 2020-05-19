@@ -12,6 +12,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="1c2xkwQwXRDD9aHLdh7t0VGcPlT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -21,10 +28,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/requirements-dev.txt" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_main.test_add">
-    <configuration name="setup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.backend_learn_file_only">
+    <configuration name="backend_learn_file_only" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bssrs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -32,11 +39,53 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../backend_learn_file_only.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bssrs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/setup.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="window_size" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bssrs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/window_size.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -56,7 +105,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;-v&quot;" />
       <option name="_new_target" value="&quot;test_main.test_add&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
@@ -79,9 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.backend_learn_file_only" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.window_size" />
         <item itemvalue="Python tests.pytest for test_main.test_add" />
         <item itemvalue="Python tests.pytest for test_main.test_mul" />
-        <item itemvalue="Python.setup" />
       </list>
     </recent_temporary>
   </component>
@@ -103,33 +154,37 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1589749112431" />
+    <state x="392" y="0" key="#pytest_for_test_main.test_add" timestamp="1589806476076">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="392" y="0" key="#pytest_for_test_main.test_add/0.0.1366.738@0.0.1366.738" timestamp="1589806476076" />
     <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1589748510699">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1589748510699" />
-    <state width="1345" height="309" key="GridCell.Tab.0.bottom" timestamp="1589749303962">
+    <state width="1345" height="167" key="GridCell.Tab.0.bottom" timestamp="1589812199141">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="309" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1589749303962" />
-    <state width="1345" height="309" key="GridCell.Tab.0.center" timestamp="1589749303962">
+    <state width="1345" height="167" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1589812199141" />
+    <state width="1345" height="167" key="GridCell.Tab.0.center" timestamp="1589812199141">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="309" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1589749303962" />
-    <state width="1345" height="309" key="GridCell.Tab.0.left" timestamp="1589749303961">
+    <state width="1345" height="167" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1589812199141" />
+    <state width="1345" height="167" key="GridCell.Tab.0.left" timestamp="1589812199141">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="309" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1589749303961" />
-    <state width="1345" height="309" key="GridCell.Tab.0.right" timestamp="1589749303962">
+    <state width="1345" height="167" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1589812199141" />
+    <state width="1345" height="167" key="GridCell.Tab.0.right" timestamp="1589812199141">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="309" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1589749303962" />
-    <state x="184" y="14" key="SettingsEditor" timestamp="1589748918305">
+    <state width="1345" height="167" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1589812199141" />
+    <state x="184" y="14" key="SettingsEditor" timestamp="1589807260095">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="184" y="14" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1589748918305" />
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1589748637826">
+    <state x="184" y="14" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1589807260095" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1589812174373">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1589748637826" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1589812174373" />
   </component>
 </project>
