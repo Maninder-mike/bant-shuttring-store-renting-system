@@ -28,10 +28,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/requirements-dev.txt" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Python.backend_learn_file_only">
-    <configuration name="backend_learn_file_only" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.sol2 (1)">
+    <configuration name="prime_check" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bssrs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -39,11 +40,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Python/maths" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../backend_learn_file_only.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Python/maths/prime_check.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -52,7 +53,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="qr_decomposition" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bssrs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -60,11 +61,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Python/maths" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Python/maths/qr_decomposition.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -73,7 +74,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="window_size" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="sol1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bssrs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -81,11 +82,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Python/project_euler/problem_01" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/window_size.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Python/project_euler/problem_01/sol1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -94,45 +95,55 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_main.test_add" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="sol2 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bssrs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;-v&quot;" />
-      <option name="_new_target" value="&quot;test_main.test_add&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sol2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_main.test_mul" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="sol2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bssrs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Python/project_euler/problem_01" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_main.test_mul&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Python/project_euler/problem_01/sol2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.backend_learn_file_only" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.window_size" />
-        <item itemvalue="Python tests.pytest for test_main.test_add" />
-        <item itemvalue="Python tests.pytest for test_main.test_mul" />
+        <item itemvalue="Python.sol2 (1)" />
+        <item itemvalue="Python.sol2" />
+        <item itemvalue="Python.sol1" />
+        <item itemvalue="Python.qr_decomposition" />
+        <item itemvalue="Python.prime_check" />
       </list>
     </recent_temporary>
   </component>
@@ -154,6 +165,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1589749112431" />
+    <state x="392" y="0" key="#prime_check" timestamp="1589895945493">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="392" y="0" key="#prime_check/0.0.1366.738@0.0.1366.738" timestamp="1589895945493" />
     <state x="392" y="0" key="#pytest_for_test_main.test_add" timestamp="1589806476076">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -162,29 +177,29 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1589748510699" />
-    <state width="1345" height="167" key="GridCell.Tab.0.bottom" timestamp="1589812199141">
+    <state width="1345" height="140" key="GridCell.Tab.0.bottom" timestamp="1589897813624">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="167" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1589812199141" />
-    <state width="1345" height="167" key="GridCell.Tab.0.center" timestamp="1589812199141">
+    <state width="1345" height="140" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1589897813624" />
+    <state width="1345" height="140" key="GridCell.Tab.0.center" timestamp="1589897813624">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="167" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1589812199141" />
-    <state width="1345" height="167" key="GridCell.Tab.0.left" timestamp="1589812199141">
+    <state width="1345" height="140" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1589897813624" />
+    <state width="1345" height="140" key="GridCell.Tab.0.left" timestamp="1589897813624">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="167" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1589812199141" />
-    <state width="1345" height="167" key="GridCell.Tab.0.right" timestamp="1589812199141">
+    <state width="1345" height="140" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1589897813624" />
+    <state width="1345" height="140" key="GridCell.Tab.0.right" timestamp="1589897813624">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="167" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1589812199141" />
+    <state width="1345" height="140" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1589897813624" />
     <state x="184" y="14" key="SettingsEditor" timestamp="1589807260095">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="184" y="14" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1589807260095" />
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1589812174373">
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1589896688094">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1589812174373" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1589896688094" />
   </component>
 </project>
