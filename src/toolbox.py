@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QToolBox, QLabel, QMainWindow
 import sys
+from PyQt5.Qt import QSize
 
 
 class MainWindow(QMainWindow):
