@@ -14,22 +14,17 @@ setup(
     url='https://github.com/maninder-mike',
     author='@maninder_mike',
     author_email='maninder.singh@outlook.in',
-    classifiers=[  # Optional
-        # How mature is this project? Common values are
+    classifiers=[
         #   3 - Alpha
         #   4 - Beta
         #   5 - Production/Stable
         'Development Status :: 3 - Alpha',
 
-        # Indicate who your project is intended for
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Build Tools',
 
-        # Pick your license as you wish
         'License :: OSI Approved :: MIT License',
 
-        # Specify the Python versions you support here. In particular, ensure
-        # checked by 'pip install'. See instead 'python_requires' below.
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3 :: Only',
     ],
@@ -51,23 +46,15 @@ setup(
     #
     packages=find_packages(where='src'),
 
-    # Specify which Python versions you support. In contrast to the
-    # 'Programming Language' classifiers above, 'pip install' will check this
-    # and refuse to install the project if the version does not match. See
-    # https://packaging.python.org/guides/distributing-packages-using-setuptools/#python-requires
     python_requires='>=3.7, <4',
 
-    # For an analysis of "install_requires" vs pip's requirements files see:
-    # https://packaging.python.org/en/latest/requirements.html
-    install_requires=['pytz'],
+    install_requires=[
+        'pyqt5'
+    ],
 
-    # List additional groups of dependencies here (e.g. development
-    # dependencies). Users will be able to install these using the "extras"
-    # syntax, for example:
-    #   $ pip install sampleproject[dev]
     extras_require={
         'dev': ['check-manifest'],
-        'test': ['coverage'],
+        'test': ['pytest'],
     },
 
     # If there are data files included in your packages that need to be

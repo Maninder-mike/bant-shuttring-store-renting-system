@@ -33,6 +33,15 @@ class ToolBox(QWidget):
         label3 = QLabel()
         toolbox.addItem(label3, 'Three')
 
+        label4 = QLabel()
+        toolbox.addItem(label4, 'Four')
+
+        label5 = QLabel()
+        toolbox.addItem(label5, 'Five')
+
+        label6 = QLabel()
+        toolbox.addItem(label6, 'Six')
+
         self.setLayout(layout)
 
 

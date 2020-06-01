@@ -1,7 +1,7 @@
-from PyQt5.QtWidgets import QMainWindow, QApplication, QTextEdit, QMenu, QMenuBar, QGridLayout, QStyleFactory, \
-    QPushButton, QHBoxLayout, QLineEdit, QDockWidget, QWidget, QListWidget, QVBoxLayout, QAction
-from PyQt5.QtGui import QIcon, QPalette, QColor
-from PyQt5.QtCore import Qt, QSize
+from PyQt5.QtWidgets import QMainWindow, QApplication, QTextEdit, QStyleFactory, QHBoxLayout, QDockWidget, QWidget, \
+    QListWidget, QVBoxLayout, QAction
+from PyQt5.QtGui import QPalette, QColor
+from PyQt5.QtCore import Qt
 import sys
 
 from src.tab_widget import TabWidget
