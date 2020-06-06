@@ -25,7 +25,7 @@ class MenuBar(QWidget):
         self.tool_menu()
         self.window_menu()
         self.help_menu()
-        self.menu_bar_nono()
+        self.menu_bar()
 
     def file_menu(self):
         pass
@@ -48,7 +48,7 @@ class MenuBar(QWidget):
         else:
             self.status_bar().hide()
 
-    def menu_bar_nono(self):
+    def menu_bar(self):
         menu_bar = self.menuBar()
         file_menu = menu_bar.addMenu('File')
         file_menu.addAction('Open')

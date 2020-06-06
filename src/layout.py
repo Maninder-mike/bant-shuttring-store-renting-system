@@ -1,53 +1,26 @@
-from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QHBoxLayout, QVBoxLayout, QDockWidget, QListWidget, \
-    QTextEdit
+from PyQt5.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QDockWidget, QListWidget, QTextEdit
 from src.toolbox import ToolBox
 from src.tab_widget import TabWidget
-from PyQt5.Qt import Qt, QSize
-
-
-def layout_gui(self):
-    main_layout = QHBoxLayout()
-    layout1 = QVBoxLayout()
-    right_layout = QHBoxLayout()
-
-    toolbox = ToolBox()
-
-    layout1.addWidget(toolbox)
-
-    main_layout.setContentsMargins(0, 0, 0, 0)
-    main_layout.setSpacing(0)
-    main_layout.addLayout(layout1)
-    table = TabWidget()
-    main_layout.addWidget(table)
-
-    right_layout.addWidget(self.right_up_text_edit())
-    right_layout.addWidget(self.right_down_text_edit())
-
-    main_layout.addLayout(right_layout)
-
-    widget = QWidget()
-    widget.setLayout(main_layout)
-    self.setCentralWidget(widget)
+from PyQt5.Qt import Qt
 
 
 def gui_layout(self):
     main_layout = QHBoxLayout()
-    layout1 = QVBoxLayout()
+    left_layout = QVBoxLayout()
     right_layout = QHBoxLayout()
 
     toolbox = ToolBox()
     toolbox.setToolTip("Find all items here.")
 
-    layout1.addWidget(toolbox)
-    layout1.setAlignment(Qt.AlignLeft)
+    left_layout.addWidget(toolbox)
+    left_layout.setAlignment(Qt.AlignLeft)
 
-    main_layout.setContentsMargins(0, 0, 0, 0)
-    main_layout.setSpacing(0)
-    main_layout.addLayout(layout1)
+    main_layout.addLayout(left_layout)
 
     table = TabWidget()
     table.setMinimumWidth(800)
     main_layout.addWidget(table)
+    main_layout.setContentsMargins(0, 5, 0, 0)
 
     right_layout.addWidget(right_up_text_edit(self))
     right_layout.addWidget(right_down_text_edit(self))
@@ -61,27 +34,24 @@ def gui_layout(self):
 
 def right_up_text_edit(self):
     layout = QHBoxLayout()
+    header = QDockWidget("Contacts", self)
 
-    items = QDockWidget("Contacts", self)
-
-    listWidget = QListWidget()
-    listWidget.addItem('Item1')
-    items.setWidget(listWidget)
-    items.setFloating(False)
+    list_widget = QListWidget()
+    list_widget.addItem('Item1')
+    header.setWidget(list_widget)
+    header.setFloating(False)
     self.setCentralWidget(QTextEdit())
-    self.addDockWidget(Qt.RightDockWidgetArea, items)
+    self.addDockWidget(Qt.RightDockWidgetArea, header)
     self.setLayout(layout)
 
 
 def right_down_text_edit(self):
     layout = QHBoxLayout()
 
-    items = QDockWidget("Payable", self)
-
-    lst = 'Bant Shuttering Store Renting System'.split(" ")
+    items = QDockWidget("Graphs", self)
 
     list_widget = QListWidget()
-    list_widget.addItems(lst)
+    list_widget.addItem('Item1')
     items.setWidget(list_widget)
     items.setFloating(False)
     self.setCentralWidget(QTextEdit())
