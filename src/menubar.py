@@ -12,7 +12,7 @@ class MainWindow(QMainWindow):
         self.show()
 
 
-class MenuBar(QWidget):
+class MenuBar(QMainWindow):
     def __init__(self, *args, **kwargs):
         super(MenuBar, self).__init__(*args, **kwargs)
 

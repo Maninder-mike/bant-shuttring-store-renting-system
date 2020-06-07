@@ -1,6 +1,20 @@
-from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QTabWidget, QFormLayout, QLineEdit, QHBoxLayout, \
-    QPushButton, QGridLayout, QLabel, QVBoxLayout
+from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QTabWidget, QLineEdit, QHBoxLayout, QPushButton, \
+    QGridLayout, QLabel
 import sys
+from PyQt5.QtGui import QFont
+
+font18 = QFont("Calibri", 18)
+
+
+def working_soon(self):
+    container = QHBoxLayout()
+    container.setSpacing(20)
+    container.setContentsMargins(10, 10, 10, 10)
+
+    label = QLabel("This Tab not working yet, Work in Progress ❤".upper())
+    label.setFont(font18)
+    container.layout().addWidget(label)
+    self.tab2.setLayout(container) or self.tab3.setLayout(container) or self.tab4.setLayout(container) or self.tab5.setLayout(container)
 
 
 class MainWindow(QMainWindow):
@@ -18,25 +32,24 @@ class TabWidget(QTabWidget):
         super(TabWidget, self).__init__(*args, **kwargs)
 
         self.tab1 = QWidget()
-        self.tab1.setToolTip("Contact window for client personal information")
         self.tab2 = QWidget()
         self.tab3 = QWidget()
         self.tab4 = QWidget()
         self.tab5 = QWidget()
 
-        self.addTab(self.tab1, 'Tab 1')
-        self.addTab(self.tab2, 'Tab 2')
-        self.addTab(self.tab3, 'Tab 3')
-        self.addTab(self.tab4, 'Tab 4')
-        self.addTab(self.tab5, 'Tab 5')
+        self.addTab(self.tab1, 'Contact Details')
+        self.addTab(self.tab2, 'History')
+        self.addTab(self.tab3, 'Bills')
+        self.addTab(self.tab4, 'Pending Items')
+        self.addTab(self.tab5, 'Offers')
 
-        self.tab1UI()
-        self.tab2UI()
-        self.tab3UI()
-        self.tab4UI()
-        self.tab5UI()
+        self.tab1ui()
+        self.tab2ui()
+        self.tab3ui()
+        self.tab4ui()
+        self.tab5ui()
 
-    def tab1UI(self):
+    def tab1ui(self):
         container = QGridLayout()
         container.setSpacing(20)
         container.setContentsMargins(10, 10, 10, 10)
@@ -90,37 +103,72 @@ class TabWidget(QTabWidget):
         bottom_layout = QHBoxLayout()
 
         button_save = QPushButton('Save')
+        button_save.setMinimumHeight(50)
+        button_save.setFont(font18)
+
         button_reset = QPushButton('Reset')
+        button_reset.setMinimumHeight(50)
+        button_reset.setFont(font18)
+
         button_delete = QPushButton('Delete')
+        button_delete.setMinimumHeight(50)
+        button_delete.setFont(font18)
+
         button_edit = QPushButton('Edit')
+        button_edit.setMinimumHeight(50)
+        button_edit.setFont(font18)
+
         bottom_layout.layout().addWidget(button_save)
         bottom_layout.layout().addWidget(button_reset)
         bottom_layout.layout().addWidget(button_edit)
         bottom_layout.layout().addWidget(button_delete)
 
         container.addLayout(bottom_layout, 9, 0, 1, 4)
-
-        self.setTabText(0, 'Contact Details')
         self.tab1.setLayout(container)
 
-    def tab2UI(self):
+    def tab2ui(self):
+        return working_soon(self)
+
+    def tab3ui(self):
+        return working_soon(self)
+
+    def tab4ui(self):
+        return working_soon(self)
+
+    def tab5ui(self):
+        return working_soon(self)
+
+
+class GraphWidget(QTabWidget):
+    def __init__(self, *args, **kwargs):
+        super(GraphWidget, self).__init__(*args, **kwargs)
+
+        self.tab1 = QWidget()
+        self.tab1.setToolTip("Graph window")
+        self.tab2 = QWidget()
+        self.tab3 = QWidget()
+
+        self.addTab(self.tab1, 'Tab 1')
+        self.addTab(self.tab2, 'Tab 2')
+        self.addTab(self.tab3, 'Tab 3')
+
+        self.graph_tab1()
+        self.graph_tab2()
+        self.graph_tab3()
+
+    def graph_tab1(self):
         layout = QHBoxLayout()
-        self.setTabText(1, 'History')
+        self.setTabText(0, 'Income')
         self.tab2.setLayout(layout)
 
-    def tab3UI(self):
+    def graph_tab2(self):
         layout = QHBoxLayout()
-        self.setTabText(2, 'Bills')
+        self.setTabText(1, 'Expensive')
         self.tab2.setLayout(layout)
 
-    def tab4UI(self):
+    def graph_tab3(self):
         layout = QHBoxLayout()
-        self.setTabText(3, 'Panding Items')
-        self.tab2.setLayout(layout)
-
-    def tab5UI(self):
-        layout = QHBoxLayout()
-        self.setTabText(4, 'Offers')
+        self.setTabText(2, 'Report')
         self.tab2.setLayout(layout)
 
 

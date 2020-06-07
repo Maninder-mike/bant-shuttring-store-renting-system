@@ -1,6 +1,6 @@
-from PyQt5.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QDockWidget, QListWidget, QTextEdit
+from PyQt5.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QDockWidget, QListWidget, QTextEdit, QPushButton
 from src.toolbox import ToolBox
-from src.tab_widget import TabWidget
+from src.tab_widget import TabWidget, GraphWidget
 from PyQt5.Qt import Qt
 
 
@@ -35,11 +35,11 @@ def gui_layout(self):
 def right_up_text_edit(self):
     layout = QHBoxLayout()
     header = QDockWidget("Contacts", self)
+    header.setFixedSize(350, 300)
 
     list_widget = QListWidget()
     list_widget.addItem('Item1')
     header.setWidget(list_widget)
-    header.setFloating(False)
     self.setCentralWidget(QTextEdit())
     self.addDockWidget(Qt.RightDockWidgetArea, header)
     self.setLayout(layout)
@@ -49,10 +49,11 @@ def right_down_text_edit(self):
     layout = QHBoxLayout()
 
     items = QDockWidget("Graphs", self)
+    items.setFixedWidth(350)
 
-    list_widget = QListWidget()
-    list_widget.addItem('Item1')
-    items.setWidget(list_widget)
+    graph_tab = GraphWidget()
+
+    items.setWidget(graph_tab)
     items.setFloating(False)
     self.setCentralWidget(QTextEdit())
     self.addDockWidget(Qt.RightDockWidgetArea, items)
