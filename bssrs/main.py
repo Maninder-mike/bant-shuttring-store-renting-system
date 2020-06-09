@@ -1,9 +1,9 @@
 import sys
 from PyQt5.QtWidgets import QMainWindow, QApplication, QStyleFactory
-from src.status_bar import status_bar
-from src.layout import gui_layout
-from src.menubar import MenuBar
-from src.toolbar import ToolBar
+from bssrs.status_bar import status_bar
+from bssrs.layout import gui_layout
+from bssrs.menubar import MenuBar
+from bssrs.toolbar import ToolBar
 
 
 class MainWindow(QMainWindow):

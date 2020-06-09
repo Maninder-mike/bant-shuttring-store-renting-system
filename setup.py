@@ -6,7 +6,7 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 setup(
-    name='bssrs',
+    name='BSSRS',
     version='0.1.0',
     description='A POS Python project',
     long_description=long_description,
@@ -32,8 +32,8 @@ setup(
     keywords='sample setuptools development',
 
     # When your source code is in a subdirectory under the project root, e.g.
-    # `src/`, it is necessary to specify the `package_dir` argument.
-    package_dir={'': 'src'},  # Optional
+    # `BSSRS/`, it is necessary to specify the `package_dir` argument.
+    package_dir={'': 'BSSRS'},  # Optional
 
     # You can just specify package directories manually here if your project is
     # simple. Or you can use find_packages().
@@ -44,7 +44,7 @@ setup(
     #
     #   py_modules=["my_module"],
     #
-    packages=find_packages(where='src'),
+    packages=find_packages(where='BSSRS'),
 
     python_requires='>=3.7, <4',
 

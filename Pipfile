@@ -11,6 +11,7 @@ pyqt5 = "==5.15.0"
 packaging = "==20.4"
 six = "==1.15.0"
 wcwidth = "==0.2.2"
+qtpy = "*"
 
 [requires]
 python_version = "3.8"

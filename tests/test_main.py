@@ -1,4 +1,4 @@
-from src.check import add, mul
+from bssrs.check import add, mul
 
 
 def test_add():

@@ -1,7 +1,7 @@
 import unittest
 from PyQt5.QtWidgets import QApplication
 from PyQt5.Qt import QKeySequence, Qt
-from src.main import MainWindow
+from bssrs.main import MainWindow
 from PyQt5.QtTest import QTest
 
 # def test_open_proj_current_window():

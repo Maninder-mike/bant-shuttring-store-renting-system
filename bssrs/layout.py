@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QDockWidget, QListWidget, QTextEdit, QPushButton
-from src.toolbox import ToolBox
-from src.tab_widget import TabWidget, GraphWidget
+from bssrs.toolbox import ToolBox
+from bssrs.tab_widget import TabWidget, GraphWidget
 from PyQt5.Qt import Qt
 
 
