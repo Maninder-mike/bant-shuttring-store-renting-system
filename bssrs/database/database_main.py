@@ -1,21 +1,45 @@
 import sqlite3
 
+client = """
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    PRIORITY INTEGER,
+    project_id INTEGER NOT NULL,
+    status_id INTEGER NOT NULL,
+    begin_date DATE NOT NULL,
+    end_date DATE NOT NULL,
+    FOREIGN KEY (`project_id`) REFERENCES project(`id`)
+"""
+
+
+def garders():
+    for x in range(7, 21):
+        return f"Garder-{x}"
+
 
 def connect():
-    conn = sqlite3.connect("books.db")
+    conn = sqlite3.connect("project.db")
     cur = conn.cursor()
-    cur.execute("CREATE TABLE IF NOT EXISTS customer (phone INTEGER PRIMARY KEY, "
-                "title TEXT,"
-                "author TEXT,"
-                "year INTEGER,"
-                "isbn INTEGER)")
-    cur.execute("CREATE TABLE IF NOT EXISTS book (id INTEGER PRIMARY KEY,"
-                "title TEXT,"
-                "author TEXT,"
-                "year INTEGER,"
-                "isbn INTEGER)")
+    cur.execute("CREATE TABLE IF NOT EXISTS projects ({})".format(client))
     conn.commit()
     conn.close()
+
+
+# def connect():
+#     conn = sqlite3.connect("project.db")
+#     cur = conn.cursor()
+#     cur.execute("CREATE TABLE IF NOT EXISTS customer (phone INTEGER PRIMARY KEY, "
+#                 "title TEXT,"
+#                 "author TEXT,"
+#                 "year INTEGER,"
+#                 "isbn INTEGER)")
+#     cur.execute("CREATE TABLE IF NOT EXISTS book (id INTEGER PRIMARY KEY,"
+#                 "title TEXT,"
+#                 "author TEXT,"
+#                 "year INTEGER,"
+#                 "isbn INTEGER)")
+#     conn.commit()
+#     conn.close()
 
 
 def insert(title, author, year, isbn):

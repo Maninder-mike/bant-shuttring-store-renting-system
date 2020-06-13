@@ -35,7 +35,7 @@ def gui_layout(self):
 def right_up_text_edit(self):
     layout = QHBoxLayout()
     header = QDockWidget("Contacts", self)
-    header.setFixedSize(350, 300)
+    header.setFixedWidth(350)
 
     list_widget = QListWidget()
     list_widget.addItem('Item1')
@@ -50,6 +50,7 @@ def right_down_text_edit(self):
 
     items = QDockWidget("Graphs", self)
     items.setFixedWidth(350)
+    items.setMinimumHeight(300)
 
     graph_tab = GraphWidget()
 

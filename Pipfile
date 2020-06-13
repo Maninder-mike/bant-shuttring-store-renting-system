@@ -12,6 +12,7 @@ packaging = "==20.4"
 six = "==1.15.0"
 wcwidth = "==0.2.2"
 qtpy = "*"
+pyqtchart = "*"
 
 [requires]
 python_version = "3.8"

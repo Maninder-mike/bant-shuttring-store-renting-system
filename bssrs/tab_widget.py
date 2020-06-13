@@ -2,6 +2,9 @@ from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QTabWidget, QLin
     QGridLayout, QLabel
 import sys
 from PyQt5.QtGui import QFont
+from bssrs.config.dialogs import show_dialog
+from bssrs.config.messages import showdialog
+from bssrs.config.charts import create_piechart
 
 font18 = QFont("Calibri", 18)
 
@@ -14,7 +17,8 @@ def working_soon(self):
     label = QLabel("This Tab not working yet, Work in Progress ❤".upper())
     label.setFont(font18)
     container.layout().addWidget(label)
-    self.tab2.setLayout(container) or self.tab3.setLayout(container) or self.tab4.setLayout(container) or self.tab5.setLayout(container)
+    self.tab2.setLayout(container) or self.tab3.setLayout(container) or self.tab4.setLayout(
+        container) or self.tab5.setLayout(container)
 
 
 class MainWindow(QMainWindow):
@@ -60,6 +64,7 @@ class TabWidget(QTabWidget):
         label_gender = QLabel("Gender:")
         label_street = QLabel("Street:")
         label_city = QLabel("City:")
+        label_pincode = QLabel("PinCode:")
         label_number = QLabel("Mobile Number:")
         label_email = QLabel("Email:")
         label_careof = QLabel("Care of:")
@@ -70,6 +75,7 @@ class TabWidget(QTabWidget):
         edit_gender = QLineEdit()
         edit_street = QLineEdit()
         edit_city = QLineEdit()
+        edit_pincode = QLineEdit()
         edit_number = QLineEdit()
         edit_email = QLineEdit()
         edit_careof = QLineEdit()
@@ -91,14 +97,17 @@ class TabWidget(QTabWidget):
         container.layout().addWidget(label_city, 3, 2)
         container.layout().addWidget(edit_city, 3, 3)
 
-        container.layout().addWidget(label_number, 5, 0)
-        container.layout().addWidget(edit_number, 5, 1)
+        container.layout().addWidget(label_pincode, 3, 4)
+        container.layout().addWidget(edit_pincode, 3, 5)
 
-        container.layout().addWidget(label_email, 6, 0)
-        container.layout().addWidget(edit_email, 6, 1)
+        container.layout().addWidget(label_number, 4, 0)
+        container.layout().addWidget(edit_number, 4, 1)
 
-        container.layout().addWidget(label_careof, 7, 0)
-        container.layout().addWidget(edit_careof, 7, 1)
+        container.layout().addWidget(label_email, 5, 0)
+        container.layout().addWidget(edit_email, 5, 1)
+
+        container.layout().addWidget(label_careof, 6, 0)
+        container.layout().addWidget(edit_careof, 6, 1)
 
         bottom_layout = QHBoxLayout()
 
@@ -113,17 +122,19 @@ class TabWidget(QTabWidget):
         button_delete = QPushButton('Delete')
         button_delete.setMinimumHeight(50)
         button_delete.setFont(font18)
+        button_delete.clicked.connect(showdialog)
 
         button_edit = QPushButton('Edit')
         button_edit.setMinimumHeight(50)
         button_edit.setFont(font18)
+        button_edit.clicked.connect(show_dialog)
 
         bottom_layout.layout().addWidget(button_save)
         bottom_layout.layout().addWidget(button_reset)
         bottom_layout.layout().addWidget(button_edit)
         bottom_layout.layout().addWidget(button_delete)
 
-        container.addLayout(bottom_layout, 9, 0, 1, 4)
+        container.addLayout(bottom_layout, 7, 0, 1, 5)
         self.tab1.setLayout(container)
 
     def tab2ui(self):
@@ -148,9 +159,9 @@ class GraphWidget(QTabWidget):
         self.tab2 = QWidget()
         self.tab3 = QWidget()
 
-        self.addTab(self.tab1, 'Tab 1')
-        self.addTab(self.tab2, 'Tab 2')
-        self.addTab(self.tab3, 'Tab 3')
+        self.addTab(self.tab1, 'Income')
+        self.addTab(self.tab2, 'Expensive')
+        self.addTab(self.tab3, 'Report')
 
         self.graph_tab1()
         self.graph_tab2()
@@ -158,17 +169,14 @@ class GraphWidget(QTabWidget):
 
     def graph_tab1(self):
         layout = QHBoxLayout()
-        self.setTabText(0, 'Income')
         self.tab2.setLayout(layout)
 
     def graph_tab2(self):
         layout = QHBoxLayout()
-        self.setTabText(1, 'Expensive')
         self.tab2.setLayout(layout)
 
     def graph_tab3(self):
         layout = QHBoxLayout()
-        self.setTabText(2, 'Report')
         self.tab2.setLayout(layout)
 
 
