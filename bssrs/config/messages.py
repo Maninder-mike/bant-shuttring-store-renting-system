@@ -1,4 +1,6 @@
 from PyQt5.QtWidgets import QMessageBox
+from bssrs.config.base import get_image_path
+from PyQt5.QtGui import QIcon
 
 
 def showdialog(self):
@@ -28,11 +30,24 @@ def msg_btn(i):
 
 def customer_added(self, fname, lname, date):
     msg = QMessageBox()
-    msg.setIcon(QMessageBox.Information)
+    add_icon = QIcon(get_image_path("success.png"))
+    msg.setWindowIcon(QIcon(add_icon))
 
     msg.setText("Customer added")
     msg.setInformativeText(f"{fname} {lname} is added in database on {date}")
     msg.setWindowTitle("Added Info")
+    msg.setFixedSize(300, 600)
+    msg.setStandardButtons(QMessageBox.Ok)
+    msg.exec_()
+
+
+def only_unique(self, x):
+    msg = QMessageBox()
+    msg.setIcon(QMessageBox.information)
+
+    msg.setText("Customer info already have here.")
+    msg.setInformativeText(f"{x} is added before!")
+    msg.setWindowTitle("Not Add Info")
     msg.setFixedSize(300, 300)
     msg.setStandardButtons(QMessageBox.Ok)
     msg.exec_()

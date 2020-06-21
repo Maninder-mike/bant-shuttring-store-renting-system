@@ -19,17 +19,17 @@ class Database:
 
     customer = """
     id INTEGER PRIMARY KEY,
-    fname	text,
-    lname	text,
-    father text,
-    gender text,
-    street text,
-    city text,
-    pincode text,
-    number INTEGER,
-    email text,
-    careof text,
-    creation_date text,
+    fname	TEXT NOT NULL,
+    lname	TEXT NOT NULL,
+    father TEXT,
+    gender TEXT,
+    street TEXT,
+    city TEXT NOT NULL,
+    pincode TEXT,
+    number INTEGER NOT NULL,
+    email TEXT,
+    careof TEXT,
+    creation_date timestamp,
     UNIQUE (number)"""
 
     book = """id INTEGER PRIMARY KEY,
@@ -59,18 +59,6 @@ class Database:
         conn.commit()
         conn.close()
 
-    def insert_book(self, title, author, year, isbn):
-        conn = sqlite3.connect(db_main)
-        cur = conn.cursor()
-        try:
-            cur.execute("INSERT INTO `book` VALUES(NULL,?,?,?,?)", (title, author, year, isbn))
-        except sqlite3.Error as e:
-            print(e)
-            self.error()
-        print("Insert Book!")
-        conn.commit()
-        conn.close()
-
     def insert_customer(self, fname, lname, father, gender, street, city, pincode, number, email, careof,
                         creation_date):
         conn = sqlite3.connect(db_main)
@@ -80,9 +68,36 @@ class Database:
                         (fname, lname, father, gender, street, city, pincode, number, email, careof, creation_date))
         except sqlite3.Error as e:
             print(e)
-
-            self.error()
         print("Insert In customer!")
+        conn.commit()
+        conn.close()
+
+    def view_all_customers(self):
+        conn = sqlite3.connect(db_main)
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM customer")
+        rows = cur.fetchall()
+        conn.close()
+        return rows
+
+    def search_customer(self, title=""):
+        conn = sqlite3.connect(db_main)
+        cur = conn.cursor()
+        cur.execute(f"SELECT {title} FROM customer")
+        rows = cur.fetchall()
+        conn.close()
+        return rows
+
+    # ==================================================================================================================
+
+    def insert_book(self, title, author, year, isbn):
+        conn = sqlite3.connect(db_main)
+        cur = conn.cursor()
+        try:
+            cur.execute("INSERT INTO `book` VALUES(NULL,?,?,?,?)", (title, author, year, isbn))
+        except sqlite3.Error as e:
+            print(e)
+        print("Insert Book!")
         conn.commit()
         conn.close()
 

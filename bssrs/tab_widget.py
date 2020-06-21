@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QTabWidget, QLin
     QGridLayout, QLabel, QDateEdit
 
 from bssrs.config.dialogs import show_dialog
-from bssrs.config.messages import showdialog,customer_added
+from bssrs.config.messages import showdialog, customer_added
 from bssrs.database.database_main import Database
 
 font18 = QFont("Calibri", 18)
@@ -35,6 +35,7 @@ class MainWindow(QMainWindow):
 
 
 class TabWidget(QTabWidget):
+    db = Database()
 
     def __init__(self, *args, **kwargs):
         super(TabWidget, self).__init__(*args, **kwargs)
@@ -128,6 +129,7 @@ class TabWidget(QTabWidget):
         button_reset = QPushButton('Reset')
         button_reset.setMinimumHeight(50)
         button_reset.setFont(font18)
+        button_reset.clicked.connect(self.view_all_customers)
 
         button_delete = QPushButton('Delete')
         button_delete.setMinimumHeight(50)
@@ -150,9 +152,14 @@ class TabWidget(QTabWidget):
     def save_customer(self):
         fname, lname, father, gender, street, city, pincode, number, email, careof, creation_date = self.edit_fname.text(), self.edit_lname.text(), self.edit_father.text(), self.edit_gender.text(), self.edit_street.text(), self.edit_city.text(), self.edit_pincode.text(), self.edit_number.text(), self.edit_email.text(), self.edit_careof.text(), self.edit_creation_date.text()
         print(fname, lname, father, gender, street, city, pincode, number, email, careof, creation_date)
-        db = Database()
-        db.insert_customer(fname, lname, father, gender, street, city, pincode, number, email, careof, creation_date)
+        self.db.insert_customer(fname, lname, father, gender, street, city, pincode, number, email, careof,
+                                creation_date)
         return customer_added(self, fname, lname, creation_date)
+
+    def view_all_customers(self):
+        m = TabWidget.db.view_all_customers()
+        for x in m:
+            print(x)
 
     def tab2ui(self):
         return working_soon(self)

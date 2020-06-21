@@ -1,7 +1,7 @@
 import sys
 
 from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QMainWindow, QApplication, QStyleFactory
+from PyQt5.QtWidgets import QMainWindow, QApplication, QStyleFactory,QDesktopWidget
 from qtpy import PYQT5
 
 from bssrs.config.base import get_image_path
@@ -9,6 +9,7 @@ from bssrs.layout import gui_layout
 from bssrs.menubar import MenuBar
 from bssrs.status_bar import status_bar
 from bssrs.toolbar import tool_bar
+
 
 
 class MainWindow(QMainWindow):
