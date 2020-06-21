@@ -31,19 +31,8 @@ setup(
 
     keywords='sample setuptools development',
 
-    # When your source code is in a subdirectory under the project root, e.g.
-    # `BSSRS/`, it is necessary to specify the `package_dir` argument.
     package_dir={'': 'BSSRS'},  # Optional
 
-    # You can just specify package directories manually here if your project is
-    # simple. Or you can use find_packages().
-    #
-    # Alternatively, if you just want to distribute a single Python file, use
-    # the `py_modules` argument instead as follows, which will expect a file
-    # called `my_module.py` to exist:
-    #
-    #   py_modules=["my_module"],
-    #
     packages=find_packages(where='BSSRS'),
 
     python_requires='>=3.7, <4',
@@ -57,21 +46,12 @@ setup(
         'test': ['pytest'],
     },
 
-    # If there are data files included in your packages that need to be
-    # installed, specify them here.
     package_data={  # Optional
         'sample': ['package_data.dat'],
     },
 
     data_files=[('my_data', ['data/data_file'])],  # Optional
 
-    # To provide executable scripts, use entry points in preference to the
-    # "scripts" keyword. Entry points provide cross-platform support and allow
-    # `pip` to create the appropriate form of executable for the target
-    # platform.
-    #
-    # For example, the following would provide a command called `sample` which
-    # executes the function `main` from this package when invoked:
     entry_points={  # Optional
         'console_scripts': [
             'sample=sample:main',

@@ -139,12 +139,14 @@ dmypy.json
 cython_debug/
 
 #vsCode
+/.vscode/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
+.pytest_cache
 
 # Local History for Visual Studio Code
 .history/

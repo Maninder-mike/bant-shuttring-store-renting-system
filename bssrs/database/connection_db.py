@@ -21,8 +21,19 @@ def create_table(conn, create_table_sql):
         print(e)
 
 
-def create_project(conn, project):
-    sql = ''' INSERT INTO `projects` (name,begin_date,end_date) VALUES(?,?,?) '''
+def create_customer(conn, project):
+    sql = '''INSERT INTO `customer` (
+    fname, 
+    lname, 
+    father, 
+    gender, 
+    street, 
+    city, 
+    pincode, 
+    number, 
+    email, 
+    careof
+    ) VALUES(?,?,?,?,?,?,?,?,?,?) '''
     cur = conn.cursor()
     cur.execute(sql, project)
     return cur.lastrowid
@@ -50,7 +61,7 @@ def delete_task(conn, id):
 
 
 def delete_projects(conn, id):
-    sql = 'DELETE FROM `projects` WHERE id=?'
+    sql = 'DELETE FROM `customer` WHERE id=?'
     cur = conn.cursor()
     cur.execute(sql, (id,))
     conn.commit()
@@ -64,7 +75,7 @@ def delete_all_tasks(conn):
 
 
 def delete_all_projects(conn):
-    sql = 'DELETE FROM `projects`'
+    sql = 'DELETE FROM `customer`'
     cur = conn.cursor()
     cur.execute(sql)
     conn.commit()
@@ -91,11 +102,18 @@ def select_task_by_priority(conn, priority):
 
 
 def main():
-    sql_create_projects_table = """ CREATE TABLE IF NOT EXISTS projects (
+    sql_create_projects_table = """ CREATE TABLE IF NOT EXISTS customer (
                                         id integer PRIMARY KEY,
-                                        name text NOT NULL,
-                                        begin_date text,
-                                        end_date text
+                                        fname text NOT NUlL,
+                                        lname text NOT NUlL,
+                                        father text NOT NUlL,
+                                        gender text NOT NUlL,
+                                        street text NOT NUlL,
+                                        city text NOT NUlL,
+                                        pincode text NOT NUlL,
+                                        number text NOT NUlL,
+                                        email text NOT NUlL,
+                                        careof text NOT NUlL
                                     ); """
 
     sql_create_tasks_table = """CREATE TABLE IF NOT EXISTS tasks (
@@ -106,7 +124,7 @@ def main():
                                     project_id integer NOT NULL,
                                     begin_date text NOT NULL,
                                     end_date text NOT NULL,
-                                    FOREIGN KEY (project_id) REFERENCES projects (id)
+                                    FOREIGN KEY (project_id) REFERENCES customer (id)
                                 );"""
 
     # create a database connection
@@ -114,7 +132,7 @@ def main():
 
     # create tables
     if conn is not None:
-        # create projects table
+        # create customer table
         create_table(conn, sql_create_projects_table)
 
         # create tasks table
@@ -124,14 +142,12 @@ def main():
 
     with conn:
         # create a new project
-        project = ('Cool App with SQLite & Python', '2015-01-01', '2015-01-30')
-        project1 = ('Mike', '2020-01-01', '2020-01-30')
-        project122 = create_project(conn, project)
-        project_id = create_project(conn, project1)
+        project = ('maninder', 'singh', 'bantsingh', 'male', 'cunagraroad', 'patran', '147105', 'mike@gmail.com', 'No one')
+        project = create_customer(conn, project)
 
         # tasks
-        task_1 = ('Analyze the requirements of the app', 1, 1, project_id, '2015-01-01', '2015-01-02')
-        task_2 = ('Confirm with user about the top requirements', 1, 1, project122, '2015-01-03', '2015-01-05')
+        task_1 = ('Analyze the requirements of the app', 1, 1, project, '2015-01-01', '2015-01-02')
+        task_2 = ('Confirm with user about the top requirements', 1, 1, project, '2015-01-03', '2015-01-05')
 
         # create tasks
         create_task(conn, task_1)
@@ -171,4 +187,4 @@ def fetch():
 
 
 if __name__ == '__main__':
-    fetch()
+    main()

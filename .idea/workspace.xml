@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cfbb3344-0f69-4f1c-8c74-baeb258d65f9" name="Default Changelist" comment="" />
+    <list default="true" id="cfbb3344-0f69-4f1c-8c74-baeb258d65f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bssrs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bssrs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/mike.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/mike.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/config/messages.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/config/messages.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/database/connection_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/database/connection_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/database/database_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/database/database_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/database/sqlite.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/dependencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/dependencies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/layout.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/layout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/root_icon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/tab_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/tab_widget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/toolbar.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/toolbar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,46 +32,31 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1c2xkwQwXRDD9aHLdh7t0VGcPlT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/requirements-dev.txt" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mike\Documents\GitHub\BSSRS\bssrs\config" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.connection_db">
-    <configuration name="charts" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="BSSRS" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bssrs/config" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bssrs/config/charts.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="connection_db" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.main (1)">
+    <configuration name="database_main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BSSRS" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -65,7 +68,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bssrs/database/connection_db.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bssrs/database/database_main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="delete (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BSSRS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bssrs/database" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bssrs/database/delete.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -95,7 +119,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BSSRS" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -116,7 +140,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="tab_widget" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BSSRS" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -128,7 +152,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bssrs/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bssrs/tab_widget.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -139,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.connection_db" />
-        <item itemvalue="Python.charts" />
-        <item itemvalue="Python.main (2)" />
+        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.tab_widget" />
+        <item itemvalue="Python.database_main" />
+        <item itemvalue="Python.delete (1)" />
         <item itemvalue="Python.delete2" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -169,6 +193,14 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="482" y="78" key="#JSON/0.0.1366.738@0.0.1366.738" timestamp="1591036164739" />
+    <state x="568" y="232" key="#Notifications" timestamp="1592765747265">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="568" y="232" key="#Notifications/0.0.1366.738@0.0.1366.738" timestamp="1592765747265" />
+    <state x="275" y="10" key="#Plugins" timestamp="1592758242067">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="10" key="#Plugins/0.0.1366.738@0.0.1366.738" timestamp="1592758242067" />
     <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591722620883">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -193,22 +225,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1589748510699" />
-    <state width="1345" height="156" key="GridCell.Tab.0.bottom" timestamp="1592073602960">
+    <state width="1323" height="119" key="GridCell.Tab.0.bottom" timestamp="1592768750039">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="156" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1592073602960" />
-    <state width="1345" height="156" key="GridCell.Tab.0.center" timestamp="1592073602959">
+    <state width="1323" height="119" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1592768750039" />
+    <state width="1323" height="119" key="GridCell.Tab.0.center" timestamp="1592768750038">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="156" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1592073602959" />
-    <state width="1345" height="156" key="GridCell.Tab.0.left" timestamp="1592073602959">
+    <state width="1323" height="119" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1592768750038" />
+    <state width="1323" height="119" key="GridCell.Tab.0.left" timestamp="1592768750038">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="156" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1592073602959" />
-    <state width="1345" height="156" key="GridCell.Tab.0.right" timestamp="1592073602960">
+    <state width="1323" height="119" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1592768750038" />
+    <state width="1323" height="119" key="GridCell.Tab.0.right" timestamp="1592768750038">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="156" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1592073602960" />
+    <state width="1323" height="119" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1592768750038" />
     <state width="1345" height="227" key="GridCell.Tab.1.bottom" timestamp="1591043337448">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -225,10 +257,14 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1345" height="227" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1591043337448" />
-    <state x="283" y="28" key="SettingsEditor" timestamp="1591724114143">
+    <state x="283" y="28" key="SettingsEditor" timestamp="1592758019124">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="283" y="28" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1591724114143" />
+    <state x="283" y="28" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1592758019124" />
+    <state x="526" y="141" key="refactoring.ChangeSignatureDialog" timestamp="1592509982422">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="526" y="141" key="refactoring.ChangeSignatureDialog/0.0.1366.738@0.0.1366.738" timestamp="1592509982422" />
     <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1589896688094">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

@@ -9,7 +9,7 @@ def showdialog(self):
     msg.setInformativeText("This is additional information")
     msg.setWindowTitle("MessageBox demo")
     msg.setDetailedText("this is a long line comment man.")
-    msg.setFixedSize(300,300)
+    msg.setFixedSize(300, 300)
     msg.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
     msg.buttonClicked.connect(msg_btn)
 
@@ -24,3 +24,15 @@ def msg_btn(i):
         print("No is here!")
     else:
         print(i.text())
+
+
+def customer_added(self, fname, lname, date):
+    msg = QMessageBox()
+    msg.setIcon(QMessageBox.Information)
+
+    msg.setText("Customer added")
+    msg.setInformativeText(f"{fname} {lname} is added in database on {date}")
+    msg.setWindowTitle("Added Info")
+    msg.setFixedSize(300, 300)
+    msg.setStandardButtons(QMessageBox.Ok)
+    msg.exec_()

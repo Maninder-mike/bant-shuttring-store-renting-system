@@ -1,7 +1,8 @@
-from PyQt5.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QDockWidget, QListWidget, QTextEdit, QPushButton
-from bssrs.toolbox import ToolBox
-from bssrs.tab_widget import TabWidget, GraphWidget
 from PyQt5.Qt import Qt
+from PyQt5.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QDockWidget, QListWidget, QTextEdit
+
+from bssrs.tab_widget import TabWidget, GraphWidget
+from bssrs.toolbox import ToolBox
 
 
 def gui_layout(self):

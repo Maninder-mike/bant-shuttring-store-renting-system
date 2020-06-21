@@ -1,12 +1,14 @@
 import sys
-from PyQt5.QtWidgets import QMainWindow, QApplication, QStyleFactory
+
 from PyQt5.QtGui import QIcon
-from bssrs.status_bar import status_bar
+from PyQt5.QtWidgets import QMainWindow, QApplication, QStyleFactory
+from qtpy import PYQT5
+
+from bssrs.config.base import get_image_path
 from bssrs.layout import gui_layout
 from bssrs.menubar import MenuBar
-from bssrs.toolbar import ToolBar
-from qtpy import PYQT5
-from bssrs.config.base import get_image_path
+from bssrs.status_bar import status_bar
+from bssrs.toolbar import tool_bar
 
 
 class MainWindow(QMainWindow):
@@ -25,13 +27,10 @@ class MainWindow(QMainWindow):
         gui_layout(self)
         status_bar(self)
         MenuBar.menu_bar(self)
-        ToolBar.tool_bar(self)
+        tool_bar(self)
         self.show()
 
     def show_status_message(self, message, timeout):
-        """
-        Show a status message in bssrs Main Window.
-        """
         status = self.statusBar()
         if status.isVisible():
             status.showMessage(message, timeout)
