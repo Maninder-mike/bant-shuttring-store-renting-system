@@ -1,24 +1,21 @@
 import os
 import sqlite3
 
-from PyQt5.QtWidgets import QMessageBox
-
-db_main = os.path.join(os.path.dirname(__file__), "timegm.db")
+db_main = os.path.join(os.path.dirname(__file__), "database_main.db")
 
 
 class Database:
     client = """
-        id INTEGER PRIMARY KEY,
+        id INT PRIMARY KEY,
         name TEXT NOT NULL,
-        PRIORITY INTEGER,
-        project_id INTEGER NOT NULL,
-        status_id INTEGER NOT NULL,
+        PRIORITY INT,
+        project_id INT NOT NULL,
+        status_id INT NOT NULL,
         begin_date DATE NOT NULL,
         end_date DATE NOT NULL,
         FOREIGN KEY (`project_id`) REFERENCES project(`id`)"""
 
     customer = """
-    id INTEGER PRIMARY KEY,
     fname	TEXT NOT NULL,
     lname	TEXT NOT NULL,
     father TEXT,
@@ -26,36 +23,63 @@ class Database:
     street TEXT,
     city TEXT NOT NULL,
     pincode TEXT,
-    number INTEGER NOT NULL,
+    number INT PRIMARY KEY NOT NULL UNIQUE,
     email TEXT,
     careof TEXT,
-    creation_date timestamp,
-    UNIQUE (number)"""
+    creation_date DATETIME"""
 
-    book = """id INTEGER PRIMARY KEY,
-    title TEXT,
+    item = """
+    item_id SMALLINT UNSIGNED NOT NULL,
+    title VARCHAR(128) NOT NULL,
+    description TEXT DEFAULT NULL,
+    rental_duration TINYINT UNSIGNED NOT NULL DEFAULT 3,
+    rental_rate DECIMAL(4,2) NOT NULL DEFAULT 4.99,
+    replacement_cost DECIMAL(5,2) NOT NULL DEFAULT 19.99,
+    last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY  (item_id)"""
+
+    payment = """
+    payment_id SMALLINT UNSIGNED NOT NULL,
+    customer_id SMALLINT UNSIGNED NOT NULL,
+    staff_id TINYINT UNSIGNED NOT NULL,
+    rental_id INT DEFAULT NULL,
+    amount DECIMAL(5,2) NOT NULL,
+    payment_date DATETIME NOT NULL,
+    last_update TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY  (payment_id)"""
+
+    staff = """
+    staff_id TINYINT UNSIGNED NOT NULL,
+    first_name VARCHAR(45) NOT NULL,
+    last_name VARCHAR(45) NOT NULL,
+    address_id SMALLINT UNSIGNED NOT NULL,
+    picture BLOB DEFAULT NULL,
+    email VARCHAR(50) DEFAULT NULL,
+    store_id TINYINT UNSIGNED NOT NULL,
+    active BOOLEAN NOT NULL DEFAULT TRUE,
+    username VARCHAR(16) NOT NULL,
+    password VARCHAR(40) DEFAULT NULL,
+    last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY  (staff_id)"""
+
+    book = """
+    title TEXT UNIQUE,
     author TEXT,
-    year INTEGER,
-    isbn INTEGER,
-    UNIQUE (title)"""
+    year INT,
+    isbn INT PRIMARY KEY UNIQUE"""
 
     def __init__(self):
         super(Database, self).__init__()
         self.connect()
-
-    def garders(self):
-        for x in range(7, 21):
-            return f"Garder-{x}"
-
-    def error(self):
-        message = QMessageBox.information("title", "this is not allows")
-        return message
 
     def connect(self):
         conn = sqlite3.connect(db_main)
         cur = conn.cursor()
         cur.execute(f"CREATE TABLE IF NOT EXISTS `book` ({Database.book})")
         cur.execute(f"CREATE TABLE IF NOT EXISTS `customer` ({Database.customer})")
+        cur.execute(f"CREATE TABLE IF NOT EXISTS `staff` ({Database.staff})")
+        cur.execute(f"CREATE TABLE IF NOT EXISTS `payment` ({Database.payment})")
+        cur.execute(f"CREATE TABLE IF NOT EXISTS `item` ({Database.item})")
         conn.commit()
         conn.close()
 
@@ -64,7 +88,7 @@ class Database:
         conn = sqlite3.connect(db_main)
         cur = conn.cursor()
         try:
-            cur.execute("INSERT INTO `customer` VALUES(NULL,?,?,?,?,?,?,?,?,?,?,?)",
+            cur.execute("INSERT INTO `customer` VALUES(?,?,?,?,?,?,?,?,?,?,?)",
                         (fname, lname, father, gender, street, city, pincode, number, email, careof, creation_date))
         except sqlite3.Error as e:
             print(e)
@@ -94,7 +118,7 @@ class Database:
         conn = sqlite3.connect(db_main)
         cur = conn.cursor()
         try:
-            cur.execute("INSERT INTO `book` VALUES(NULL,?,?,?,?)", (title, author, year, isbn))
+            cur.execute("INSERT INTO `book` VALUES(?,?,?,?)", (title, author, year, isbn))
         except sqlite3.Error as e:
             print(e)
         print("Insert Book!")
@@ -122,6 +146,7 @@ class Database:
         conn = sqlite3.connect(db_main)
         cur = conn.cursor()
         cur.execute("DELETE FROM book WHERE id = ?", (id,))
+        print("Value Deleted")
         conn.commit()
         conn.close()
 

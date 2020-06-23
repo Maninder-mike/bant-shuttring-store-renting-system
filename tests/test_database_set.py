@@ -1,2 +1,2 @@
-from bssrs.database.database_connect import connect
+from bssrs.database.database_main import Database
 import sqlite3

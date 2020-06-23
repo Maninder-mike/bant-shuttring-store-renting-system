@@ -1,15 +1,21 @@
 import datetime
 import sys
 
-from PyQt5.QtGui import QFont
+from PyQt5.QtGui import QFont, QStandardItemModel, QStandardItem
 from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QTabWidget, QLineEdit, QHBoxLayout, QPushButton, \
-    QGridLayout, QLabel, QDateEdit
+    QGridLayout, QLabel, QDateEdit, QComboBox
 
 from bssrs.config.dialogs import show_dialog
 from bssrs.config.messages import showdialog, customer_added
 from bssrs.database.database_main import Database
 
 font18 = QFont("Calibri", 18)
+
+data = {
+    'Garder': ["7'", "8'", "9'"],
+    'Plates': ["3'-6\"","3'-9\"","3'-12\""],
+    'Texas': ['Austin', 'Houston', 'San Antonio']
+}
 
 
 def working_soon(self):
@@ -162,7 +168,59 @@ class TabWidget(QTabWidget):
             print(x)
 
     def tab2ui(self):
-        return working_soon(self)
+        main_layout = QHBoxLayout()
+
+        self.model = QStandardItemModel()
+
+        self.lbl = QLabel("1.")
+        self.lbl.setFont(font18)
+        self.lbl.setMaximumWidth(30)
+
+        self.edit_qty = QLineEdit()
+        self.edit_qty.setFont(font18)
+        self.edit_qty.setMaximumWidth(50)
+
+        # states
+        self.comboStates = QComboBox()
+        self.comboStates.setFont(font18)
+        self.comboStates.setModel(self.model)
+
+        # cities
+        self.comboCities = QComboBox()
+        self.comboCities.setFont(font18)
+        self.comboCities.setModel(self.model)
+
+        self.btn_ok = QPushButton("OK")
+        self.btn_ok.setFont(font18)
+        self.btn_ok.setMaximumWidth(150)
+
+        self.btn_cancel = QPushButton("Cancel")
+        self.btn_cancel.setFont(font18)
+        self.btn_cancel.setMaximumWidth(150)
+
+        # add data
+        for k, v in data.items():
+            state = QStandardItem(k)
+            self.model.appendRow(state)
+            for value in v:
+                city = QStandardItem(value)
+                state.appendRow(city)
+
+        self.comboStates.currentIndexChanged.connect(self.updateStateCombo)
+        self.updateStateCombo(0)
+
+        main_layout.addWidget(self.lbl)
+        main_layout.addWidget(self.edit_qty)
+        main_layout.addWidget(self.comboStates)
+        main_layout.addWidget(self.comboCities)
+        main_layout.addWidget(self.btn_ok)
+        main_layout.addWidget(self.btn_cancel)
+        self.tab2.setLayout(main_layout)
+
+    def updateStateCombo(self, index):
+        indx = self.model.index(index, 0, self.comboStates.rootModelIndex())
+        self.comboCities.setRootModelIndex(indx)
+        self.comboCities.setCurrentIndex(0)
 
     def tab3ui(self):
         return working_soon(self)
