@@ -14,6 +14,11 @@ class StatusBar(QMainWindow):
         bar = self.statusBar()
         bar.showMessage('Welcome to the Application', 5000)
 
+    def show_status_message(self, message, timeout):
+        status = self.statusBar()
+        if status.isVisible():
+            status.showMessage(message, timeout)
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

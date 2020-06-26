@@ -1,15 +1,9 @@
-from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget
 import sys
 
+from PyQt5.QtWidgets import QMainWindow, QApplication
 
-class MainWindow(QMainWindow):
-    def __init__(self, *args, **kwargs):
-        super(MainWindow, self).__init__(*args, **kwargs)
-
-        self.menubar = MenuBar()
-        self.setCentralWidget(self.menubar)
-
-        self.show()
+from bssrs.config.dialogs import version_info
+from bssrs.config.preferences import TabWidget
 
 
 class MenuBar(QMainWindow):
@@ -17,13 +11,14 @@ class MenuBar(QMainWindow):
         super(MenuBar, self).__init__(*args, **kwargs)
 
         self.menubar_one()
+        self.show()
 
     def menubar_one(self):
 
         self.file_menu()
         self.edit_menu()
+        self.view_menu()
         self.tool_menu()
-        self.window_menu()
         self.help_menu()
         self.menu_bar()
 
@@ -33,10 +28,10 @@ class MenuBar(QMainWindow):
     def edit_menu(self):
         pass
 
-    def tool_menu(self):
+    def view_menu(self):
         pass
 
-    def window_menu(self):
+    def tool_menu(self):
         pass
 
     def help_menu(self):
@@ -57,30 +52,30 @@ class MenuBar(QMainWindow):
         file_menu.addAction('Exit', self.close)
 
         edit_menu = menu_bar.addMenu('Edit')
-        edit_menu.addAction('Undo')
+        edit_menu.addAction('Preferences', TabWidget)
 
-        window_menu = menu_bar.addMenu('Window')
-        window_menu.addAction('Themes')
+        view_menu = menu_bar.addMenu('View')
+        view_menu.addAction('Plot')
+        view_menu.addAction('DB Schema')
+        view_menu.addAction("Today's Income")
+        view_menu.addSeparator()
+        view_menu.addAction('Show Dockbar')
+        view_menu.addAction('Show Contacts Window')
+        view_menu.addAction('Show Graph Window')
+        view_menu.addSeparator()
+        view_menu.addAction('Restore Default')
+
+        tools_menu = menu_bar.addMenu('Tools')
+        tools_menu.addAction('Themes')
 
         help_menu = menu_bar.addMenu('Help')
-        help_menu.addAction('Info')
+        help_menu.addAction('Feedback')
+        help_menu.addAction('Check Update')
+        help_menu.addSeparator()
+        help_menu.addAction('Version', version_info)
 
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    w = MainWindow()
+    w = MenuBar()
     sys.exit(app.exec_())
-
-# layout = QVBoxLayout()
-#        bar = self.menuBar()
-#        file = bar.addMenu('file')
-#        file.addAction('New')
-#
-#        save = QAction('Save', self)
-#        save.setShortcut('Ctrl+S')
-#        file.addAction(save)
-#
-#        edit = file.addMenu('Edit')
-#        edit.addAction('Copy')
-#        edit.addAction('Paste')
-#        self.setLayout(layout)

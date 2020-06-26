@@ -2,7 +2,7 @@ import sys
 
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QToolBox, QLabel, QMainWindow, QLineEdit, QTextEdit, \
     QPushButton
-from random import randint
+
 
 class MainWindow(QMainWindow):
     def __init__(self, *args, **kwargs):

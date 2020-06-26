@@ -13,7 +13,7 @@ font18 = QFont("Calibri", 18)
 
 data = {
     'Garder': ["7'", "8'", "9'"],
-    'Plates': ["3'-6\"","3'-9\"","3'-12\""],
+    'Plates': ["3'-6\"", "3'-9\"", "3'-12\""],
     'Texas': ['Austin', 'Houston', 'San Antonio']
 }
 
@@ -168,6 +168,21 @@ class TabWidget(QTabWidget):
             print(x)
 
     def tab2ui(self):
+
+        def check_disable():
+            if self.edit_rate.text() and self.edit_qty.text():
+                self.btn_ok.setEnabled(True)
+            else:
+                self.btn_ok.setEnabled(False)
+
+        def change_lbl():
+            from random import randint
+
+            def random121():
+                return randint(0, 20)
+
+            self.lbl.setText(str(random121()))
+
         main_layout = QHBoxLayout()
 
         self.model = QStandardItemModel()
@@ -190,9 +205,18 @@ class TabWidget(QTabWidget):
         self.comboCities.setFont(font18)
         self.comboCities.setModel(self.model)
 
+        self.edit_rate = QLineEdit()
+        self.edit_rate.setFont(font18)
+        self.edit_rate.setText("1.5")
+        self.edit_rate.setMaximumWidth(50)
+
+        self.edit_qty.textChanged.connect(check_disable)
+        self.edit_rate.textChanged.connect(check_disable)
+
         self.btn_ok = QPushButton("OK")
         self.btn_ok.setFont(font18)
         self.btn_ok.setMaximumWidth(150)
+        self.btn_ok.clicked.connect(change_lbl)
 
         self.btn_cancel = QPushButton("Cancel")
         self.btn_cancel.setFont(font18)
@@ -213,6 +237,7 @@ class TabWidget(QTabWidget):
         main_layout.addWidget(self.edit_qty)
         main_layout.addWidget(self.comboStates)
         main_layout.addWidget(self.comboCities)
+        main_layout.addWidget(self.edit_rate)
         main_layout.addWidget(self.btn_ok)
         main_layout.addWidget(self.btn_cancel)
         self.tab2.setLayout(main_layout)

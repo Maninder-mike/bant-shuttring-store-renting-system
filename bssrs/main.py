@@ -15,6 +15,7 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__(*args, **kwargs)
 
         self.setWindowTitle('Bant Shuttering Store Renting System')
+
         self.setMinimumSize(1350, 700)
 
         app_icon = QIcon(get_image_path("root_icon.ico"))
@@ -28,11 +29,6 @@ class MainWindow(QMainWindow):
         MenuBar.menu_bar(self)
         tool_bar(self)
         self.show()
-
-    def show_status_message(self, message, timeout):
-        status = self.statusBar()
-        if status.isVisible():
-            status.showMessage(message, timeout)
 
 
 if __name__ == '__main__':
