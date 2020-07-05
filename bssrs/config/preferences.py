@@ -24,12 +24,12 @@ def working_soon(self):
         container) or self.tab5.setLayout(container)
 
 
-class MainWindow(QMainWindow):
+class MainWindow(QWidget):
     def __init__(self, *args, **kwargs):
         super(MainWindow, self).__init__(*args, **kwargs)
 
         self.table = TabWidget(self)
-        self.setCentralWidget(self.table)
+        # self.setCentralWidget(self.table)
 
         self.show()
 

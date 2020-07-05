@@ -7,7 +7,6 @@ from bssrs.config.base import get_image_path
 from bssrs.layout import gui_layout
 from bssrs.menubar import MenuBar
 from bssrs.status_bar import StatusBar
-from bssrs.toolbar import tool_bar
 
 
 class MainWindow(QMainWindow):
@@ -27,7 +26,7 @@ class MainWindow(QMainWindow):
         gui_layout(self)
         StatusBar.status_bar(self)
         MenuBar.menu_bar(self)
-        tool_bar(self)
+        MenuBar.tool_bar(self)
         self.show()
 
 

@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfbb3344-0f69-4f1c-8c74-baeb258d65f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bssrs/config/preferences.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bssrs/api/menus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bssrs/config/dialogs.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/config/dialogs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/config/preferences.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/config/preferences.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bssrs/database/database_main.db" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/database/database_main.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/database/database_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/database/database_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/database/working_db.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/layout.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/layout.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bssrs/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bssrs/menubar.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/menubar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bssrs/status_bar.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/status_bar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bssrs/tab_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/tab_widget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/toolbar.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bssrs/toolbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/toolbox.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +31,32 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/dev" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="dev" />
@@ -33,19 +65,24 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1c2xkwQwXRDD9aHLdh7t0VGcPlT" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -53,49 +90,7 @@
       <recent name="C:\Users\mike\Documents\GitHub\BSSRS\bssrs\config" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.preferences">
-    <configuration name="delete" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="BSSRS" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bssrs/database" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bssrs/database/delete.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="dialogs" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="BSSRS" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bssrs/config" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bssrs/config/dialogs.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.main (1)">
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BSSRS" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,6 +104,48 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bssrs/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BSSRS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bssrs/dialog" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bssrs/dialog/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BSSRS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../PyQt-Sqlite-Project-CURD-master" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../PyQt-Sqlite-Project-CURD-master/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -138,7 +175,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="preferences" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="toolbox" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BSSRS" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -146,11 +183,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bssrs/config" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bssrs" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bssrs/config/preferences.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bssrs/toolbox.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -161,11 +198,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.preferences" />
-        <item itemvalue="Python.menubar" />
         <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.delete" />
-        <item itemvalue="Python.dialogs" />
+        <item itemvalue="Python.toolbox" />
+        <item itemvalue="Python.menubar" />
+        <item itemvalue="Python.main (2)" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +217,19 @@
       <option name="presentableId" value="Default" />
       <updated>1589740635413</updated>
     </task>
+    <task id="LOCAL-00001" summary="add dialogs">
+      <created>1593205784054</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1593205784054</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add dialogs" />
+    <option name="LAST_COMMIT_MESSAGE" value="add dialogs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="47" key="#Inspections" timestamp="1592770014023">
@@ -207,10 +256,14 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="443" y="171" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1591358795765" />
-    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592945337543">
+    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593969581490">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1592945337543" />
+    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1593969581490" />
+    <state x="392" y="0" key="#main_(1)" timestamp="1593367645234">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="392" y="0" key="#main_(1)/0.0.1366.738@0.0.1366.738" timestamp="1593367645234" />
     <state x="392" y="0" key="#prime_check" timestamp="1589895945493">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -219,46 +272,54 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="392" y="0" key="#pytest_for_test_main.test_add/0.0.1366.738@0.0.1366.738" timestamp="1589806476076" />
+    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1593205779898">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1593205779898" />
     <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1589748510699">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1589748510699" />
-    <state width="1323" height="145" key="GridCell.Tab.0.bottom" timestamp="1593205653769">
+    <state width="1345" height="137" key="GridCell.Tab.0.bottom" timestamp="1593979190371">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="145" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1593205653769" />
-    <state width="1323" height="145" key="GridCell.Tab.0.center" timestamp="1593205653769">
+    <state width="1345" height="137" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1593979190371" />
+    <state width="1345" height="137" key="GridCell.Tab.0.center" timestamp="1593979190371">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="145" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1593205653769" />
-    <state width="1323" height="145" key="GridCell.Tab.0.left" timestamp="1593205653769">
+    <state width="1345" height="137" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1593979190371" />
+    <state width="1345" height="137" key="GridCell.Tab.0.left" timestamp="1593979190371">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="145" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1593205653769" />
-    <state width="1323" height="145" key="GridCell.Tab.0.right" timestamp="1593205653769">
+    <state width="1345" height="137" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1593979190371" />
+    <state width="1345" height="137" key="GridCell.Tab.0.right" timestamp="1593979190371">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="145" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1593205653769" />
-    <state width="1345" height="227" key="GridCell.Tab.1.bottom" timestamp="1591043337448">
+    <state width="1345" height="137" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1593979190371" />
+    <state width="1345" height="227" key="GridCell.Tab.1.bottom" timestamp="1593833535831">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="227" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1591043337448" />
-    <state width="1345" height="227" key="GridCell.Tab.1.center" timestamp="1591043337447">
+    <state width="1345" height="227" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1593833535831" />
+    <state width="1345" height="227" key="GridCell.Tab.1.center" timestamp="1593833535830">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="227" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1591043337447" />
-    <state width="1345" height="227" key="GridCell.Tab.1.left" timestamp="1591043337447">
+    <state width="1345" height="227" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1593833535830" />
+    <state width="1345" height="227" key="GridCell.Tab.1.left" timestamp="1593833535830">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="227" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1591043337447" />
-    <state width="1345" height="227" key="GridCell.Tab.1.right" timestamp="1591043337448">
+    <state width="1345" height="227" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1593833535830" />
+    <state width="1345" height="227" key="GridCell.Tab.1.right" timestamp="1593833535831">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="227" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1591043337448" />
-    <state x="283" y="28" key="SettingsEditor" timestamp="1593106281529">
+    <state width="1345" height="227" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1593833535831" />
+    <state x="283" y="28" key="SettingsEditor" timestamp="1593373054680">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="283" y="28" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1593106281529" />
+    <state x="283" y="28" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1593373054680" />
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1593205880732">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1593205880732" />
     <state x="526" y="141" key="refactoring.ChangeSignatureDialog" timestamp="1592509982422">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

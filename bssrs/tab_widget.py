@@ -1,7 +1,8 @@
 import datetime
 import sys
 
-from PyQt5.QtGui import QFont, QStandardItemModel, QStandardItem
+from PyQt5.Qt import Qt
+from PyQt5.QtGui import QFont, QStandardItemModel, QStandardItem, QIcon
 from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QTabWidget, QLineEdit, QHBoxLayout, QPushButton, \
     QGridLayout, QLabel, QDateEdit, QComboBox
 
@@ -12,9 +13,8 @@ from bssrs.database.database_main import Database
 font18 = QFont("Calibri", 18)
 
 data = {
-    'Garder': ["7'", "8'", "9'"],
-    'Plates': ["3'-6\"", "3'-9\"", "3'-12\""],
-    'Texas': ['Austin', 'Houston', 'San Antonio']
+    'Garder': ["7'", "8'", "9'", "10'", "11'", "12'", "13'", "14'", "15'", "16'", "17'", "18'", "19'", "20'"],
+    'Plates': ["3'-6\"", "3'-9\"", "3'-12\"", "3'-18\"", "3'-24\"", "4'-6\"", "4'-9\"", "4'-12\"", "4'-18\"", "4'-24\""]
 }
 
 
@@ -46,6 +46,107 @@ class TabWidget(QTabWidget):
     def __init__(self, *args, **kwargs):
         super(TabWidget, self).__init__(*args, **kwargs)
 
+        self.tab1 = QWidget()
+        self.tab2 = QWidget()
+        self.tab3 = QWidget()
+        self.tab4 = QWidget()
+        self.tab5 = QWidget()
+
+        self.addTab(self.tab1, 'Main')
+        self.addTab(self.tab2, 'Contacts')
+        self.addTab(self.tab3, 'Bills')
+        self.addTab(self.tab4, 'Pending Items')
+        self.addTab(self.tab5, 'Offers')
+
+        self.tab1ui()
+        self.tab2ui()
+        self.tab3ui()
+        self.tab4ui()
+        self.tab5ui()
+
+    def tab1ui(self):
+
+        def check_disable():
+            if self.edit_rate.text() and self.edit_qty.text():
+                self.btn_ok.setEnabled(True)
+            else:
+                self.btn_ok.setEnabled(False)
+
+        def change_lbl():
+            from random import randint
+
+            def random121():
+                return randint(0, 20)
+
+            self.lbl.setText(str(random121()))
+
+        main_layout = QHBoxLayout()
+        main_layout.setAlignment(Qt.AlignTop)
+
+        self.model = QStandardItemModel()
+
+        self.lbl = QLabel("1.")
+        self.lbl.setFont(font18)
+        self.lbl.setMaximumWidth(30)
+
+        self.edit_qty = QLineEdit()
+        self.edit_qty.setFont(font18)
+        self.edit_qty.setMaximumWidth(50)
+
+        # states
+        self.comboStates = QComboBox()
+        self.comboStates.setFont(font18)
+        self.comboStates.setModel(self.model)
+
+        # cities
+        self.comboCities = QComboBox()
+        self.comboCities.setFont(font18)
+        self.comboCities.setModel(self.model)
+
+        self.edit_rate = QLineEdit()
+        self.edit_rate.setFont(font18)
+        self.edit_rate.setText("1.5")
+        self.edit_rate.setMaximumWidth(50)
+
+        self.edit_qty.textChanged.connect(check_disable)
+        self.edit_rate.textChanged.connect(check_disable)
+
+        self.btn_ok = QPushButton(QIcon("images/ok.ico"), " OK")
+        self.btn_ok.setFont(font18)
+        self.btn_ok.setMaximumWidth(150)
+        self.btn_ok.clicked.connect(change_lbl)
+
+        self.btn_cancel = QPushButton(QIcon("images/cancel.ico"), " Cancel")
+        self.btn_cancel.setFont(font18)
+        self.btn_cancel.setMaximumWidth(150)
+
+        # add data
+        for k, v in data.items():
+            state = QStandardItem(k)
+            self.model.appendRow(state)
+            for value in v:
+                city = QStandardItem(value)
+                state.appendRow(city)
+
+        self.comboStates.currentIndexChanged.connect(self.updateStateCombo)
+        self.updateStateCombo(0)
+
+        main_layout.addWidget(self.lbl)
+        main_layout.addWidget(self.edit_qty)
+        main_layout.addWidget(self.comboStates)
+        main_layout.addWidget(self.comboCities)
+        main_layout.addWidget(self.edit_rate)
+        main_layout.addWidget(self.btn_ok)
+        main_layout.addWidget(self.btn_cancel)
+        self.tab1.setLayout(main_layout)
+
+    def updateStateCombo(self, index):
+        indx = self.model.index(index, 0, self.comboStates.rootModelIndex())
+        self.comboCities.setRootModelIndex(indx)
+        self.comboCities.setCurrentIndex(0)
+
+    def tab2ui(self):
+
         self.edit_fname = QLineEdit()
         self.edit_lname = QLineEdit()
         self.edit_father = QLineEdit()
@@ -58,25 +159,6 @@ class TabWidget(QTabWidget):
         self.edit_careof = QLineEdit()
         self.edit_creation_date = QDateEdit(date=datetime.datetime.today())
 
-        self.tab1 = QWidget()
-        self.tab2 = QWidget()
-        self.tab3 = QWidget()
-        self.tab4 = QWidget()
-        self.tab5 = QWidget()
-
-        self.addTab(self.tab1, 'Contact Details')
-        self.addTab(self.tab2, 'History')
-        self.addTab(self.tab3, 'Bills')
-        self.addTab(self.tab4, 'Pending Items')
-        self.addTab(self.tab5, 'Offers')
-
-        self.tab1ui()
-        self.tab2ui()
-        self.tab3ui()
-        self.tab4ui()
-        self.tab5ui()
-
-    def tab1ui(self):
         container = QGridLayout()
         container.setSpacing(20)
         container.setContentsMargins(10, 10, 10, 10)
@@ -153,7 +235,7 @@ class TabWidget(QTabWidget):
         bottom_layout.layout().addWidget(button_delete)
 
         container.addLayout(bottom_layout, 7, 0, 1, 6)
-        self.tab1.setLayout(container)
+        self.tab2.setLayout(container)
 
     def save_customer(self):
         fname, lname, father, gender, street, city, pincode, number, email, careof, creation_date = self.edit_fname.text(), self.edit_lname.text(), self.edit_father.text(), self.edit_gender.text(), self.edit_street.text(), self.edit_city.text(), self.edit_pincode.text(), self.edit_number.text(), self.edit_email.text(), self.edit_careof.text(), self.edit_creation_date.text()
@@ -166,86 +248,6 @@ class TabWidget(QTabWidget):
         m = TabWidget.db.view_all_customers()
         for x in m:
             print(x)
-
-    def tab2ui(self):
-
-        def check_disable():
-            if self.edit_rate.text() and self.edit_qty.text():
-                self.btn_ok.setEnabled(True)
-            else:
-                self.btn_ok.setEnabled(False)
-
-        def change_lbl():
-            from random import randint
-
-            def random121():
-                return randint(0, 20)
-
-            self.lbl.setText(str(random121()))
-
-        main_layout = QHBoxLayout()
-
-        self.model = QStandardItemModel()
-
-        self.lbl = QLabel("1.")
-        self.lbl.setFont(font18)
-        self.lbl.setMaximumWidth(30)
-
-        self.edit_qty = QLineEdit()
-        self.edit_qty.setFont(font18)
-        self.edit_qty.setMaximumWidth(50)
-
-        # states
-        self.comboStates = QComboBox()
-        self.comboStates.setFont(font18)
-        self.comboStates.setModel(self.model)
-
-        # cities
-        self.comboCities = QComboBox()
-        self.comboCities.setFont(font18)
-        self.comboCities.setModel(self.model)
-
-        self.edit_rate = QLineEdit()
-        self.edit_rate.setFont(font18)
-        self.edit_rate.setText("1.5")
-        self.edit_rate.setMaximumWidth(50)
-
-        self.edit_qty.textChanged.connect(check_disable)
-        self.edit_rate.textChanged.connect(check_disable)
-
-        self.btn_ok = QPushButton("OK")
-        self.btn_ok.setFont(font18)
-        self.btn_ok.setMaximumWidth(150)
-        self.btn_ok.clicked.connect(change_lbl)
-
-        self.btn_cancel = QPushButton("Cancel")
-        self.btn_cancel.setFont(font18)
-        self.btn_cancel.setMaximumWidth(150)
-
-        # add data
-        for k, v in data.items():
-            state = QStandardItem(k)
-            self.model.appendRow(state)
-            for value in v:
-                city = QStandardItem(value)
-                state.appendRow(city)
-
-        self.comboStates.currentIndexChanged.connect(self.updateStateCombo)
-        self.updateStateCombo(0)
-
-        main_layout.addWidget(self.lbl)
-        main_layout.addWidget(self.edit_qty)
-        main_layout.addWidget(self.comboStates)
-        main_layout.addWidget(self.comboCities)
-        main_layout.addWidget(self.edit_rate)
-        main_layout.addWidget(self.btn_ok)
-        main_layout.addWidget(self.btn_cancel)
-        self.tab2.setLayout(main_layout)
-
-    def updateStateCombo(self, index):
-        indx = self.model.index(index, 0, self.comboStates.rootModelIndex())
-        self.comboCities.setRootModelIndex(indx)
-        self.comboCities.setCurrentIndex(0)
 
     def tab3ui(self):
         return working_soon(self)

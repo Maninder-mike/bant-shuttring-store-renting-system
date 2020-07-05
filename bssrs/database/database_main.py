@@ -5,6 +5,7 @@ db_main = os.path.join(os.path.dirname(__file__), "database_main.db")
 
 
 class Database:
+
     client = """
         id INT PRIMARY KEY,
         name TEXT NOT NULL,
@@ -30,9 +31,9 @@ class Database:
 
     item = """
     item_id SMALLINT UNSIGNED NOT NULL,
-    title VARCHAR(128) NOT NULL,
+    title VARCHAR(20) NOT NULL,
     description TEXT DEFAULT NULL,
-    rental_duration TINYINT UNSIGNED NOT NULL DEFAULT 3,
+    rental_duration TINYINT UNSIGNED NOT NULL DEFAULT 14,
     rental_rate DECIMAL(4,2) NOT NULL DEFAULT 4.99,
     replacement_cost DECIMAL(5,2) NOT NULL DEFAULT 19.99,
     last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -142,10 +143,10 @@ class Database:
         conn.close()
         return rows
 
-    def delete(self, id):
+    def delete(self, _id):
         conn = sqlite3.connect(db_main)
         cur = conn.cursor()
-        cur.execute("DELETE FROM book WHERE id = ?", (id,))
+        cur.execute("DELETE FROM book WHERE id = ?", (_id,))
         print("Value Deleted")
         conn.commit()
         conn.close()

@@ -1,5 +1,6 @@
 import sys
-
+from PyQt5.Qt import Qt
+from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QToolBox, QLabel, QMainWindow, QLineEdit, QTextEdit, \
     QPushButton
 
@@ -20,8 +21,12 @@ class ToolBox(QWidget):
 
         layout = QVBoxLayout()
         toolbox = QToolBox()
+        layout.setAlignment(Qt.AlignLeft)
+        toolbox.setMaximumWidth(300)
 
         layout.addWidget(toolbox)
+
+        folder = QIcon("images/imageres.ico")
 
         w1 = QWidget()
         layout1 = QVBoxLayout()
@@ -40,7 +45,7 @@ class ToolBox(QWidget):
         layout1.addWidget(QLabel("Garder 19'"))
         layout1.addWidget(QLabel("Garder 20'"))
         w1.setLayout(layout1)
-        toolbox.addItem(w1, 'Garder')
+        toolbox.addItem(w1, folder,'Garder')
 
         w2 = QWidget()
         layout1 = QVBoxLayout()
@@ -55,7 +60,7 @@ class ToolBox(QWidget):
         layout1.addWidget(QLabel("Plates 4'-15\""))
         layout1.addWidget(QLabel("Plates 4'-18\""))
         w2.setLayout(layout1)
-        toolbox.addItem(w2, 'Plates')
+        toolbox.addItem(w2, folder,'Plates')
 
         w3 = QWidget()
         layout1 = QVBoxLayout()
@@ -79,7 +84,7 @@ class ToolBox(QWidget):
         layout1.addWidget(QLabel("Spota 24'"))
         layout1.addWidget(QLabel("Spota 25'"))
         w3.setLayout(layout1)
-        toolbox.addItem(w3, 'Spota')
+        toolbox.addItem(w3, folder,'Spota')
 
         # tab X
         w = QWidget()

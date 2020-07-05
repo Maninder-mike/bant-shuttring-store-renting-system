@@ -41,3 +41,19 @@ E
 bssrs/config/utils.py,7\6\76d0efdc239306b2f2e58de7cd98d47be52aa380
 C
 bssrs/status_bar.py,9\f\9f4a7723d6e28015b1b25c7f21e3f81204bb563f
+H
+bssrs/config/__init__.py,9\0\90e7b919c4099f2e11331ad16231060a4ada7a79
+A
+bssrs/__init__.py,1\f\1fd6bed6e139effc7a929dfb7580816bd9974d01
+K
+bssrs/config/preferences.py,d\e\def642dd08a0343310ae0dda01d6b2951baa5e23
+B
+bssrs/api/menus.py,4\8\48ccd05386e556a5cf519683947dd418224a66c6
+@
+bssrs/toolbar.py,6\4\64f0f6691872e48429cb58c9bac6f8d3849abc49
+H
+bssrs/database/cls_db.py,4\c\4c82c22ee918a06727500bb267d5fff70feb6a4a
+O
+bssrs/database/connection_db.py,5\4\54370e1e867ba789a2c93d7c0813af87095cf12b
+D
+bssrs/dialog/main.py,f\c\fcabf27d082b6b9de93e3f3c6b91f9eb2ee41046

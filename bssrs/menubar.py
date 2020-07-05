@@ -1,81 +1,142 @@
 import sys
 
-from PyQt5.QtWidgets import QMainWindow, QApplication
-
-from bssrs.config.dialogs import version_info
-from bssrs.config.preferences import TabWidget
+from PyQt5.QtCore import QSize, Qt
+from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QApplication, QAction, QCompleter, QLineEdit, QMainWindow, QMessageBox, QToolBar, QLayout
+from bssrs import __version__
 
 
 class MenuBar(QMainWindow):
-    def __init__(self, *args, **kwargs):
-        super(MenuBar, self).__init__(*args, **kwargs)
+    def __init__(self):
+        super(MenuBar, self).__init__()
 
-        self.menubar_one()
-        self.show()
-
-    def menubar_one(self):
-
-        self.file_menu()
-        self.edit_menu()
-        self.view_menu()
-        self.tool_menu()
-        self.help_menu()
         self.menu_bar()
-
-    def file_menu(self):
-        pass
-
-    def edit_menu(self):
-        pass
-
-    def view_menu(self):
-        pass
-
-    def tool_menu(self):
-        pass
-
-    def help_menu(self):
-        pass
-
-    def toggle_menu(self, state):
-        if state:
-            self.status_bar().show()
-        else:
-            self.status_bar().hide()
+        self.tool_bar()
 
     def menu_bar(self):
-        menu_bar = self.menuBar()
-        file_menu = menu_bar.addMenu('File')
-        file_menu.addAction('Open')
-        file_menu.addAction('Save')
+        file_menu = self.menuBar().addMenu("&File")
+        edit_menu = self.menuBar().addMenu("&Edit")
+        view_menu = self.menuBar().addMenu("&View")
+        tools_menu = self.menuBar().addMenu("&Tools")
+        help_menu = self.menuBar().addMenu("&Help")
+
+        # ======== File ============
+        file = QAction("File", self)
+        file_menu.addAction(file)
+
+        _open = QAction("Open", self)
+        file_menu.addAction(_open)
+
+        save = QAction(QIcon("images/add.png"), "Save", self)
+        file_menu.addAction(save)
         file_menu.addSeparator()
-        file_menu.addAction('Exit', self.close)
 
-        edit_menu = menu_bar.addMenu('Edit')
-        edit_menu.addAction('Preferences', TabWidget)
+        _exit = QAction(QIcon("images/exit.png"), "Exit", self)
+        _exit.triggered.connect(self.close)
+        file_menu.addAction(_exit)
 
-        view_menu = menu_bar.addMenu('View')
-        view_menu.addAction('Plot')
-        view_menu.addAction('DB Schema')
-        view_menu.addAction("Today's Income")
+        # ======== Edit ============
+        preferences = QAction(QIcon("images/setting.png"), "Preferences", self)
+        edit_menu.addAction(preferences)
+
+        # ======== View ============
+        plot = QAction(QIcon("images/pie.png"), "Plot", self)
+        view_menu.addAction(plot)
+
+        schema = QAction(QIcon("images/database.png"), "DB Schema", self)
+        view_menu.addAction(schema)
+
+        tincome = QAction(QIcon("images/notes.png"), "Today's Income", self)
+        view_menu.addAction(tincome)
+
         view_menu.addSeparator()
-        view_menu.addAction('Show Dockbar')
-        view_menu.addAction('Show Contacts Window')
-        view_menu.addAction('Show Graph Window')
+
+        dockbar = QAction(QIcon("images/folder.png"), "Show Dockbar", self)
+        view_menu.addAction(dockbar)
+
+        cwindow = QAction(QIcon("images/user.png"), "Show Contacts Window", self)
+        view_menu.addAction(cwindow)
+
+        gwindow = QAction(QIcon("images/graph.png"), "Show Graph Window", self)
+        view_menu.addAction(gwindow)
+
         view_menu.addSeparator()
-        view_menu.addAction('Restore Default')
 
-        tools_menu = menu_bar.addMenu('Tools')
-        tools_menu.addAction('Themes')
+        rdefault = QAction(QIcon("images/setting.png"), "Restore Default", self)
+        view_menu.addAction(rdefault)
 
-        help_menu = menu_bar.addMenu('Help')
-        help_menu.addAction('Feedback')
-        help_menu.addAction('Check Update')
+        # ======== Tools ============
+        themes = QAction(QIcon("images/theme.ico"), "Themes", self)
+        tools_menu.addAction(themes)
+
+        # ======== Help ============
+        feedback = QAction(QIcon("images/feedback.png"), "Feedback", self)
+        help_menu.addAction(feedback)
+
+        check_update = QAction(QIcon("images/update.png"), "Check Update", self)
+        help_menu.addAction(check_update)
+
         help_menu.addSeparator()
-        help_menu.addAction('Version', version_info)
+
+        version = QAction(QIcon("images/version.ico"), "Version", self)
+        # version.triggered.connect(self.version)
+        help_menu.addAction(version)
+
+    def tool_bar(self):
+        toolbar = QToolBar()
+        toolbar.setMovable(False)
+        toolbar.setIconSize(QSize(30, 30))
+        self.addToolBar(toolbar)
+
+        btn_add = QAction(QIcon("images/add.png"), "Add Customer", self)
+        btn_add.setStatusTip("Add Customer")
+        toolbar.addAction(btn_add)
+
+        btn_edit = QAction(QIcon("images/edit.png"), "Edit Customer", self)
+        btn_edit.setStatusTip("Edit Customer")
+        toolbar.addAction(btn_edit)
+
+        btn_search = QAction(QIcon("images/Search.png"), "Search Customer", self)
+        btn_search.setStatusTip("Search Customer")
+        toolbar.addAction(btn_search)
+
+        btn_delete = QAction(QIcon("images/garbage.png"), "Delete Customer", self)
+        btn_delete.setStatusTip("Delete Customer")
+        toolbar.addAction(btn_delete)
+
+        toolbar.addSeparator()
+
+
+        #
+        # view_toolbar = self.addToolBar('View')
+        # view_toolbar.addAction('Themes')
+        # view_toolbar.addAction('Recent Files')
+        # view_toolbar.addAction('Location')
+        # view_toolbar.addAction('Main DB')
+        # view_toolbar.addSeparator()
+        #
+        # sample = ["Apple", "Alps", "Berry", "Cherry"]
+        # completer = QCompleter(sample)
+        #
+        # search_toolbar = self.addToolBar('Search')
+        # search = QLineEdit()
+        # search_toolbar.addWidget(search)
+        # search.setCompleter(completer)
+        #
+        # search_toolbar.setFixedWidth(300)
+        # search_toolbar.setToolTip("Search all data, names, dates, and bills")
+        # search_toolbar.addSeparator()
+        # search_toolbar.addAction("Search")
+
+    def insert(self):
+        print("Inserted")
+
+    def version(self):
+        return QMessageBox.information(self, 'Programme version', __version__)
 
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     w = MenuBar()
+    w.show()
     sys.exit(app.exec_())
