@@ -1,6 +1,5 @@
 from PyQt5.Qt import Qt
-from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QDockWidget, QListWidget, QTextEdit
+from PyQt5.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QDockWidget, QListWidget
 
 from bssrs.tab_widget import TabWidget, GraphWidget
 from bssrs.toolbox import ToolBox

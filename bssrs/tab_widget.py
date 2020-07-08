@@ -6,7 +6,7 @@ from PyQt5.QtGui import QFont, QStandardItemModel, QStandardItem, QIcon
 from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QTabWidget, QLineEdit, QHBoxLayout, QPushButton, \
     QGridLayout, QLabel, QDateEdit, QComboBox
 
-from bssrs.config.dialogs import show_dialog
+# from bssrs.config.dialogs import show_dialog
 from bssrs.config.messages import showdialog, customer_added
 from bssrs.database.database_main import Database
 
@@ -222,12 +222,10 @@ class TabWidget(QTabWidget):
         button_delete = QPushButton('Delete')
         button_delete.setMinimumHeight(50)
         button_delete.setFont(font18)
-        button_delete.clicked.connect(showdialog)
 
         button_edit = QPushButton('Edit')
         button_edit.setMinimumHeight(50)
         button_edit.setFont(font18)
-        button_edit.clicked.connect(show_dialog)
 
         bottom_layout.layout().addWidget(button_save)
         bottom_layout.layout().addWidget(button_reset)

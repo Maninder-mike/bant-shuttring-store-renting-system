@@ -1,14 +1,17 @@
 import sys
 
-from PyQt5.QtCore import QSize, Qt
+from PyQt5.QtCore import QSize
 from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QApplication, QAction, QCompleter, QLineEdit, QMainWindow, QMessageBox, QToolBar, QLayout
+from PyQt5.QtWidgets import QApplication, QAction, QMainWindow, QMessageBox, QToolBar, QCompleter, QLineEdit, QGroupBox, \
+    QLabel, QComboBox, QSpinBox, QFormLayout, QVBoxLayout, QDialogButtonBox, QDialog
+
 from bssrs import __version__
+from bssrs.config.dialogs import Dialogs
 
 
 class MenuBar(QMainWindow):
-    def __init__(self):
-        super(MenuBar, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(MenuBar, self).__init__(*args, **kwargs)
 
         self.menu_bar()
         self.tool_bar()
@@ -79,7 +82,7 @@ class MenuBar(QMainWindow):
         help_menu.addSeparator()
 
         version = QAction(QIcon("images/version.ico"), "Version", self)
-        # version.triggered.connect(self.version)
+        version.triggered.connect(Dialogs.version_info)
         help_menu.addAction(version)
 
     def tool_bar(self):
@@ -89,6 +92,7 @@ class MenuBar(QMainWindow):
         self.addToolBar(toolbar)
 
         btn_add = QAction(QIcon("images/add.png"), "Add Customer", self)
+        btn_add.triggered.connect(Dialogs.mainitemsdb)
         btn_add.setStatusTip("Add Customer")
         toolbar.addAction(btn_add)
 
@@ -106,27 +110,18 @@ class MenuBar(QMainWindow):
 
         toolbar.addSeparator()
 
+        sample = ["Apple", "Alps", "Berry", "Cherry"]
+        completer = QCompleter(sample)
+        search = QLineEdit()
+        search.setPlaceholderText(" Search here all items.")
+        search.setMaximumSize(QSize(300, 30))
+        search.setCompleter(completer)
+        search.setToolTip("Search all data, names, dates, and bills")
+        toolbar.addWidget(search)
 
-        #
-        # view_toolbar = self.addToolBar('View')
-        # view_toolbar.addAction('Themes')
-        # view_toolbar.addAction('Recent Files')
-        # view_toolbar.addAction('Location')
-        # view_toolbar.addAction('Main DB')
-        # view_toolbar.addSeparator()
-        #
-        # sample = ["Apple", "Alps", "Berry", "Cherry"]
-        # completer = QCompleter(sample)
-        #
-        # search_toolbar = self.addToolBar('Search')
-        # search = QLineEdit()
-        # search_toolbar.addWidget(search)
-        # search.setCompleter(completer)
-        #
-        # search_toolbar.setFixedWidth(300)
-        # search_toolbar.setToolTip("Search all data, names, dates, and bills")
-        # search_toolbar.addSeparator()
-        # search_toolbar.addAction("Search")
+        btn_search = QAction(QIcon("images/search1.ico"), "Search", self)
+        btn_search.setStatusTip("Search")
+        toolbar.addAction(btn_search)
 
     def insert(self):
         print("Inserted")

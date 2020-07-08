@@ -18,7 +18,7 @@ class StatusBar(QMainWindow):
         bar.showMessage('Welcome to the Application', 5000)
 
         now = datetime.now()
-        self.stime = QLabel(str(datetime.strftime(now, "%d-%m-%Y,  %H:%M:%S")))
+        self.stime = QLabel(str(datetime.strftime(now, "%d-%m-%Y  %H:%M:%S")))
         self.sonline = QLabel("🙂")
 
         bar.addPermanentWidget(self.stime)
