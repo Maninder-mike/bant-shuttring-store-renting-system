@@ -1,13 +1,13 @@
 import datetime
 import sys
+from random import randint
 
 from PyQt5.Qt import Qt
 from PyQt5.QtGui import QFont, QStandardItemModel, QStandardItem, QIcon
-from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QTabWidget, QLineEdit, QHBoxLayout, QPushButton, \
-    QGridLayout, QLabel, QDateEdit, QComboBox
+from PyQt5.QtWidgets import (QMainWindow, QApplication, QWidget, QTabWidget, QLineEdit, QHBoxLayout, QPushButton,
+                             QGridLayout, QLabel, QDateEdit, QComboBox)
 
-# from bssrs.config.dialogs import show_dialog
-from bssrs.config.messages import showdialog, customer_added
+from bssrs.config.messages import customer_added
 from bssrs.database.database_main import Database
 
 font18 = QFont("Calibri", 18)
@@ -67,14 +67,12 @@ class TabWidget(QTabWidget):
     def tab1ui(self):
 
         def check_disable():
-            if self.edit_rate.text() and self.edit_qty.text():
-                self.btn_ok.setEnabled(True)
+            if self.edit_qty.text() == "":
+                return self.btn_ok.setDisabled(True)
             else:
-                self.btn_ok.setEnabled(False)
+                return self.btn_ok.setDisabled(False)
 
         def change_lbl():
-            from random import randint
-
             def random121():
                 return randint(0, 20)
 
@@ -92,6 +90,7 @@ class TabWidget(QTabWidget):
         self.edit_qty = QLineEdit()
         self.edit_qty.setFont(font18)
         self.edit_qty.setMaximumWidth(50)
+        self.edit_qty.setFocus()
 
         # states
         self.comboStates = QComboBox()
@@ -111,12 +110,12 @@ class TabWidget(QTabWidget):
         self.edit_qty.textChanged.connect(check_disable)
         self.edit_rate.textChanged.connect(check_disable)
 
-        self.btn_ok = QPushButton(QIcon("images/ok.ico"), " OK")
+        self.btn_ok = QPushButton("OK")
         self.btn_ok.setFont(font18)
         self.btn_ok.setMaximumWidth(150)
         self.btn_ok.clicked.connect(change_lbl)
 
-        self.btn_cancel = QPushButton(QIcon("images/cancel.ico"), " Cancel")
+        self.btn_cancel = QPushButton("Cancel")
         self.btn_cancel.setFont(font18)
         self.btn_cancel.setMaximumWidth(150)
 
@@ -146,106 +145,38 @@ class TabWidget(QTabWidget):
         self.comboCities.setCurrentIndex(0)
 
     def tab2ui(self):
+        return working_soon(self)
+        # container = QGridLayout()
+        # container.setSpacing(20)
+        # container.setContentsMargins(10, 10, 10, 10)
+        # bottom_layout = QHBoxLayout()
+        #
+        # button_save = QPushButton('Save')
+        # button_save.setMinimumHeight(50)
+        # button_save.setFont(font18)
+        # # button_save.clicked.connect(self.save_customer)
+        #
+        # button_reset = QPushButton('Reset')
+        # button_reset.setMinimumHeight(50)
+        # button_reset.setFont(font18)
+        # # button_reset.clicked.connect(self.view_all_customers)
+        #
+        # button_delete = QPushButton('Delete')
+        # button_delete.setMinimumHeight(50)
+        # button_delete.setFont(font18)
+        #
+        # button_edit = QPushButton('Edit')
+        # button_edit.setMinimumHeight(50)
+        # button_edit.setFont(font18)
+        #
+        # bottom_layout.layout().addWidget(button_save)
+        # bottom_layout.layout().addWidget(button_reset)
+        # bottom_layout.layout().addWidget(button_edit)
+        # bottom_layout.layout().addWidget(button_delete)
+        #
+        # container.addLayout(bottom_layout, 7, 0, 1, 6)
+        # self.tab2.setLayout(container)
 
-        self.edit_fname = QLineEdit()
-        self.edit_lname = QLineEdit()
-        self.edit_father = QLineEdit()
-        self.edit_gender = QLineEdit()
-        self.edit_street = QLineEdit()
-        self.edit_city = QLineEdit()
-        self.edit_pincode = QLineEdit()
-        self.edit_number = QLineEdit()
-        self.edit_email = QLineEdit()
-        self.edit_careof = QLineEdit()
-        self.edit_creation_date = QDateEdit(date=datetime.datetime.today())
-
-        container = QGridLayout()
-        container.setSpacing(20)
-        container.setContentsMargins(10, 10, 10, 10)
-
-        label_fname = QLabel("First Name:")
-        label_lname = QLabel("Last Name:")
-        label_father = QLabel("Father Name:")
-        label_gender = QLabel("Gender:")
-        label_street = QLabel("Street:")
-        label_city = QLabel("City:")
-        label_pincode = QLabel("PinCode:")
-        label_number = QLabel("Mobile Number:")
-        label_email = QLabel("Email:")
-        label_careof = QLabel("Care of:")
-        label_creation_date = QLabel("Date: ")
-
-        container.layout().addWidget(label_fname, 0, 0)
-        container.layout().addWidget(self.edit_fname, 0, 1)
-        container.layout().addWidget(label_lname, 0, 2)
-        container.layout().addWidget(self.edit_lname, 0, 3)
-
-        container.layout().addWidget(label_father, 1, 0)
-        container.layout().addWidget(self.edit_father, 1, 1)
-
-        container.layout().addWidget(label_gender, 2, 0)
-        container.layout().addWidget(self.edit_gender, 2, 1)
-
-        container.layout().addWidget(label_street, 3, 0)
-        container.layout().addWidget(self.edit_street, 3, 1)
-
-        container.layout().addWidget(label_city, 3, 2)
-        container.layout().addWidget(self.edit_city, 3, 3)
-
-        container.layout().addWidget(label_pincode, 3, 4)
-        container.layout().addWidget(self.edit_pincode, 3, 5)
-
-        container.layout().addWidget(label_number, 4, 0)
-        container.layout().addWidget(self.edit_number, 4, 1)
-
-        container.layout().addWidget(label_email, 5, 0)
-        container.layout().addWidget(self.edit_email, 5, 1)
-
-        container.layout().addWidget(label_careof, 6, 0)
-        container.layout().addWidget(self.edit_careof, 6, 1)
-
-        container.layout().addWidget(label_creation_date, 6, 2)
-        container.layout().addWidget(self.edit_creation_date, 6, 3)
-
-        bottom_layout = QHBoxLayout()
-
-        button_save = QPushButton('Save')
-        button_save.setMinimumHeight(50)
-        button_save.setFont(font18)
-        button_save.clicked.connect(self.save_customer)
-
-        button_reset = QPushButton('Reset')
-        button_reset.setMinimumHeight(50)
-        button_reset.setFont(font18)
-        button_reset.clicked.connect(self.view_all_customers)
-
-        button_delete = QPushButton('Delete')
-        button_delete.setMinimumHeight(50)
-        button_delete.setFont(font18)
-
-        button_edit = QPushButton('Edit')
-        button_edit.setMinimumHeight(50)
-        button_edit.setFont(font18)
-
-        bottom_layout.layout().addWidget(button_save)
-        bottom_layout.layout().addWidget(button_reset)
-        bottom_layout.layout().addWidget(button_edit)
-        bottom_layout.layout().addWidget(button_delete)
-
-        container.addLayout(bottom_layout, 7, 0, 1, 6)
-        self.tab2.setLayout(container)
-
-    def save_customer(self):
-        fname, lname, father, gender, street, city, pincode, number, email, careof, creation_date = self.edit_fname.text(), self.edit_lname.text(), self.edit_father.text(), self.edit_gender.text(), self.edit_street.text(), self.edit_city.text(), self.edit_pincode.text(), self.edit_number.text(), self.edit_email.text(), self.edit_careof.text(), self.edit_creation_date.text()
-        print(fname, lname, father, gender, street, city, pincode, number, email, careof, creation_date)
-        self.db.insert_customer(fname, lname, father, gender, street, city, pincode, number, email, careof,
-                                creation_date)
-        return customer_added(self, fname, lname, creation_date)
-
-    def view_all_customers(self):
-        m = TabWidget.db.view_all_customers()
-        for x in m:
-            print(x)
 
     def tab3ui(self):
         return working_soon(self)
@@ -260,6 +191,8 @@ class TabWidget(QTabWidget):
 class GraphWidget(QTabWidget):
     def __init__(self, *args, **kwargs):
         super(GraphWidget, self).__init__(*args, **kwargs)
+
+        self.setTabPosition(QTabWidget.South)
 
         self.tab1 = QWidget()
         self.tab1.setToolTip("Graph window")

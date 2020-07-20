@@ -84,16 +84,15 @@ class Database:
         conn.commit()
         conn.close()
 
-    def insert_customer(self, fname, lname, father, gender, street, city, pincode, number, email, careof,
-                        creation_date):
+    def insert_cust(self, fname, lname, father, gender, street, city, pincode, number, email, careof, creation_date):
         conn = sqlite3.connect(db_main)
         cur = conn.cursor()
         try:
             cur.execute("INSERT INTO `customer` VALUES(?,?,?,?,?,?,?,?,?,?,?)",
                         (fname, lname, father, gender, street, city, pincode, number, email, careof, creation_date))
+            print("Insert In customer!")
         except sqlite3.Error as e:
             print(e)
-        print("Insert In customer!")
         conn.commit()
         conn.close()
 
@@ -173,3 +172,17 @@ db.connect()
 # db.insert_customer(123456789, 'tim', 'tommy', datetime.datetime.today(), random.random())
 
 print("Database Called")
+
+
+def save_customer(self):
+    fname, lname, father, gender, street, city, pincode, number, email, careof, creation_date = self.edit_fname.text(), self.edit_lname.text(), self.edit_father.text(), self.edit_gender.text(), self.edit_street.text(), self.edit_city.text(), self.edit_pincode.text(), self.edit_number.text(), self.edit_email.text(), self.edit_careof.text(), self.edit_creation_date.text()
+    print(fname, lname, father, gender, street, city, pincode, number, email, careof, creation_date)
+    self.db.insert_cust(fname, lname, father, gender, street, city, pincode, number, email, careof,
+                        creation_date)
+    return customer_added(self, fname, lname, creation_date)
+
+
+def view_all_customers(self):
+    m = TabWidget.db.view_all_customers()
+    for x in m:
+        print(x)

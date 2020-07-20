@@ -2,11 +2,13 @@ import sys
 
 from PyQt5.QtCore import QSize
 from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QApplication, QAction, QMainWindow, QMessageBox, QToolBar, QCompleter, QLineEdit, QGroupBox, \
-    QLabel, QComboBox, QSpinBox, QFormLayout, QVBoxLayout, QDialogButtonBox, QDialog
+from PyQt5.QtWidgets import QApplication, QAction, QMainWindow, QMessageBox, QToolBar, QCompleter, QLineEdit
 
 from bssrs import __version__
-from bssrs.config.dialogs import Dialogs
+from bssrs.config.dialogs import Dialogs, DialogWindow
+
+
+# TODO not use this module now
 
 
 class MenuBar(QMainWindow):
@@ -85,6 +87,10 @@ class MenuBar(QMainWindow):
         version.triggered.connect(Dialogs.version_info)
         help_menu.addAction(version)
 
+    def dialog_window(self):
+        dwin = DialogWindow()
+        dwin.exec_()
+
     def tool_bar(self):
         toolbar = QToolBar()
         toolbar.setMovable(False)
@@ -97,6 +103,7 @@ class MenuBar(QMainWindow):
         toolbar.addAction(btn_add)
 
         btn_edit = QAction(QIcon("images/edit.png"), "Edit Customer", self)
+        btn_edit.triggered.connect(self.dialog_window)
         btn_edit.setStatusTip("Edit Customer")
         toolbar.addAction(btn_edit)
 

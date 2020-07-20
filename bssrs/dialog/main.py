@@ -1,8 +1,10 @@
 import sqlite3
 import sys
 
-from PyQt5.QtGui import *
-from PyQt5.QtWidgets import *
+from PyQt5.QtGui import QIntValidator, QPixmap, QIcon, QTextDocument, QTextCursor
+from PyQt5.QtWidgets import (QDialog, QPushButton, QVBoxLayout, QLineEdit, QComboBox, QMessageBox, QLabel,
+                             QDialogButtonBox, QMainWindow, QTableWidget, QToolBar, QStatusBar, QAction,
+                             QTableWidgetItem, QApplication)
 
 
 class InsertDialog(QDialog):
@@ -46,7 +48,7 @@ class InsertDialog(QDialog):
 
         self.mobileinput = QLineEdit()
         self.mobileinput.setPlaceholderText("Mobile")
-        self.mobileinput.setInputMask('99999 99999')
+        # self.mobileinput.setInputMask('99999 99999')
         layout.addWidget(self.mobileinput)
 
         self.addressinput = QLineEdit()

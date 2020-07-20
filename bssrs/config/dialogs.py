@@ -1,9 +1,8 @@
-import sys
-
 from PyQt5.Qt import Qt
-from PyQt5.QtGui import QPixmap
+from PyQt5.QtCore import QDateTime
+from PyQt5.QtGui import QDoubleValidator
 from PyQt5.QtWidgets import (QDialog, QPushButton, QLabel, QDialogButtonBox, QVBoxLayout, QGroupBox, QFormLayout,
-                             QLineEdit, QComboBox, QSpinBox, QApplication)
+                             QLineEdit, QComboBox, QSpinBox, QDateEdit, QGridLayout, QTabWidget, QWidget)
 
 from bssrs import __version__
 
@@ -54,11 +53,12 @@ class Dialogs(QDialog):
         layout.addRow(QLabel("Age:"), QSpinBox())
 
 
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    w = Dialogs()
-    w.show()
-    sys.exit(app.exec_())
+#
+# if __name__ == '__main__':
+#     app = QApplication(sys.argv)
+#     w = Dialogs()
+#     w.show()
+#     sys.exit(app.exec_())
 
 
 class CustomerDialog(QDialog):
@@ -84,41 +84,109 @@ class CustomerDialog(QDialog):
         self.formGroupBox.setLayout(layout)
 
 
-class AboutDialog(QDialog):
+# ==========================================================================
+
+
+class CustomerDatabase(QDialog):
     def __init__(self, *args, **kwargs):
-        super(AboutDialog, self).__init__(*args, **kwargs)
+        super(CustomerDatabase, self).__init__(*args, **kwargs)
 
-        self.setFixedWidth(300)
-        self.setFixedHeight(250)
-
-        QBtn = QDialogButtonBox.Ok  # No cancel
-        self.buttonBox = QDialogButtonBox(QBtn)
-        self.buttonBox.accepted.connect(self.accept)
-        self.buttonBox.rejected.connect(self.reject)
-
+        self.setMinimumSize(300, 500)
+        self.setWindowTitle("Customer Info‍")
         layout = QVBoxLayout()
 
-        title = QLabel("STDMGMT")
-        font = title.font()
-        font.setPointSize(20)
-        title.setFont(font)
+        self.formGroupBox = QGroupBox("Customer Database")
 
-        labelpic = QLabel()
-        pixmap = QPixmap('icon/logo.png')
-        pixmap = pixmap.scaledToWidth(275)
-        labelpic.setPixmap(pixmap)
-        labelpic.setFixedHeight(150)
+        button_box = QDialogButtonBox(
+            QDialogButtonBox.Save | QDialogButtonBox.Cancel | QDialogButtonBox.Reset | QDialogButtonBox.Discard)
+        button_box.accepted.connect(self.accept)
+        button_box.rejected.connect(self.reject)
 
-        layout.addWidget(title)
+        layout.addWidget(self.formGroupBox)
+        layout.addWidget(button_box)
 
-        layout.addWidget(QLabel("Version 5.3.2"))
-        layout.addWidget(QLabel("Copyright 2018 CYB Inc."))
-        layout.addWidget(labelpic)
+        form_layout = QGridLayout()
+        form_layout.setSpacing(20)
+        form_layout.setContentsMargins(10, 10, 10, 10)
 
-        layout.addWidget(self.buttonBox)
+        self.fname = QLineEdit()
+        self.fname.setPlaceholderText("First Name")
+        self.fname.setFocus()
+
+        self.lname = QLineEdit()
+        self.lname.setPlaceholderText("Last Name")
+
+        self.edit_fname = QLineEdit()
+        self.edit_fname.setPlaceholderText("First Name")
+        self.edit_lname = QLineEdit()
+        self.edit_lname.setPlaceholderText("Last Name")
+        self.edit_father = QLineEdit()
+        self.edit_father.setPlaceholderText("Father Name")
+        self.edit_gender = QComboBox()
+        self.edit_gender.addItems(['Male', 'Female'])
+        self.edit_street = QLineEdit()
+        self.edit_street.setPlaceholderText("Street")
+        self.edit_city = QLineEdit()
+        self.edit_city.setPlaceholderText("City")
+        self.edit_pincode = QLineEdit()
+        self.edit_pincode.setPlaceholderText("Pincode")
+        self.edit_number = QLineEdit()
+        self.edit_number.setPlaceholderText("Phone Number")
+        self.edit_email = QLineEdit()
+        self.edit_email.setPlaceholderText("Email")
+        self.edit_careof = QLineEdit()
+        self.edit_careof.setPlaceholderText("Care Of")
+        self.edit_creation_date = QDateEdit()
+        self.edit_creation_date.setDateTime(QDateTime.currentDateTime())
+
+        form_layout.addWidget(self.edit_fname, 0, 1)
+        form_layout.addWidget(self.edit_lname, 0, 3)
+        form_layout.addWidget(self.edit_father, 1, 1)
+        form_layout.addWidget(self.edit_gender, 2, 1)
+        form_layout.addWidget(self.edit_street, 3, 1)
+        form_layout.addWidget(self.edit_city, 3, 3)
+        form_layout.addWidget(self.edit_pincode, 3, 5)
+        form_layout.addWidget(self.edit_number, 4, 1)
+        form_layout.addWidget(self.edit_email, 4, 3)
+        form_layout.addWidget(self.edit_careof, 6, 1)
+        form_layout.addWidget(self.edit_creation_date, 6, 3)
+
+        self.cbox = QComboBox()
+        # self.cbox.addItems([str(x) for x in pm_Combo()])
+        self.cbox.setEditable(True)
+        self.cbox.setDisabled(True)
+
+        self.age = QLineEdit()
+        self.age.setPlaceholderText("Price")
+        self.age.setValidator(QDoubleValidator())
+
+        self.dateedit = QDateEdit()
+        self.dateedit.setDateTime(QDateTime.currentDateTime())
+
+        self.formGroupBox.setLayout(form_layout)
 
         self.setLayout(layout)
 
-    def about(self):
-        dlg = AboutDialog()
-        dlg.exec_()
+
+class SettingWindow(QDialog):
+    def __init__(self, *args, **kwargs):
+        super(SettingWindow, self).__init__(*args, **kwargs)
+
+        self.setMinimumSize(500, 500)
+        self.setWindowTitle("Settings‍")
+
+        layout = QVBoxLayout()
+        layout.setSpacing(0)
+
+        self.tabs = QTabWidget()
+        self.tabs.setTabPosition(QTabWidget.North)
+
+        self.tab1 = QWidget()
+        self.tab2 = QWidget()
+        self.tab3 = QWidget()
+        self.tabs.addTab(self.tab1, 'Font')
+        self.tabs.addTab(self.tab2, 'BackUp')
+        self.tabs.addTab(self.tab3, 'Internet')
+
+        layout.addWidget(self.tabs)
+        self.setLayout(layout)
