@@ -55,3 +55,7 @@ O
 bssrs/database/connection_db.py,5\4\54370e1e867ba789a2c93d7c0813af87095cf12b
 D
 bssrs/dialog/main.py,f\c\fcabf27d082b6b9de93e3f3c6b91f9eb2ee41046
+I
+bssrs/database/delete6.py,b\1\b1bdb4e319b22406c44354ab62470aba9649a787
+T
+$bssrs/database/notouch_database.json,c\9\c9a7aa17189b870f5d9ebb2fc4d063937b2fb060

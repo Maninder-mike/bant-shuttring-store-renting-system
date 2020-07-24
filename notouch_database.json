@@ -1,0 +1,53 @@
+{
+  "garder": {
+    "garder_7": 1,
+    "garder_8": 1,
+    "garder_9": 1,
+    "garder_10": 1,
+    "garder_11": 1,
+    "garder_12": 1,
+    "garder_13": 1,
+    "garder_14": 1,
+    "garder_15": 1,
+    "garder_16": 1,
+    "garder_17": 1,
+    "garder_18": 1,
+    "garder_19": 1,
+    "garder_20": 1
+  },
+  "fatta": {
+    "fatta_2": 1,
+    "fatta_2.6": 1,
+    "fatta_3": 1,
+    "fatta_3.3": 1,
+    "fatta_3.6": 1,
+    "fatta_4": 1
+  },
+  "kahi": 1,
+  "tasla": 1,
+  "chalia": 1,
+  "water drum": 1,
+  "iron drum": 1,
+  "kali drum": 1,
+  "ganti": 1,
+  "sabal": 1,
+  "gan": 1,
+  "durmat": 1,
+  "farma": 1,
+  "bala": {
+    "bala_5": 1,
+    "bala_8": 1
+  },
+  "godi": {
+    "godi_4-6": 1,
+    "godi_7-8": 1,
+    "godi_10": 1,
+    "godi_12": 1,
+    "godi_13-20": 1
+  },
+  "podi": {
+    "podi_10-12": 1,
+    "podi_15-20": 1,
+    "podi_21-25": 1
+  }
+}

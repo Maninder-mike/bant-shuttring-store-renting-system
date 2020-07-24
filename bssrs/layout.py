@@ -7,6 +7,7 @@ from bssrs.toolbox import ToolBox
 
 def right_up_text_edit(self):
     layout = QHBoxLayout()
+
     header = QDockWidget("Contacts", self)
     header.setFixedWidth(350)
 
@@ -15,6 +16,7 @@ def right_up_text_edit(self):
     header.setWidget(list_widget)
     # self.setCentralWidget(QTextEdit())
     self.addDockWidget(Qt.RightDockWidgetArea, header)
+
     self.setLayout(layout)
 
 

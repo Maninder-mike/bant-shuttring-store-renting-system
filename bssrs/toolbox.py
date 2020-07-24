@@ -1,9 +1,19 @@
 import sys
-
+import json
 from PyQt5.Qt import Qt
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import (QApplication, QWidget, QVBoxLayout, QToolBox, QLabel, QMainWindow, QLineEdit, QTextEdit,
                              QPushButton)
+
+with open('../notouch_database.json', 'r') as f:
+    file = json.load(f)
+    garder_list = []
+    plates_list = []
+    for x in file['garder'].values():
+        garder_list.append(x)
+    for y in file['fatta'].values():
+        plates_list.append(x)
+
 
 
 class MainWindow(QMainWindow):
@@ -31,7 +41,7 @@ class ToolBox(QWidget):
 
         w1 = QWidget()
         layout1 = QVBoxLayout()
-        layout1.addWidget(QLabel("Garder 7'"))
+        layout1.addWidget(QLabel(f"Garder 7'"))
         layout1.addWidget(QLabel("Garder 8'"))
         layout1.addWidget(QLabel("Garder 9'"))
         layout1.addWidget(QLabel("Garder 10'"))
@@ -46,7 +56,7 @@ class ToolBox(QWidget):
         layout1.addWidget(QLabel("Garder 19'"))
         layout1.addWidget(QLabel("Garder 20'"))
         w1.setLayout(layout1)
-        toolbox.addItem(w1, folder, 'Garder')
+        toolbox.addItem(w1, folder, f'Garder - {sum(garder_list)}')
 
         w2 = QWidget()
         layout1 = QVBoxLayout()
@@ -61,7 +71,7 @@ class ToolBox(QWidget):
         layout1.addWidget(QLabel("Plates 4'-15\""))
         layout1.addWidget(QLabel("Plates 4'-18\""))
         w2.setLayout(layout1)
-        toolbox.addItem(w2, folder, 'Plates')
+        toolbox.addItem(w2, folder, f'Plates - {sum(plates_list)}')
 
         w3 = QWidget()
         layout1 = QVBoxLayout()

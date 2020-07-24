@@ -1,9 +1,11 @@
+import json
 import sys
 
 from PyQt5.QtCore import QSize
 from PyQt5.QtGui import QIcon
 from PyQt5.QtGui import QKeySequence
-from PyQt5.QtWidgets import QApplication, QAction, QMainWindow, QMessageBox, QToolBar, QCompleter, QLineEdit
+from PyQt5.QtWidgets import QApplication, QAction, QMainWindow, QMessageBox, QToolBar, QCompleter, QLineEdit, \
+    QVBoxLayout, QDialog, QHBoxLayout, QLabel, QPushButton
 from PyQt5.QtWidgets import QStyleFactory, QShortcut
 
 from bssrs import __version__
@@ -11,6 +13,50 @@ from bssrs.config.base import get_image_path
 from bssrs.config.dialogs import Dialogs, CustomerDatabase, SettingWindow
 from bssrs.layout import gui_layout
 from bssrs.status_bar import StatusBar
+
+with open('../notouch_database.json', 'r') as f:
+    file = json.load(f)
+
+
+class MainJsonWindow(QDialog):
+
+    def __init__(self, *args, **kwargs):
+        super(MainJsonWindow, self).__init__(*args, **kwargs)
+
+        self.setMinimumSize(600, 500)
+        self.setWindowTitle("Settings‍")
+
+        self.layout = QHBoxLayout()
+        # self.layout.setSpacing(5)
+
+        self.right_layout = QVBoxLayout()
+        self.left_layout = QVBoxLayout()
+        self.bottom_layout = QVBoxLayout()
+
+        for i in file.keys():
+            self.btn = QLabel(f'{i}', self)
+            self.left_layout.addWidget(self.btn)
+
+        for i in file.values():
+            self.btn = QLineEdit(f'{i}', self)
+            self.right_layout.addWidget(self.btn)
+
+        save_btn = QPushButton("Save")
+        save_btn.clicked.connect(self.save_json)
+
+        close_btn = QPushButton("Close")
+        close_btn.clicked.connect(self.close)
+
+        self.layout.addLayout(self.left_layout)
+        self.layout.addLayout(self.right_layout)
+        self.layout.addLayout(self.bottom_layout)
+        # layout.addLayout(grid)
+        self.bottom_layout.addWidget(save_btn)
+        self.bottom_layout.addWidget(close_btn)
+        self.setLayout(self.layout)
+
+    def save_json(self):
+        print("Json Called")
 
 
 class MainWindow(QMainWindow):
@@ -35,14 +81,6 @@ class MainWindow(QMainWindow):
         self.menu_bar()
         self.tool_bar()
 
-    def settings_window(self):
-        dwin = SettingWindow()
-        dwin.exec_()
-
-    def dialog_window(self):
-        dwin = CustomerDatabase()
-        dwin.exec_()
-
     def menu_bar(self):
         file_menu = self.menuBar().addMenu("&File")
         edit_menu = self.menuBar().addMenu("&Edit")
@@ -54,7 +92,8 @@ class MainWindow(QMainWindow):
         file = QAction("File", self)
         file_menu.addAction(file)
 
-        _open = QAction("Open", self)
+        _open = QAction("Open Main Database", self)
+        _open.triggered.connect(self.json_db_window)
         file_menu.addAction(_open)
 
         save = QAction(QIcon("images/add.png"), "Save", self)
@@ -67,7 +106,7 @@ class MainWindow(QMainWindow):
 
         # ======== Edit ============
         preferences = QAction(QIcon("images/setting.png"), "Preferences", self)
-        preferences.triggered.connect(self.settings_window)
+        preferences.triggered.connect(SettingWindow.settings_window)
         edit_menu.addAction(preferences)
 
         # ======== View ============
@@ -120,7 +159,7 @@ class MainWindow(QMainWindow):
         self.addToolBar(toolbar)
 
         btn_add = QAction(QIcon("images/add.png"), "Add Customer", self)
-        btn_add.triggered.connect(self.dialog_window)
+        btn_add.triggered.connect(CustomerDatabase.dialog_window)
         btn_add.setStatusTip("Add Customer")
         toolbar.addAction(btn_add)
 
@@ -134,6 +173,7 @@ class MainWindow(QMainWindow):
         toolbar.addAction(btn_search)
 
         btn_delete = QAction(QIcon("images/garbage.png"), "Delete Customer", self)
+        btn_delete.triggered.connect(self.delete_customer)
         btn_delete.setStatusTip("Delete Customer")
         toolbar.addAction(btn_delete)
 
@@ -154,6 +194,14 @@ class MainWindow(QMainWindow):
 
     def version(self):
         return QMessageBox.information(self, 'Programme version', __version__)
+
+    def delete_customer(self):
+        self.cdata = CustomerDatabase()
+        return self.cdata.delete_customer()
+
+    def json_db_window(self):
+        jwin = MainJsonWindow()
+        jwin.exec_()
 
 
 if __name__ == '__main__':

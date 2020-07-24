@@ -1,3 +1,4 @@
+import json
 import os
 import sqlite3
 
@@ -5,7 +6,6 @@ db_main = os.path.join(os.path.dirname(__file__), "database_main.db")
 
 
 class Database:
-
     client = """
         id INT PRIMARY KEY,
         name TEXT NOT NULL,
@@ -90,7 +90,6 @@ class Database:
         try:
             cur.execute("INSERT INTO `customer` VALUES(?,?,?,?,?,?,?,?,?,?,?)",
                         (fname, lname, father, gender, street, city, pincode, number, email, careof, creation_date))
-            print("Insert In customer!")
         except sqlite3.Error as e:
             print(e)
         conn.commit()
@@ -111,6 +110,29 @@ class Database:
         rows = cur.fetchall()
         conn.close()
         return rows
+
+    def delete_cust(self, fname):
+        conn = sqlite3.connect(db_main)
+        cur = conn.cursor()
+        cur.execute("DELETE FROM customer WHERE fname = ?", (fname,))
+        print("Value Deleted")
+        conn.commit()
+        conn.close()
+
+    def customer_list(self):
+        conn = sqlite3.connect(db_main)
+        c = conn.cursor()
+        c.execute("SELECT fname FROM customer")
+        pm_list = c.fetchall()
+        listp = []
+        for x in pm_list:
+            if x in listp:
+                pass
+            else:
+                listp.append(x)
+
+        m = [str(x) for x, in listp]
+        return m
 
     # ==================================================================================================================
 
@@ -157,6 +179,8 @@ class Database:
                     (title, author, year, isbn, id))
         conn.commit()
         conn.close()
+
+    # ========================================
 
 
 db = Database()

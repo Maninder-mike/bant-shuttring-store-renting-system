@@ -1,13 +1,20 @@
+import json
+
 from PyQt5.Qt import Qt
 from PyQt5.QtCore import QDateTime
 from PyQt5.QtGui import QDoubleValidator
 from PyQt5.QtWidgets import (QDialog, QPushButton, QLabel, QDialogButtonBox, QVBoxLayout, QGroupBox, QFormLayout,
-                             QLineEdit, QComboBox, QSpinBox, QDateEdit, QGridLayout, QTabWidget, QWidget)
+                             QLineEdit, QComboBox, QSpinBox, QDateEdit, QGridLayout, QTabWidget, QWidget, QMessageBox,
+                             QInputDialog)
 
 from bssrs import __version__
+from bssrs.database.database_main import Database
+
+db = Database()
 
 
 class Dialogs(QDialog):
+
     def __init__(self):
         super(Dialogs, self).__init__()
 
@@ -46,20 +53,6 @@ class Dialogs(QDialog):
         # d.setWindowModality(Qt.ApplicationModal)
         d.exec_()
 
-    def notok(self):
-        layout = QFormLayout()
-        layout.addRow(QLabel("Name:"), QLineEdit())
-        layout.addRow(QLabel("Country:"), QComboBox())
-        layout.addRow(QLabel("Age:"), QSpinBox())
-
-
-#
-# if __name__ == '__main__':
-#     app = QApplication(sys.argv)
-#     w = Dialogs()
-#     w.show()
-#     sys.exit(app.exec_())
-
 
 class CustomerDialog(QDialog):
 
@@ -84,10 +77,11 @@ class CustomerDialog(QDialog):
         self.formGroupBox.setLayout(layout)
 
 
-# ==========================================================================
+# =============================== Working DB`s ===========================================
 
 
 class CustomerDatabase(QDialog):
+
     def __init__(self, *args, **kwargs):
         super(CustomerDatabase, self).__init__(*args, **kwargs)
 
@@ -98,9 +92,10 @@ class CustomerDatabase(QDialog):
         self.formGroupBox = QGroupBox("Customer Database")
 
         button_box = QDialogButtonBox(
-            QDialogButtonBox.Save | QDialogButtonBox.Cancel | QDialogButtonBox.Reset | QDialogButtonBox.Discard)
-        button_box.accepted.connect(self.accept)
-        button_box.rejected.connect(self.reject)
+            QDialogButtonBox.Save | QDialogButtonBox.Cancel | QDialogButtonBox.Reset)
+        button_box.accepted.connect(self.add_customer)
+        button_box.rejected.connect(self.close)
+        button_box.clicked.connect(self.reset_customer)
 
         layout.addWidget(self.formGroupBox)
         layout.addWidget(button_box)
@@ -108,13 +103,6 @@ class CustomerDatabase(QDialog):
         form_layout = QGridLayout()
         form_layout.setSpacing(20)
         form_layout.setContentsMargins(10, 10, 10, 10)
-
-        self.fname = QLineEdit()
-        self.fname.setPlaceholderText("First Name")
-        self.fname.setFocus()
-
-        self.lname = QLineEdit()
-        self.lname.setPlaceholderText("Last Name")
 
         self.edit_fname = QLineEdit()
         self.edit_fname.setPlaceholderText("First Name")
@@ -139,6 +127,9 @@ class CustomerDatabase(QDialog):
         self.edit_creation_date = QDateEdit()
         self.edit_creation_date.setDateTime(QDateTime.currentDateTime())
 
+        self.btn = QPushButton("Add Customer !!!")
+        self.btn.clicked.connect(self.add_customer)
+
         form_layout.addWidget(self.edit_fname, 0, 1)
         form_layout.addWidget(self.edit_lname, 0, 3)
         form_layout.addWidget(self.edit_father, 1, 1)
@@ -150,6 +141,7 @@ class CustomerDatabase(QDialog):
         form_layout.addWidget(self.edit_email, 4, 3)
         form_layout.addWidget(self.edit_careof, 6, 1)
         form_layout.addWidget(self.edit_creation_date, 6, 3)
+        form_layout.addWidget(self.btn, 6, 5)
 
         self.cbox = QComboBox()
         # self.cbox.addItems([str(x) for x in pm_Combo()])
@@ -167,8 +159,41 @@ class CustomerDatabase(QDialog):
 
         self.setLayout(layout)
 
+    def add_customer(self):
+        if self.edit_fname.text() == "" and self.edit_lname.text() == "":
+            QMessageBox.warning(self, "Warning : Please add all fields", "Don't empty fields 🤦🏽‍‍")
+        else:
+            db.insert_cust(self.edit_fname.text(), self.edit_lname.text(), self.edit_father.text(),
+                           self.edit_gender.currentText(), self.edit_street.text(), self.edit_city.text(),
+                           self.edit_pincode.text(), self.edit_number.text(), self.edit_email.text(),
+                           self.edit_careof.text(), self.edit_creation_date.text())
+            print("Data is Added!")
+
+    def delete_customer(self):
+        items = [str(x) for x in db.customer_list()]
+
+        item, ok = QInputDialog.getItem(self, "Delete Customer", "This is Label", items, 0, False)
+        if ok and items:
+            return db.delete_cust(item)
+
+    def print_line(self):
+        print("Check Success <>")
+
+    def discard_line(self):
+        print("Discard Success <>")
+
+    def reset_customer(self):
+        return (self.edit_fname.clear(), self.edit_lname.clear(), self.edit_father.clear(), self.edit_street.clear(),
+                self.edit_city.clear(), self.edit_pincode.clear(), self.edit_number.clear(), self.edit_email.clear(),
+                self.edit_careof.clear())
+
+    def dialog_window(self):
+        dwin = CustomerDatabase()
+        dwin.exec_()
+
 
 class SettingWindow(QDialog):
+
     def __init__(self, *args, **kwargs):
         super(SettingWindow, self).__init__(*args, **kwargs)
 
@@ -190,3 +215,9 @@ class SettingWindow(QDialog):
 
         layout.addWidget(self.tabs)
         self.setLayout(layout)
+
+    def settings_window(self):
+        dwin = SettingWindow()
+        dwin.exec_()
+
+
