@@ -33,15 +33,13 @@ class MainJsonWindow(QDialog):
         self.left_layout = QVBoxLayout()
         self.bottom_layout = QVBoxLayout()
 
-        for i in file.keys():
-            self.btn = QLabel(f'{i}', self)
+        for x, y in file.items():
+            self.btn = QLabel(f'{x}', self)
+            self.edit = QLineEdit(f'{y}', self)
             self.left_layout.addWidget(self.btn)
+            self.right_layout.addWidget(self.edit)
 
-        for i in file.values():
-            self.btn = QLineEdit(f'{i}', self)
-            self.right_layout.addWidget(self.btn)
-
-        save_btn = QPushButton("Save")
+        save_btn = QPushButton("Change")
         save_btn.clicked.connect(self.save_json)
 
         close_btn = QPushButton("Close")

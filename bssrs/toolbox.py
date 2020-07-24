@@ -9,11 +9,22 @@ with open('../notouch_database.json', 'r') as f:
     file = json.load(f)
     garder_list = []
     plates_list = []
+    spot_list = []
+    fatta_list = []
+    godi_list = []
+    podi_list = []
     for x in file['garder'].values():
         garder_list.append(x)
-    for y in file['fatta'].values():
+    for y in file['plate'].values():
         plates_list.append(x)
-
+    for z in file['spot'].values():
+        spot_list.append(z)
+    for m in file['fatta'].values():
+        fatta_list.append(m)
+    for n in file['godi'].values():
+        godi_list.append(n)
+    for o in file['podi'].values():
+        podi_list.append(o)
 
 
 class MainWindow(QMainWindow):
@@ -41,82 +52,63 @@ class ToolBox(QWidget):
 
         w1 = QWidget()
         layout1 = QVBoxLayout()
-        layout1.addWidget(QLabel(f"Garder 7'"))
-        layout1.addWidget(QLabel("Garder 8'"))
-        layout1.addWidget(QLabel("Garder 9'"))
-        layout1.addWidget(QLabel("Garder 10'"))
-        layout1.addWidget(QLabel("Garder 11'"))
-        layout1.addWidget(QLabel("Garder 12'"))
-        layout1.addWidget(QLabel("Garder 13'"))
-        layout1.addWidget(QLabel("Garder 14'"))
-        layout1.addWidget(QLabel("Garder 15'"))
-        layout1.addWidget(QLabel("Garder 16'"))
-        layout1.addWidget(QLabel("Garder 17'"))
-        layout1.addWidget(QLabel("Garder 18'"))
-        layout1.addWidget(QLabel("Garder 19'"))
-        layout1.addWidget(QLabel("Garder 20'"))
+        for c in file['garder'].keys():
+            garder_lbl = QLabel(f'{c}')
+            layout1.addWidget(garder_lbl)
         w1.setLayout(layout1)
-        toolbox.addItem(w1, folder, f'Garder - {sum(garder_list)}')
+        toolbox.addItem(w1, folder, f'ਗਾਡਰ - {sum(garder_list)}')
 
         w2 = QWidget()
         layout1 = QVBoxLayout()
-        layout1.addWidget(QLabel("Plates 3'-6\""))
-        layout1.addWidget(QLabel("Plates 3'-9\""))
-        layout1.addWidget(QLabel("Plates 3'-12\""))
-        layout1.addWidget(QLabel("Plates 3'-15\""))
-        layout1.addWidget(QLabel("Plates 3'-18\""))
-        layout1.addWidget(QLabel("Plates 4'-6\""))
-        layout1.addWidget(QLabel("Plates 4'-9\""))
-        layout1.addWidget(QLabel("Plates 4'-12\""))
-        layout1.addWidget(QLabel("Plates 4'-15\""))
-        layout1.addWidget(QLabel("Plates 4'-18\""))
+        for b in file['plate'].keys():
+            plate_lbl = QLabel(f'{b}')
+            layout1.addWidget(plate_lbl)
         w2.setLayout(layout1)
-        toolbox.addItem(w2, folder, f'Plates - {sum(plates_list)}')
+        toolbox.addItem(w2, folder, f'ਪਲੇਟਾਂ - {sum(plates_list)}')
 
         w3 = QWidget()
         layout1 = QVBoxLayout()
-        layout1.addWidget(QLabel("Spota 7'"))
-        layout1.addWidget(QLabel("Spota 8'"))
-        layout1.addWidget(QLabel("Spota 9'"))
-        layout1.addWidget(QLabel("Spota 10'"))
-        layout1.addWidget(QLabel("Spota 11'"))
-        layout1.addWidget(QLabel("Spota 12'"))
-        layout1.addWidget(QLabel("Spota 13'"))
-        layout1.addWidget(QLabel("Spota 14'"))
-        layout1.addWidget(QLabel("Spota 15'"))
-        layout1.addWidget(QLabel("Spota 16'"))
-        layout1.addWidget(QLabel("Spota 17'"))
-        layout1.addWidget(QLabel("Spota 18'"))
-        layout1.addWidget(QLabel("Spota 19'"))
-        layout1.addWidget(QLabel("Spota 20'"))
-        layout1.addWidget(QLabel("Spota 21'"))
-        layout1.addWidget(QLabel("Spota 22'"))
-        layout1.addWidget(QLabel("Spota 23'"))
-        layout1.addWidget(QLabel("Spota 24'"))
-        layout1.addWidget(QLabel("Spota 25'"))
+        for a in file['spot'].keys():
+            lbl = QLabel(f'{a}')
+            layout1.addWidget(lbl)
         w3.setLayout(layout1)
-        toolbox.addItem(w3, folder, 'Spota')
+        toolbox.addItem(w3, folder, f'ਸ਼ਪੋਂਟਾਂ - {sum(spot_list)}')
 
-        # tab X
-        w = QWidget()
+        w4 = QWidget()
         layout1 = QVBoxLayout()
-        self.lineEdit = QLineEdit()
-        layout1.addWidget(QLabel('Enter something'))
-        layout1.addWidget(self.lineEdit)
-        w.setLayout(layout1)
+        for d in file['fatta'].keys():
+            lbl = QLabel(f'{d}')
+            layout1.addWidget(lbl)
+        w4.setLayout(layout1)
+        toolbox.addItem(w4, folder, f'ਫੱਟਾਂ - {sum(fatta_list)}')
 
-        toolbox.addItem(w, 'Tab X')
+        w5 = QWidget()
+        layout1 = QVBoxLayout()
+        for e in file['godi'].keys():
+            lbl = QLabel(f'{e}')
+            layout1.addWidget(lbl)
+        w5.setLayout(layout1)
+        toolbox.addItem(w5, folder, f'ਘੋੜੀ - {sum(godi_list)}')
 
-        # tab Y
-        btn = QPushButton('My Button')
-        btn.clicked.connect(self.printText)
-        toolbox.addItem(btn, 'Tab Y')
+        w6 = QWidget()
+        layout1 = QVBoxLayout()
+        for g in file['podi'].keys():
+            lbl = QLabel(f'{g}')
+            layout1.addWidget(lbl)
+        w6.setLayout(layout1)
+        toolbox.addItem(w6, folder, f'ਪੌੜੀ - {sum(podi_list)}')
 
-        # tab Z
-        self.textEditor = QTextEdit()
-        toolbox.addItem(self.textEditor, 'Tab Z')
-        toolbox.setCurrentIndex(1)
+        w7 = QWidget()
+        layout1 = QVBoxLayout()
+        num = 1
+        for h in file.keys():
+            lbl = QLabel(f'{num}.  {h}')
+            layout1.addWidget(lbl)
+            num += 1
+        w7.setLayout(layout1)
+        toolbox.addItem(w7, folder, 'ਹੋਂਰ')
 
+        toolbox.setCurrentIndex(0)
         self.setLayout(layout)
 
     def printText(self):

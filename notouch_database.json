@@ -49,5 +49,38 @@
     "podi_10-12": 1,
     "podi_15-20": 1,
     "podi_21-25": 1
+  },
+  "plate": {
+    "plate_3_6": 1,
+    "plate_3_9": 1,
+    "plate_3_12": 1,
+    "plate_3_15": 1,
+    "plate_3_18": 1,
+    "plate_4_6": 1,
+    "plate_4_9": 1,
+    "plate_4_12": 1,
+    "plate_4_15": 1,
+    "plate_4_18": 1
+  },
+  "spot": {
+    "spot_7": 1,
+    "spot_8": 1,
+    "spot_9": 1,
+    "spot_10": 1,
+    "spot_11": 1,
+    "spot_12": 1,
+    "spot_13": 1,
+    "spot_14": 1,
+    "spot_15": 1,
+    "spot_16": 1,
+    "spot_17": 1,
+    "spot_18": 1,
+    "spot_19": 1,
+    "spot_20": 1,
+    "spot_21": 1,
+    "spot_22": 1,
+    "spot_23": 1,
+    "spot_24": 1,
+    "spot_25": 1
   }
 }

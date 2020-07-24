@@ -219,5 +219,3 @@ class SettingWindow(QDialog):
     def settings_window(self):
         dwin = SettingWindow()
         dwin.exec_()
-
-
