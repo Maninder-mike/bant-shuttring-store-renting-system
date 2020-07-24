@@ -5,7 +5,7 @@ from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import (QApplication, QWidget, QVBoxLayout, QToolBox, QLabel, QMainWindow, QLineEdit, QTextEdit,
                              QPushButton)
 
-with open('../notouch_database.json', 'r') as f:
+with open('database/notouch_database.json', 'r') as f:
     file = json.load(f)
     garder_list = []
     plates_list = []

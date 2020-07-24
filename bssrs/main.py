@@ -4,8 +4,8 @@ import sys
 from PyQt5.QtCore import QSize
 from PyQt5.QtGui import QIcon
 from PyQt5.QtGui import QKeySequence
-from PyQt5.QtWidgets import QApplication, QAction, QMainWindow, QMessageBox, QToolBar, QCompleter, QLineEdit, \
-    QVBoxLayout, QDialog, QHBoxLayout, QLabel, QPushButton
+from PyQt5.QtWidgets import (QApplication, QAction, QMainWindow, QMessageBox, QToolBar, QCompleter, QLineEdit,
+                             QHBoxLayout, QVBoxLayout, QLabel, QPushButton, QDialog)
 from PyQt5.QtWidgets import QStyleFactory, QShortcut
 
 from bssrs import __version__
@@ -14,7 +14,7 @@ from bssrs.config.dialogs import Dialogs, CustomerDatabase, SettingWindow
 from bssrs.layout import gui_layout
 from bssrs.status_bar import StatusBar
 
-with open('../notouch_database.json', 'r') as f:
+with open('./database/notouch_database.json', 'r') as f:
     file = json.load(f)
 
 
@@ -23,7 +23,7 @@ class MainJsonWindow(QDialog):
     def __init__(self, *args, **kwargs):
         super(MainJsonWindow, self).__init__(*args, **kwargs)
 
-        self.setMinimumSize(600, 500)
+        self.setMinimumSize(1000, 500)
         self.setWindowTitle("Settings‍")
 
         self.layout = QHBoxLayout()
@@ -48,7 +48,6 @@ class MainJsonWindow(QDialog):
         self.layout.addLayout(self.left_layout)
         self.layout.addLayout(self.right_layout)
         self.layout.addLayout(self.bottom_layout)
-        # layout.addLayout(grid)
         self.bottom_layout.addWidget(save_btn)
         self.bottom_layout.addWidget(close_btn)
         self.setLayout(self.layout)
@@ -162,7 +161,7 @@ class MainWindow(QMainWindow):
         toolbar.addAction(btn_add)
 
         btn_edit = QAction(QIcon("images/edit.png"), "Edit Customer", self)
-        btn_edit.triggered.connect(Dialogs.mainitemsdb)
+        # btn_edit.triggered.connect(Dialogs.mainitemsdb)
         btn_edit.setStatusTip("Edit Customer")
         toolbar.addAction(btn_edit)
 

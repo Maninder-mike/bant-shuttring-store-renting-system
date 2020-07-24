@@ -1,13 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cfbb3344-0f69-4f1c-8c74-baeb258d65f9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bssrs/config/dialogs.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/config/dialogs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bssrs/database/database_main.db" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/database/database_main.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/database/database_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/database/database_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/dialog/Sc/A.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/dialog/Sc/A1.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/dialog/Sc/A2.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/dialog/Sc/A3.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/dialog/Sc/A4.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/dialog/Sc/B.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/dialog/Sc/donate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/dialog/database.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/dialog/icon/Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/dialog/icon/add.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/dialog/icon/info.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/dialog/icon/refresh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/dialog/icon/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/dialog/icon/trash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/dialog/main.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bssrs/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/status_bar.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/status_bar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bssrs/toolbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/toolbox.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notouch_database.json" beforeDir="false" afterPath="$PROJECT_DIR$/notouch_database.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notouch_database.json" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/database/notouch_database.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +114,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mike\Documents\GitHub\BSSRS\testnet" />
+      <recent name="C:\Users\mike\Documents\GitHub\BSSRS\bssrs\database" />
       <recent name="C:\Users\mike\Documents\GitHub\BSSRS" />
       <recent name="C:\Users\mike\Documents\GitHub\BSSRS\bssrs\config" />
       <recent name="C:\Users\mike\Documents\GitHub\BSSRS\bssrs" />
@@ -95,7 +134,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bssrs/database/delete.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\mike\Documents\GitHub\BSSRS\testnet\delete.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -104,7 +143,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="delete6" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="delete1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BSSRS" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -112,11 +151,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bssrs/database" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testnet" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bssrs/database/delete6.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testnet/delete1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -167,7 +206,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="toolbox" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BSSRS" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -175,11 +214,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bssrs" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bssrs/dialog" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bssrs/toolbox.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\mike\Documents\GitHub\BSSRS\testnet\main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -191,10 +230,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.delete6" />
         <item itemvalue="Python.dialogs" />
-        <item itemvalue="Python.toolbox" />
         <item itemvalue="Python.delete" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.delete1" />
       </list>
     </recent_temporary>
   </component>
@@ -218,6 +257,18 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add dialogs" />
@@ -276,22 +327,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1589748510699" />
-    <state width="1345" height="170" key="GridCell.Tab.0.bottom" timestamp="1595600767096">
+    <state width="1345" height="149" key="GridCell.Tab.0.bottom" timestamp="1595625397508">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="170" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1595600767096" />
-    <state width="1345" height="170" key="GridCell.Tab.0.center" timestamp="1595600767095">
+    <state width="1345" height="149" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1595625397508" />
+    <state width="1345" height="149" key="GridCell.Tab.0.center" timestamp="1595625397508">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="170" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1595600767095" />
-    <state width="1345" height="170" key="GridCell.Tab.0.left" timestamp="1595600767095">
+    <state width="1345" height="149" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1595625397508" />
+    <state width="1345" height="149" key="GridCell.Tab.0.left" timestamp="1595625397508">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="170" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1595600767095" />
-    <state width="1345" height="170" key="GridCell.Tab.0.right" timestamp="1595600767095">
+    <state width="1345" height="149" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1595625397508" />
+    <state width="1345" height="149" key="GridCell.Tab.0.right" timestamp="1595625397508">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="170" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1595600767095" />
+    <state width="1345" height="149" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1595625397508" />
     <state width="1345" height="227" key="GridCell.Tab.1.bottom" timestamp="1593833535831">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

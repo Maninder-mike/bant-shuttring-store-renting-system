@@ -1,4 +1,3 @@
-import json
 import os
 import sqlite3
 
@@ -196,17 +195,3 @@ db.connect()
 # db.insert_customer(123456789, 'tim', 'tommy', datetime.datetime.today(), random.random())
 
 print("Database Called")
-
-
-def save_customer(self):
-    fname, lname, father, gender, street, city, pincode, number, email, careof, creation_date = self.edit_fname.text(), self.edit_lname.text(), self.edit_father.text(), self.edit_gender.text(), self.edit_street.text(), self.edit_city.text(), self.edit_pincode.text(), self.edit_number.text(), self.edit_email.text(), self.edit_careof.text(), self.edit_creation_date.text()
-    print(fname, lname, father, gender, street, city, pincode, number, email, careof, creation_date)
-    self.db.insert_cust(fname, lname, father, gender, street, city, pincode, number, email, careof,
-                        creation_date)
-    return customer_added(self, fname, lname, creation_date)
-
-
-def view_all_customers(self):
-    m = TabWidget.db.view_all_customers()
-    for x in m:
-        print(x)

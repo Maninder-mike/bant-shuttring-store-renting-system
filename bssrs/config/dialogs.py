@@ -4,8 +4,8 @@ from PyQt5.Qt import Qt
 from PyQt5.QtCore import QDateTime
 from PyQt5.QtGui import QDoubleValidator
 from PyQt5.QtWidgets import (QDialog, QPushButton, QLabel, QDialogButtonBox, QVBoxLayout, QGroupBox, QFormLayout,
-                             QLineEdit, QComboBox, QSpinBox, QDateEdit, QGridLayout, QTabWidget, QWidget, QMessageBox,
-                             QInputDialog)
+                             QLineEdit, QComboBox, QDateEdit, QGridLayout, QTabWidget, QWidget, QMessageBox,
+                             QInputDialog, QHBoxLayout)
 
 from bssrs import __version__
 from bssrs.database.database_main import Database
@@ -17,10 +17,6 @@ class Dialogs(QDialog):
 
     def __init__(self):
         super(Dialogs, self).__init__()
-
-        self.show_dialog()
-        self.version_info()
-        self.mainitemsdb()
 
     def show_dialog(self):
         d = QDialog()
@@ -39,45 +35,6 @@ class Dialogs(QDialog):
         d.setWindowTitle("Button Edit Window")
         d.setWindowModality(Qt.ApplicationModal)
         d.exec_()
-
-    def mainitemsdb(self):
-        d = QDialog()
-        d.setMinimumSize(800, 600)
-        d.setWindowTitle("Main ITEMS db")
-
-        layout = QFormLayout()
-        layout.addRow(QLabel("Name:"), QLineEdit())
-        layout.addRow(QLabel("Country:"), QComboBox())
-        layout.addWidget(d)
-
-        # d.setWindowModality(Qt.ApplicationModal)
-        d.exec_()
-
-
-class CustomerDialog(QDialog):
-
-    def __init__(self):
-        super(CustomerDialog, self).__init__()
-        self.createFormGroupBox()
-
-        button_box = QDialogButtonBox(QDialogButtonBox.Save | QDialogButtonBox.Cancel | QDialogButtonBox.Reset)
-        button_box.accepted.connect(self.accept)
-        button_box.rejected.connect(self.reject)
-
-        main_layout = QVBoxLayout()
-        main_layout.addWidget(self.formGroupBox)
-        main_layout.addWidget(button_box)
-
-    def createFormGroupBox(self):
-        self.formGroupBox = QGroupBox("Form layout")
-        layout = QFormLayout()
-        layout.addRow(QLabel("Name:"), QLineEdit())
-        layout.addRow(QLabel("Country:"), QComboBox())
-        layout.addRow(QLabel("Age:"), QSpinBox())
-        self.formGroupBox.setLayout(layout)
-
-
-# =============================== Working DB`s ===========================================
 
 
 class CustomerDatabase(QDialog):
@@ -167,6 +124,8 @@ class CustomerDatabase(QDialog):
                            self.edit_gender.currentText(), self.edit_street.text(), self.edit_city.text(),
                            self.edit_pincode.text(), self.edit_number.text(), self.edit_email.text(),
                            self.edit_careof.text(), self.edit_creation_date.text())
+            QMessageBox.information(self, "Added",
+                                    f"{self.edit_fname.text()} {self.edit_lname.text()} added in {self.edit_creation_date.text()}")
             print("Data is Added!")
 
     def delete_customer(self):
@@ -219,3 +178,5 @@ class SettingWindow(QDialog):
     def settings_window(self):
         dwin = SettingWindow()
         dwin.exec_()
+
+
