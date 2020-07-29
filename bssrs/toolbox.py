@@ -1,9 +1,9 @@
-import sys
 import json
+import sys
+
 from PyQt5.Qt import Qt
 from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import (QApplication, QWidget, QVBoxLayout, QToolBox, QLabel, QMainWindow, QLineEdit, QTextEdit,
-                             QPushButton)
+from PyQt5.QtWidgets import (QApplication, QWidget, QVBoxLayout, QToolBox, QLabel, QMainWindow)
 
 with open('database/notouch_database.json', 'r') as f:
     file = json.load(f)
@@ -53,7 +53,7 @@ class ToolBox(QWidget):
         w1 = QWidget()
         layout1 = QVBoxLayout()
         for c in file['garder'].keys():
-            garder_lbl = QLabel(f'{c}')
+            garder_lbl = QLabel(f'ਗਾਡਰ - {c}')
             layout1.addWidget(garder_lbl)
         w1.setLayout(layout1)
         toolbox.addItem(w1, folder, f'ਗਾਡਰ - {sum(garder_list)}')
@@ -61,7 +61,7 @@ class ToolBox(QWidget):
         w2 = QWidget()
         layout1 = QVBoxLayout()
         for b in file['plate'].keys():
-            plate_lbl = QLabel(f'{b}')
+            plate_lbl = QLabel(f'ਪਲੇਟ - {b}')
             layout1.addWidget(plate_lbl)
         w2.setLayout(layout1)
         toolbox.addItem(w2, folder, f'ਪਲੇਟਾਂ - {sum(plates_list)}')
@@ -69,7 +69,7 @@ class ToolBox(QWidget):
         w3 = QWidget()
         layout1 = QVBoxLayout()
         for a in file['spot'].keys():
-            lbl = QLabel(f'{a}')
+            lbl = QLabel(f'ਸ਼ਪੋਂਟ - {a}')
             layout1.addWidget(lbl)
         w3.setLayout(layout1)
         toolbox.addItem(w3, folder, f'ਸ਼ਪੋਂਟਾਂ - {sum(spot_list)}')
@@ -77,7 +77,7 @@ class ToolBox(QWidget):
         w4 = QWidget()
         layout1 = QVBoxLayout()
         for d in file['fatta'].keys():
-            lbl = QLabel(f'{d}')
+            lbl = QLabel(f'ਫੱਟਾਂ - {d}')
             layout1.addWidget(lbl)
         w4.setLayout(layout1)
         toolbox.addItem(w4, folder, f'ਫੱਟਾਂ - {sum(fatta_list)}')
@@ -85,7 +85,7 @@ class ToolBox(QWidget):
         w5 = QWidget()
         layout1 = QVBoxLayout()
         for e in file['godi'].keys():
-            lbl = QLabel(f'{e}')
+            lbl = QLabel(f'ਘੋੜੀ - {e}')
             layout1.addWidget(lbl)
         w5.setLayout(layout1)
         toolbox.addItem(w5, folder, f'ਘੋੜੀ - {sum(godi_list)}')
@@ -93,7 +93,7 @@ class ToolBox(QWidget):
         w6 = QWidget()
         layout1 = QVBoxLayout()
         for g in file['podi'].keys():
-            lbl = QLabel(f'{g}')
+            lbl = QLabel(f'ਪੌੜੀ - {g}')
             layout1.addWidget(lbl)
         w6.setLayout(layout1)
         toolbox.addItem(w6, folder, f'ਪੌੜੀ - {sum(podi_list)}')
@@ -102,6 +102,8 @@ class ToolBox(QWidget):
         layout1 = QVBoxLayout()
         num = 1
         for h in file.keys():
+            if h in ['garder', 'plate', 'spot', "fatta", 'godi', 'podi']:
+                continue
             lbl = QLabel(f'{num}.  {h}')
             layout1.addWidget(lbl)
             num += 1

@@ -1,21 +1,17 @@
-import datetime
+import json
 import sys
-from random import randint
 
 from PyQt5.Qt import Qt
-from PyQt5.QtGui import QFont, QStandardItemModel, QStandardItem, QIcon
+from PyQt5.QtGui import QFont, QStandardItemModel, QStandardItem
 from PyQt5.QtWidgets import (QMainWindow, QApplication, QWidget, QTabWidget, QLineEdit, QHBoxLayout, QPushButton,
-                             QGridLayout, QLabel, QDateEdit, QComboBox)
+                             QLabel, QComboBox)
 
-from bssrs.config.messages import customer_added
 from bssrs.database.database_main import Database
 
 font18 = QFont("Calibri", 18)
 
-data = {
-    'Garder': ["7'", "8'", "9'", "10'", "11'", "12'", "13'", "14'", "15'", "16'", "17'", "18'", "19'", "20'"],
-    'Plates': ["3'-6\"", "3'-9\"", "3'-12\"", "3'-18\"", "3'-24\"", "4'-6\"", "4'-9\"", "4'-12\"", "4'-18\"", "4'-24\""]
-}
+with open('database/notouch_database.json', 'r')as f:
+    file = json.load(f)
 
 
 def working_soon(self):
@@ -66,21 +62,9 @@ class TabWidget(QTabWidget):
 
     def tab1ui(self):
 
-        def check_disable():
-            if self.edit_qty.text() == "":
-                return self.btn_ok.setDisabled(True)
-            else:
-                return self.btn_ok.setDisabled(False)
-
-        def change_lbl():
-            def random121():
-                return randint(0, 20)
-
-            self.lbl.setText(str(random121()))
-
         main_layout = QHBoxLayout()
-        main_layout.setAlignment(Qt.AlignTop)
 
+        main_layout.setAlignment(Qt.AlignTop)
         self.model = QStandardItemModel()
 
         self.lbl = QLabel("1.")
@@ -107,25 +91,21 @@ class TabWidget(QTabWidget):
         self.edit_rate.setText("1.5")
         self.edit_rate.setMaximumWidth(50)
 
-        self.edit_qty.textChanged.connect(check_disable)
-        self.edit_rate.textChanged.connect(check_disable)
-
         self.btn_ok = QPushButton("OK")
         self.btn_ok.setFont(font18)
         self.btn_ok.setMaximumWidth(150)
-        self.btn_ok.clicked.connect(change_lbl)
 
         self.btn_cancel = QPushButton("Cancel")
         self.btn_cancel.setFont(font18)
         self.btn_cancel.setMaximumWidth(150)
 
         # add data
-        for k, v in data.items():
+        for k, v in file.items():
             state = QStandardItem(k)
             self.model.appendRow(state)
-            for value in v:
-                city = QStandardItem(value)
-                state.appendRow(city)
+            for value in str(v):
+                size = QStandardItem(value)
+                state.appendRow(size)
 
         self.comboStates.currentIndexChanged.connect(self.updateStateCombo)
         self.updateStateCombo(0)
@@ -145,38 +125,21 @@ class TabWidget(QTabWidget):
         self.comboCities.setCurrentIndex(0)
 
     def tab2ui(self):
-        return working_soon(self)
-        # container = QGridLayout()
-        # container.setSpacing(20)
-        # container.setContentsMargins(10, 10, 10, 10)
-        # bottom_layout = QHBoxLayout()
-        #
-        # button_save = QPushButton('Save')
-        # button_save.setMinimumHeight(50)
-        # button_save.setFont(font18)
-        # # button_save.clicked.connect(self.save_customer)
-        #
-        # button_reset = QPushButton('Reset')
-        # button_reset.setMinimumHeight(50)
-        # button_reset.setFont(font18)
-        # # button_reset.clicked.connect(self.view_all_customers)
-        #
-        # button_delete = QPushButton('Delete')
-        # button_delete.setMinimumHeight(50)
-        # button_delete.setFont(font18)
-        #
-        # button_edit = QPushButton('Edit')
-        # button_edit.setMinimumHeight(50)
-        # button_edit.setFont(font18)
-        #
-        # bottom_layout.layout().addWidget(button_save)
-        # bottom_layout.layout().addWidget(button_reset)
-        # bottom_layout.layout().addWidget(button_edit)
-        # bottom_layout.layout().addWidget(button_delete)
-        #
-        # container.addLayout(bottom_layout, 7, 0, 1, 6)
-        # self.tab2.setLayout(container)
+        mlayout = QHBoxLayout()
+        mlayout.setAlignment(Qt.AlignTop)
 
+        def click():
+            for x in range(1, 3):
+                btn = QPushButton(str(x))
+                mlayout.addWidget(btn)
+            for _ in range(1, 3):
+                edit = QLineEdit()
+                edit.setPlaceholderText('text edit')
+                mlayout.addWidget(edit)
+
+        click()
+
+        self.tab2.setLayout(mlayout)
 
     def tab3ui(self):
         return working_soon(self)

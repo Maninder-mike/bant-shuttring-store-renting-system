@@ -4,13 +4,13 @@ import sys
 from PyQt5.QtCore import QSize
 from PyQt5.QtGui import QIcon
 from PyQt5.QtGui import QKeySequence
-from PyQt5.QtWidgets import (QApplication, QAction, QMainWindow, QMessageBox, QToolBar, QCompleter, QLineEdit,
-                             QHBoxLayout, QVBoxLayout, QLabel, QPushButton, QDialog)
+from PyQt5.QtWidgets import (QApplication, QAction, QMainWindow, QMessageBox, QToolBar, QCompleter, QLineEdit, QLabel,
+                             QHBoxLayout, QVBoxLayout, QPushButton, QDialog)
 from PyQt5.QtWidgets import QStyleFactory, QShortcut
 
 from bssrs import __version__
 from bssrs.config.base import get_image_path
-from bssrs.config.dialogs import Dialogs, CustomerDatabase, SettingWindow
+from bssrs.config.dialogs import Dialogs, CustomerDatabase, SettingWindow, SearchDialog
 from bssrs.layout import gui_layout
 from bssrs.status_bar import StatusBar
 
@@ -23,11 +23,11 @@ class MainJsonWindow(QDialog):
     def __init__(self, *args, **kwargs):
         super(MainJsonWindow, self).__init__(*args, **kwargs)
 
-        self.setMinimumSize(1000, 500)
-        self.setWindowTitle("Settings‍")
+        self.setMinimumSize(900, 500)
+        self.setWindowTitle("Settings")
 
         self.layout = QHBoxLayout()
-        # self.layout.setSpacing(5)
+        self.layout.setSpacing(5)
 
         self.right_layout = QVBoxLayout()
         self.left_layout = QVBoxLayout()
@@ -161,11 +161,11 @@ class MainWindow(QMainWindow):
         toolbar.addAction(btn_add)
 
         btn_edit = QAction(QIcon("images/edit.png"), "Edit Customer", self)
-        # btn_edit.triggered.connect(Dialogs.mainitemsdb)
         btn_edit.setStatusTip("Edit Customer")
         toolbar.addAction(btn_edit)
 
         btn_search = QAction(QIcon("images/Search.png"), "Search Customer", self)
+        btn_search.triggered.connect(SearchDialog.search_cust)
         btn_search.setStatusTip("Search Customer")
         toolbar.addAction(btn_search)
 

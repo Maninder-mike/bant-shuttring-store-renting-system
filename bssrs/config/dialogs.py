@@ -1,11 +1,8 @@
-import json
-
 from PyQt5.Qt import Qt
 from PyQt5.QtCore import QDateTime
 from PyQt5.QtGui import QDoubleValidator
-from PyQt5.QtWidgets import (QDialog, QPushButton, QLabel, QDialogButtonBox, QVBoxLayout, QGroupBox, QFormLayout,
-                             QLineEdit, QComboBox, QDateEdit, QGridLayout, QTabWidget, QWidget, QMessageBox,
-                             QInputDialog, QHBoxLayout)
+from PyQt5.QtWidgets import (QDialog, QPushButton, QDialogButtonBox, QVBoxLayout, QGroupBox, QLineEdit, QComboBox,
+                             QDateEdit, QGridLayout, QTabWidget, QWidget, QMessageBox, QInputDialog)
 
 from bssrs import __version__
 from bssrs.database.database_main import Database
@@ -49,8 +46,8 @@ class CustomerDatabase(QDialog):
         self.formGroupBox = QGroupBox("Customer Database")
 
         button_box = QDialogButtonBox(
-            QDialogButtonBox.Save | QDialogButtonBox.Cancel | QDialogButtonBox.Reset)
-        button_box.accepted.connect(self.add_customer)
+            QDialogButtonBox.Ok | QDialogButtonBox.Cancel | QDialogButtonBox.Reset)
+        # button_box.accepted.connect(self.add_customer)
         button_box.rejected.connect(self.close)
         button_box.clicked.connect(self.reset_customer)
 
@@ -84,6 +81,9 @@ class CustomerDatabase(QDialog):
         self.edit_creation_date = QDateEdit()
         self.edit_creation_date.setDateTime(QDateTime.currentDateTime())
 
+        self.edit_pincode.setValidator(QDoubleValidator())
+        self.edit_number.setValidator(QDoubleValidator())
+
         self.btn = QPushButton("Add Customer !!!")
         self.btn.clicked.connect(self.add_customer)
 
@@ -98,19 +98,14 @@ class CustomerDatabase(QDialog):
         form_layout.addWidget(self.edit_email, 4, 3)
         form_layout.addWidget(self.edit_careof, 6, 1)
         form_layout.addWidget(self.edit_creation_date, 6, 3)
-        form_layout.addWidget(self.btn, 6, 5)
+        # form_layout.addWidget(self.btn, 6, 5)
+
+        layout.addWidget(self.btn)
 
         self.cbox = QComboBox()
         # self.cbox.addItems([str(x) for x in pm_Combo()])
         self.cbox.setEditable(True)
         self.cbox.setDisabled(True)
-
-        self.age = QLineEdit()
-        self.age.setPlaceholderText("Price")
-        self.age.setValidator(QDoubleValidator())
-
-        self.dateedit = QDateEdit()
-        self.dateedit.setDateTime(QDateTime.currentDateTime())
 
         self.formGroupBox.setLayout(form_layout)
 
@@ -118,7 +113,7 @@ class CustomerDatabase(QDialog):
 
     def add_customer(self):
         if self.edit_fname.text() == "" and self.edit_lname.text() == "":
-            QMessageBox.warning(self, "Warning : Please add all fields", "Don't empty fields 🤦🏽‍‍")
+            return QMessageBox.warning(self, "Warning : Please add all fields", "Don't empty fields 🤦🏽‍‍")
         else:
             db.insert_cust(self.edit_fname.text(), self.edit_lname.text(), self.edit_father.text(),
                            self.edit_gender.currentText(), self.edit_street.text(), self.edit_city.text(),
@@ -151,6 +146,39 @@ class CustomerDatabase(QDialog):
         dwin.exec_()
 
 
+class SearchDialog(QDialog):
+    def __init__(self, *args, **kwargs):
+        super(SearchDialog, self).__init__(*args, **kwargs)
+
+        self.QBtn = QPushButton()
+        self.QBtn.setText("Search")
+
+        self.setWindowTitle("Search user")
+        self.setFixedWidth(300)
+        self.setFixedHeight(100)
+        self.QBtn.clicked.connect(self.searchstudent)
+        layout = QVBoxLayout()
+
+        self.searchinput = QComboBox()
+        self.searchinput.setPlaceholderText("Find By First Name")
+        items = [str(x) for x in db.customer_list()]
+        self.searchinput.addItems(items)
+        layout.addWidget(self.searchinput)
+        layout.addWidget(self.QBtn)
+        self.setLayout(layout)
+
+    def searchstudent(self):
+        try:
+            db.search_customer(self.searchinput.currentText())
+        except Exception:
+            QMessageBox.warning(QMessageBox(), 'Error', f'Could not Find from the database.')
+            self.searchinput.clear()
+
+    def search_cust(self):
+        scust = SearchDialog()
+        scust.exec_()
+
+
 class SettingWindow(QDialog):
 
     def __init__(self, *args, **kwargs):
@@ -178,5 +206,3 @@ class SettingWindow(QDialog):
     def settings_window(self):
         dwin = SettingWindow()
         dwin.exec_()
-
-

@@ -102,13 +102,15 @@ class Database:
         conn.close()
         return rows
 
-    def search_customer(self, title=""):
+    def search_customer(self, fname):
         conn = sqlite3.connect(db_main)
         cur = conn.cursor()
-        cur.execute(f"SELECT {title} FROM customer")
+        cur.execute(f"SELECT * FROM customer WHERE fname = ?", (fname, ))
         rows = cur.fetchall()
         conn.close()
-        return rows
+        # return rows
+        for x in rows:
+            print(x)
 
     def delete_cust(self, fname):
         conn = sqlite3.connect(db_main)
@@ -126,10 +128,9 @@ class Database:
         listp = []
         for x in pm_list:
             if x in listp:
-                pass
+                continue
             else:
                 listp.append(x)
-
         m = [str(x) for x, in listp]
         return m
 
@@ -141,7 +142,7 @@ class Database:
         try:
             cur.execute("INSERT INTO `book` VALUES(?,?,?,?)", (title, author, year, isbn))
         except sqlite3.Error as e:
-            print(e)
+             print(e)
         print("Insert Book!")
         conn.commit()
         conn.close()
@@ -193,5 +194,7 @@ db.connect()
 
 # db.insert_customer(9872855415, 'mike', 'maninder', datetime.datetime.today(), random.random())
 # db.insert_customer(123456789, 'tim', 'tommy', datetime.datetime.today(), random.random())
+
+# db.search_customer("tim")
 
 print("Database Called")

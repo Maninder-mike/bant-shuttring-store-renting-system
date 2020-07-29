@@ -1,7 +1,4 @@
 
-:
-
-delete1.py,a\0\a06e856a2b81f8913ef7ec5496a2958471c268c1
 G
 .pytest_cache/README.md,4\b\4b5717387c04d11ab268b4b6085b028641558d09
 E
@@ -11,13 +8,8 @@ E
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 8
 setup.py,8\e\8e2edce0d507e1297474f25c00cae94258db38d8
-:
-
-delete2.py,c\c\cce7c81941387d21028b6b59245b97d02244cb49
 ?
 bssrs/layout.py,4\1\415e39a1e2327f855e0f155bd484b72787f87804
-H
-bssrs/database/delete.py,d\9\d9a742bd5ec7533c504379f055a9560857574dec
 C
 bssrs/tab_widget.py,8\3\83d7706b25b9ff1437b69c1ba379fd5261c7d01d
 G
@@ -32,9 +24,6 @@ J
 tests/test_database_set.py,6\e\6ea227ba331ed50726f951d1f07944b43e48c1be
 @
 bssrs/toolbox.py,5\5\559e5f1a9f859e997046fb4d62ef93bf21f2ffd2
-:
-
-delete5.py,b\f\bf1eac9898f379e9e543a6613b0c31ba045c2976
 @
 bssrs/menubar.py,a\f\af42ba775228420c8fd30799af5e792049f5828d
 E
@@ -53,9 +42,19 @@ H
 bssrs/database/cls_db.py,4\c\4c82c22ee918a06727500bb267d5fff70feb6a4a
 O
 bssrs/database/connection_db.py,5\4\54370e1e867ba789a2c93d7c0813af87095cf12b
-D
-bssrs/dialog/main.py,f\c\fcabf27d082b6b9de93e3f3c6b91f9eb2ee41046
-I
-bssrs/database/delete6.py,b\1\b1bdb4e319b22406c44354ab62470aba9649a787
-E
-notouch_database.json,a\7\a7d475787f8704d25f58c26ed40a444b45d888ac
+T
+$bssrs/database/notouch_database.json,c\9\c9a7aa17189b870f5d9ebb2fc4d063937b2fb060
+O
+.github/workflows/pythonapp.yml,2\3\23e2dc9c034af025d826cd83a3444b8ee161b32b
+B
+testnet/delete5.py,b\9\b92dd0ca44bd8ac3615558d1911c366da758dff2
+B
+testnet/delete2.py,1\d\1d2155125ae89f0ee894354f0fee8c0da2f8c0df
+B
+testnet/delete1.py,a\c\ac29d9da0f6612bc2aa69ef4fb5b335e66b01de8
+A
+testnet/delete.py,8\1\81ddb3bc4bb39258b95cd333424e6769543c9ee8
+F
+testnet/dialog/main.py,e\3\e3c4372f897b734aebd8a2576137e092a7079551
+H
+.pytest_cache/.gitignore,8\e\8e5b1c08dc85d155ed7cf4dd6949ea7ef7d6c0a0
