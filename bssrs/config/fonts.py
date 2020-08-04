@@ -1,13 +1,3 @@
-# -*- coding: utf-8 -*-
-
-# Copyright © BSSRS Project Contributors
-# Licensed under the terms of the MIT License
-# (see bssrs/__init__.py for details)
-
-"""
-BSSRS font variables
-"""
-
 import os
 import sys
 

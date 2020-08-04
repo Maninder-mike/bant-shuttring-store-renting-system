@@ -1,21 +1,9 @@
-# -*- coding: utf-8 -*-
-#
-# Copyright © BSSRS Project Contributors
-# Licensed under the terms of the MIT License
-# (see bssrs/__init__.py for details)
-
-"""Module checking BSSRS runtime dependencies"""
-
-# TODO correction on dependencies in his file for checking
-
 import os
 import sys
 
 # Local imports
-from bssrs.utils import programs
 from bssrs.config.base import _
 from bssrs.config.utils import is_anaconda
-from bssrs.py3compat import PY2
 
 
 # =============================================================================

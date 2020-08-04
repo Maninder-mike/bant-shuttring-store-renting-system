@@ -75,10 +75,6 @@ def get_versions(reporev=True):
 
     revision = None
 
-    if reporev:
-        from bssrs.utils import vcs
-        revision, branch = vcs.get_git_revision(os.path.dirname(__dir__))
-
     if not sys.platform == 'darwin':  # To avoid a crash with our Mac app
         system = platform.system()
     else:
