@@ -19,15 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfbb3344-0f69-4f1c-8c74-baeb258d65f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/pythonapp.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pythonapp.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bssrs/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bssrs/config/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/config/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bssrs/config/fonts.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/config/fonts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bssrs/dependencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/dependencies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bssrs/utils/vcs.py" beforeDir="false" />
-    </list>
+    <list default="true" id="cfbb3344-0f69-4f1c-8c74-baeb258d65f9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -252,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596570444379</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="code style">
+      <created>1596572181367</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1596572181367</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -274,7 +273,8 @@
     <MESSAGE value="add dialogs" />
     <MESSAGE value="modified for loops" />
     <MESSAGE value="delete unnecessary files" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete unnecessary files" />
+    <MESSAGE value="code style" />
+    <option name="LAST_COMMIT_MESSAGE" value="code style" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="47" key="#Inspections" timestamp="1592770014023">
@@ -325,10 +325,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="392" y="0" key="#pytest_for_test_main.test_add/0.0.1366.738@0.0.1366.738" timestamp="1589806476076" />
-    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1596570437599">
+    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1596572179009">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1596570437599" />
+    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1596572179009" />
     <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1596550929407">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
