@@ -25,7 +25,6 @@ CLOUDPICKLE_REQVER = '>=0.5.0'
 COOKIECUTTER_REQVER = '>=1.6.0'
 DIFF_MATCH_PATCH_REQVER = '>=20181111'
 INTERVALTREE_REQVER = None
-IPYTHON_REQVER = ">=4.0;<6.0" if PY2 else ">=4.0"
 JEDI_REQVER = '=0.17.0'
 KEYRING_REQVER = None
 NBCONVERT_REQVER = '>=4.0'
@@ -254,11 +253,9 @@ class Dependency(object):
 
         if installed_version is None:
             try:
-                self.installed_version = programs.get_module_version(modname)
+                pass
+                # self.installed_version = programs.get_module_version(modname)
             except Exception:
-                # NOTE: Don't add any exception type here!
-                # Modules can fail to import in several ways besides
-                # ImportError
                 self.installed_version = None
         else:
             self.installed_version = installed_version
@@ -266,9 +263,8 @@ class Dependency(object):
     def check(self):
         """Check if dependency is installed"""
         if self.required_version and self.installed_version:
-            return programs.is_module_installed(self.modname,
-                                                self.required_version,
-                                                self.installed_version)
+            pass
+            # return programs.is_module_installed(self.modname,self.required_version,self.installed_version)
         else:
             return True
 

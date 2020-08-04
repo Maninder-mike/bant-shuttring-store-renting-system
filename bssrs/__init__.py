@@ -90,5 +90,4 @@ def get_versions(reporev=True):
         'system': system,
         'release': platform.release(),
         'revision': revision,
-        'branch': branch,
     }
