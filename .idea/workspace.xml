@@ -20,7 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cfbb3344-0f69-4f1c-8c74-baeb258d65f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/lint.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/test.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/pythonapp.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pythonapp.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -318,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596574150923</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="code style">
+      <created>1596574579244</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1596574579244</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -392,10 +402,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="392" y="0" key="#pytest_for_test_main.test_add/0.0.1366.738@0.0.1366.738" timestamp="1589806476076" />
-    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1596574149157">
+    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1596574577551">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1596574149157" />
+    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1596574577551" />
     <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1596550929407">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -436,10 +446,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="283" y="28" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1596559183498" />
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1596574152755">
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1596574580695">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1596574152755" />
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1596574580695" />
     <state x="526" y="141" key="refactoring.ChangeSignatureDialog" timestamp="1592509982422">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
