@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfbb3344-0f69-4f1c-8c74-baeb258d65f9" name="Default Changelist" comment="" />
+    <list default="true" id="cfbb3344-0f69-4f1c-8c74-baeb258d65f9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/pythonapp.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pythonapp.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -251,7 +253,21 @@
       <option name="project" value="LOCAL" />
       <updated>1596572181367</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="code style">
+      <created>1596572192740</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1596572192740</updated>
+    </task>
+    <task id="LOCAL-00006" summary="code style">
+      <created>1596572302286</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1596572302286</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -325,30 +341,30 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="392" y="0" key="#pytest_for_test_main.test_add/0.0.1366.738@0.0.1366.738" timestamp="1589806476076" />
-    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1596572179009">
+    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1596572300730">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1596572179009" />
+    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1596572300730" />
     <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1596550929407">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1596550929407" />
-    <state width="1323" height="146" key="GridCell.Tab.0.bottom" timestamp="1596571706682">
+    <state width="1323" height="146" key="GridCell.Tab.0.bottom" timestamp="1596572293971">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="146" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1596571706682" />
-    <state width="1323" height="146" key="GridCell.Tab.0.center" timestamp="1596571706682">
+    <state width="1323" height="146" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1596572293971" />
+    <state width="1323" height="146" key="GridCell.Tab.0.center" timestamp="1596572293971">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="146" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1596571706682" />
-    <state width="1323" height="146" key="GridCell.Tab.0.left" timestamp="1596571706682">
+    <state width="1323" height="146" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1596572293971" />
+    <state width="1323" height="146" key="GridCell.Tab.0.left" timestamp="1596572293971">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="146" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1596571706682" />
-    <state width="1323" height="146" key="GridCell.Tab.0.right" timestamp="1596571706682">
+    <state width="1323" height="146" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1596572293971" />
+    <state width="1323" height="146" key="GridCell.Tab.0.right" timestamp="1596572293971">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="146" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1596571706682" />
+    <state width="1323" height="146" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1596572293971" />
     <state width="1345" height="227" key="GridCell.Tab.1.bottom" timestamp="1593833535831">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -369,10 +385,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="283" y="28" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1596559183498" />
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1596570449723">
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1596572303839">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1596570449723" />
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1596572303839" />
     <state x="526" y="141" key="refactoring.ChangeSignatureDialog" timestamp="1592509982422">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
