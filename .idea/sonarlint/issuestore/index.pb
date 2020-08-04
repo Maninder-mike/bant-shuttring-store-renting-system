@@ -58,3 +58,7 @@ F
 testnet/dialog/main.py,e\3\e3c4372f897b734aebd8a2576137e092a7079551
 H
 .pytest_cache/.gitignore,8\e\8e5b1c08dc85d155ed7cf4dd6949ea7ef7d6c0a0
+K
+.idea/dictionaries/mike.xml,a\6\a6d3356802f70516204a9ebd72ba94725e96d1e1
+D
+testnet/json_test.py,5\f\5fa296fdfc28c9c933b15a7e9bd88c0dd11ab3e0

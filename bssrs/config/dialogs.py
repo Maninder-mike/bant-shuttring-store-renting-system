@@ -171,7 +171,7 @@ class SearchDialog(QDialog):
         try:
             db.search_customer(self.searchinput.currentText())
         except Exception:
-            QMessageBox.warning(QMessageBox(), 'Error', f'Could not Find from the database.')
+            QMessageBox.warning(QMessageBox(), 'Error', 'Could not Find from the database.')
             self.searchinput.clear()
 
     def search_cust(self):

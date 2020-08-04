@@ -20,18 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cfbb3344-0f69-4f1c-8c74-baeb258d65f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/mike.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/mike.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a06e856a2b81f8913ef7ec5496a2958471c268c1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bssrs/check.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bssrs/config/dialogs.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/config/dialogs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bssrs/database/database_main.db" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/database/database_main.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bssrs/database/database_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/database/database_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bssrs/database/notouch_database.json" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/database/notouch_database.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bssrs/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bssrs/tab_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/tab_widget.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bssrs/toolbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/toolbox.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/colored_lines.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_database_set.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_menus.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +96,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -130,7 +129,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="dialogs" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="json_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BSSRS" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -138,11 +137,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bssrs/config" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testnet" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bssrs/config/dialogs.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testnet/json_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -217,10 +216,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.tab_widget" />
         <item itemvalue="Python.toolbox" />
+        <item itemvalue="Python.tab_widget" />
+        <item itemvalue="Python.json_test" />
         <item itemvalue="Python.database_main" />
-        <item itemvalue="Python.dialogs" />
       </list>
     </recent_temporary>
   </component>
@@ -243,8 +242,18 @@
       <option name="project" value="LOCAL" />
       <updated>1593205784054</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="modified for loops">
+      <created>1596057356904</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596057356904</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TerminalProjectNonSharedOptionsProvider">
+    <option name="shellPath" value="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -260,7 +269,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add dialogs" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dialogs" />
+    <MESSAGE value="modified for loops" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified for loops" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="47" key="#Inspections" timestamp="1592770014023">
@@ -295,10 +305,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="363" y="105" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.738@0.0.1366.738" timestamp="1596040625243" />
-    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595579914887">
+    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596562738710">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1595579914887" />
+    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1596562738710" />
     <state x="392" y="0" key="#main_(1)" timestamp="1593367645234">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -311,30 +321,30 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="392" y="0" key="#pytest_for_test_main.test_add/0.0.1366.738@0.0.1366.738" timestamp="1589806476076" />
-    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1593205779898">
+    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1596057352154">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1593205779898" />
-    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1589748510699">
+    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1596057352154" />
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1596550929407">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1589748510699" />
-    <state width="1345" height="145" key="GridCell.Tab.0.bottom" timestamp="1596057278362">
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1596550929407" />
+    <state width="1323" height="146" key="GridCell.Tab.0.bottom" timestamp="1596555023294">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="145" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1596057278362" />
-    <state width="1345" height="145" key="GridCell.Tab.0.center" timestamp="1596057278362">
+    <state width="1323" height="146" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1596555023294" />
+    <state width="1323" height="146" key="GridCell.Tab.0.center" timestamp="1596555023294">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="145" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1596057278362" />
-    <state width="1345" height="145" key="GridCell.Tab.0.left" timestamp="1596057278362">
+    <state width="1323" height="146" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1596555023294" />
+    <state width="1323" height="146" key="GridCell.Tab.0.left" timestamp="1596555023294">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="145" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1596057278362" />
-    <state width="1345" height="145" key="GridCell.Tab.0.right" timestamp="1596057278362">
+    <state width="1323" height="146" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1596555023294" />
+    <state width="1323" height="146" key="GridCell.Tab.0.right" timestamp="1596555023294">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1345" height="145" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1596057278362" />
+    <state width="1323" height="146" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1596555023294" />
     <state width="1345" height="227" key="GridCell.Tab.1.bottom" timestamp="1593833535831">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -351,10 +361,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1345" height="227" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1593833535831" />
-    <state x="283" y="28" key="SettingsEditor" timestamp="1595576277798">
+    <state x="283" y="28" key="SettingsEditor" timestamp="1596559183498">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="283" y="28" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1595576277798" />
+    <state x="283" y="28" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1596559183498" />
     <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1593205880732">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

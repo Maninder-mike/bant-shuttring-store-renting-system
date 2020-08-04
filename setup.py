@@ -38,7 +38,7 @@ setup(
     python_requires='>=3.7, <4',
 
     install_requires=[
-        'pyqt5'
+        'PyQt5'
     ],
 
     extras_require={
@@ -59,9 +59,8 @@ setup(
     },
 
     project_urls={
-        # 'Bug Reports': 'https://github.com/pypa/sampleproject/issues',
-        # 'Funding': 'https://donate.pypi.org',
+        'Bug Reports': 'https://github.com/pypa/sampleproject/issues',
         # 'Say Thanks!': 'http://saythanks.io/to/example',
-        # 'Source': 'https://github.com/pypa/sampleproject/',
+        'Source': 'https://github.com/Maninder-mike/bant-shuttring-store-renting-system'
     },
 )
