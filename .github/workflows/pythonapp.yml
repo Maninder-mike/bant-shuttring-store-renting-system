@@ -31,7 +31,7 @@ jobs:
       - name: Lint with black
         run: |
           pip install black
-          black
+          black .
 
       - name: Test with pytest
         run: |
