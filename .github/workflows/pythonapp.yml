@@ -32,6 +32,7 @@ jobs:
         run: |
           pip install black
           black .
+          ...
 
       - name: Test with pytest
         run: |
