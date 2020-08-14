@@ -23,7 +23,6 @@ os.environ['SPYDER_PYTEST'] = 'True'
 from qtpy import QtWebEngineWidgets  # pylint: disable=unused-import
 import pytest
 
-
 # To run our slow tests only in our CIs
 CI = os.environ.get('CI', None) is not None
 RUN_SLOW = os.environ.get('RUN_SLOW', None) == 'true'

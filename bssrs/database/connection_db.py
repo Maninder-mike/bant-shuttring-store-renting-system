@@ -142,7 +142,8 @@ def main():
 
     with conn:
         # create a new project
-        project = ('maninder', 'singh', 'bantsingh', 'male', 'cunagraroad', 'patran', '147105', 'mike@gmail.com', 'No one')
+        project = (
+        'maninder', 'singh', 'bantsingh', 'male', 'cunagraroad', 'patran', '147105', 'mike@gmail.com', 'No one')
         project = create_customer(conn, project)
 
         # tasks

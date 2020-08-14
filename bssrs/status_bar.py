@@ -1,8 +1,6 @@
-from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QWidget,QStatusBar
-import sys
-
 from datetime import datetime
+
+from PyQt5.QtWidgets import QLabel, QWidget
 
 
 class StatusBar(QWidget):
