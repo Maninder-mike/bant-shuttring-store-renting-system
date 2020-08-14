@@ -1,7 +1,7 @@
 import sys
 
 from PyQt5.QtGui import QFont
-from PyQt5.QtWidgets import QMainWindow, QApplication, QStyleFactory, QTabWidget, QHBoxLayout, QLabel, QWidget
+from PyQt5.QtWidgets import QApplication, QStyleFactory, QTabWidget, QHBoxLayout, QLabel, QWidget
 
 font18 = QFont("Calibri", 18)
 

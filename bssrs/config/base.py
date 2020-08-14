@@ -1,11 +1,9 @@
 from __future__ import print_function
 
-import getpass
 import os
 import os.path as osp
 import re
 import sys
-import tempfile
 
 # Local imports
 from bssrs import __version__

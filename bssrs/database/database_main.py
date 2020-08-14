@@ -105,7 +105,7 @@ class Database:
     def search_customer(self, fname):
         conn = sqlite3.connect(db_main)
         cur = conn.cursor()
-        cur.execute(f"SELECT * FROM customer WHERE fname = ?", (fname, ))
+        cur.execute(f"SELECT * FROM customer WHERE fname = ?", (fname,))
         rows = cur.fetchall()
         conn.close()
         # return rows
@@ -142,7 +142,7 @@ class Database:
         try:
             cur.execute("INSERT INTO `book` VALUES(?,?,?,?)", (title, author, year, isbn))
         except sqlite3.Error as e:
-             print(e)
+            print(e)
         print("Insert Book!")
         conn.commit()
         conn.close()

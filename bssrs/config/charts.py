@@ -1,7 +1,6 @@
-from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QHBoxLayout
 from PyQt5.QtChart import QChart, QChartView, QPieSeries, QPieSlice
-from PyQt5.QtGui import QPainter, QPen
 from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QPainter, QPen
 
 
 def create_piechart():
@@ -40,4 +39,3 @@ def create_piechart():
 
     chartview = QChartView(chart)
     chartview.setRenderHint(QPainter.Antialiasing)
-
