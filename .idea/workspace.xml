@@ -1,125 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfbb3344-0f69-4f1c-8c74-baeb258d65f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/bssrs/config/charts.py" beforeDir="false" afterPath="$PROJECT_DIR$/bssrs/config/charts.py" afterDir="false" />
+    <list default="true" id="e2698c1c-7853-4490-b155-5466d3db45a1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bssrs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bssrs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/mike.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsonSchemas.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements-dev.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <excluded-from-favorite>
-      <branch-storage>
-        <map>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </excluded-from-favorite>
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/dev" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1c2xkwQwXRDD9aHLdh7t0VGcPlT" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1iq6e4TaWrqXAQGg8W9NBMv07G5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\mike\Documents\GitHub\BSSRS\testnet" />
-      <recent name="C:\Users\mike\Documents\GitHub\BSSRS\bssrs\database" />
-      <recent name="C:\Users\mike\Documents\GitHub\BSSRS" />
-      <recent name="C:\Users\mike\Documents\GitHub\BSSRS\bssrs\config" />
-      <recent name="C:\Users\mike\Documents\GitHub\BSSRS\bssrs" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Python.main (1)">
-    <configuration name="add" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="BSSRS" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/add.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BSSRS" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -140,352 +60,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tab_widget" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="BSSRS" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bssrs" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bssrs/tab_widget.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="toolbox" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="BSSRS" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bssrs" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bssrs/toolbox.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest in tests" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="BSSRS" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python tests.pytest in tests" />
-        <item itemvalue="Python.add" />
-        <item itemvalue="Python.toolbox" />
-        <item itemvalue="Python.tab_widget" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration>C:\Users\mike\AppData\Roaming\Subversion</configuration>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cfbb3344-0f69-4f1c-8c74-baeb258d65f9" name="Default Changelist" comment="" />
-      <created>1589740635413</created>
+      <changelist id="e2698c1c-7853-4490-b155-5466d3db45a1" name="Default Changelist" comment="" />
+      <created>1602622887469</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1589740635413</updated>
+      <updated>1602622887469</updated>
     </task>
-    <task id="LOCAL-00001" summary="add dialogs">
-      <created>1593205784054</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1593205784054</updated>
-    </task>
-    <task id="LOCAL-00002" summary="modified for loops">
-      <created>1596057356904</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1596057356904</updated>
-    </task>
-    <task id="LOCAL-00003" summary="delete unnecessary files">
-      <created>1596570444379</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1596570444379</updated>
-    </task>
-    <task id="LOCAL-00004" summary="code style">
-      <created>1596572181367</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1596572181367</updated>
-    </task>
-    <task id="LOCAL-00005" summary="code style">
-      <created>1596572192740</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1596572192740</updated>
-    </task>
-    <task id="LOCAL-00006" summary="code style">
-      <created>1596572302286</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1596572302286</updated>
-    </task>
-    <task id="LOCAL-00007" summary="code style">
-      <created>1596572559674</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1596572559674</updated>
-    </task>
-    <task id="LOCAL-00008" summary="code style">
-      <created>1596572848472</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1596572848472</updated>
-    </task>
-    <task id="LOCAL-00009" summary="code style">
-      <created>1596572957215</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1596572957215</updated>
-    </task>
-    <task id="LOCAL-00010" summary="code style">
-      <created>1596573092401</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1596573092401</updated>
-    </task>
-    <task id="LOCAL-00011" summary="code style">
-      <created>1596573466099</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1596573466099</updated>
-    </task>
-    <task id="LOCAL-00012" summary="code style">
-      <created>1596573556229</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1596573556229</updated>
-    </task>
-    <task id="LOCAL-00013" summary="code style">
-      <created>1596573634889</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1596573634889</updated>
-    </task>
-    <task id="LOCAL-00014" summary="code style">
-      <created>1596574150923</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1596574150923</updated>
-    </task>
-    <task id="LOCAL-00015" summary="code style">
-      <created>1596574579244</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1596574579244</updated>
-    </task>
-    <task id="LOCAL-00016" summary="code style">
-      <created>1596575317140</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1596575317140</updated>
-    </task>
-    <task id="LOCAL-00017" summary="code style">
-      <created>1596575528599</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1596575528599</updated>
-    </task>
-    <task id="LOCAL-00018" summary="code style">
-      <created>1596575880066</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1596575880066</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
-  <component name="TerminalProjectNonSharedOptionsProvider">
-    <option name="shellPath" value="C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="add dialogs" />
-    <MESSAGE value="modified for loops" />
-    <MESSAGE value="delete unnecessary files" />
-    <MESSAGE value="code style" />
-    <option name="LAST_COMMIT_MESSAGE" value="code style" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="309" y="47" key="#Inspections" timestamp="1592770014023">
+    <state x="462" y="124" key="FileChooserDialogImpl" timestamp="1602625581051">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="309" y="47" key="#Inspections/0.0.1366.738@0.0.1366.738" timestamp="1592770014023" />
-    <state x="482" y="78" key="#JSON" timestamp="1591036164739">
+    <state x="462" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1602625581051" />
+    <state x="184" y="14" key="SettingsEditor" timestamp="1602626214126">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="482" y="78" key="#JSON/0.0.1366.738@0.0.1366.738" timestamp="1591036164739" />
-    <state x="568" y="232" key="#Notifications" timestamp="1592765747265">
+    <state x="184" y="14" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1602626214126" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1602625324046">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="568" y="232" key="#Notifications/0.0.1366.738@0.0.1366.738" timestamp="1592765747265" />
-    <state x="275" y="10" key="#Plugins" timestamp="1596042075042">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="275" y="10" key="#Plugins/0.0.1366.738@0.0.1366.738" timestamp="1596042075042" />
-    <state x="423" y="237" key="#Project_Settings" timestamp="1596055923299">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="423" y="237" key="#Project_Settings/0.0.1366.738@0.0.1366.738" timestamp="1596055923299" />
-    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591722620883">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1591722620883" />
-    <state x="443" y="171" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595579906780">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="443" y="171" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1595579906780" />
-    <state x="363" y="105" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1596040625243">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="363" y="105" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.738@0.0.1366.738" timestamp="1596040625243" />
-    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596571424192">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1596571424192" />
-    <state x="392" y="0" key="#main_(1)" timestamp="1593367645234">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="392" y="0" key="#main_(1)/0.0.1366.738@0.0.1366.738" timestamp="1593367645234" />
-    <state x="392" y="0" key="#prime_check" timestamp="1589895945493">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="392" y="0" key="#prime_check/0.0.1366.738@0.0.1366.738" timestamp="1589895945493" />
-    <state x="392" y="0" key="#pytest_for_test_main.test_add" timestamp="1589806476076">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="392" y="0" key="#pytest_for_test_main.test_add/0.0.1366.738@0.0.1366.738" timestamp="1589806476076" />
-    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1596575878158">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1596575878158" />
-    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1596550929407">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1596550929407" />
-    <state width="1323" height="146" key="GridCell.Tab.0.bottom" timestamp="1597410986095">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1323" height="146" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1597410986095" />
-    <state width="1323" height="146" key="GridCell.Tab.0.center" timestamp="1597410986095">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1323" height="146" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1597410986095" />
-    <state width="1323" height="146" key="GridCell.Tab.0.left" timestamp="1597410986095">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1323" height="146" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1597410986095" />
-    <state width="1323" height="146" key="GridCell.Tab.0.right" timestamp="1597410986095">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1323" height="146" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1597410986095" />
-    <state width="1345" height="227" key="GridCell.Tab.1.bottom" timestamp="1593833535831">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1345" height="227" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1593833535831" />
-    <state width="1345" height="227" key="GridCell.Tab.1.center" timestamp="1593833535830">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1345" height="227" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1593833535830" />
-    <state width="1345" height="227" key="GridCell.Tab.1.left" timestamp="1593833535830">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1345" height="227" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1593833535830" />
-    <state width="1345" height="227" key="GridCell.Tab.1.right" timestamp="1593833535831">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1345" height="227" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1593833535831" />
-    <state x="283" y="28" key="SettingsEditor" timestamp="1597416291908">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="283" y="28" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1597416291908" />
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1596575881497">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1596575881497" />
-    <state x="526" y="141" key="refactoring.ChangeSignatureDialog" timestamp="1592509982422">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="526" y="141" key="refactoring.ChangeSignatureDialog/0.0.1366.738@0.0.1366.738" timestamp="1592509982422" />
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1595790583584">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1595790583584" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <default-breakpoints>
-        <breakpoint type="python-exception">
-          <properties notifyOnTerminate="true" exception="BaseException">
-            <option name="notifyOnTerminate" value="true" />
-          </properties>
-        </breakpoint>
-      </default-breakpoints>
-    </breakpoint-manager>
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1602625324046" />
   </component>
 </project>
