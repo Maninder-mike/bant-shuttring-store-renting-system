@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QHBoxLayout, QVBoxLayout
 import sys
-from src.toolbox import ToolBox
-from src.tab_widget import TabWidget
+from toolbox import ToolBox
+from tab_widget import TabWidget
 
 
 class MainWindow(QMainWindow):

@@ -4,10 +4,10 @@ from PyQt5.QtGui import QPalette, QColor
 from PyQt5.QtCore import Qt
 import sys
 
-from src.tab_widget import TabWidget
-from src.toolbox import ToolBox
-from src.status_bar import StatusBar
-from src.layout import Layout
+from tab_widget import TabWidget
+from toolbox import ToolBox
+from status_bar import StatusBar
+from layout import Layout
 
 
 class Color(QWidget):
